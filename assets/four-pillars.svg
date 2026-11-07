@@ -1,24 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Rohit Patil — 4 Career Tracks: Data Analytics, Data Science, AI Systems, Fullstack">
   <defs>
-    <!-- Card Border Gradient -->
+    <!-- Brushed Titanium & Electric Red Border -->
     <linearGradient id="p-border" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.8"/>
-      <stop offset="40%" stop-color="#27272A" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.6"/>
+      <stop offset="0%" stop-color="#E2E8F0" stop-opacity="0.8"/>
+      <stop offset="35%" stop-color="#475569" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#1E293B" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.7"/>
     </linearGradient>
 
-    <!-- Solid Bar Chart Gradient -->
+    <!-- Solid Bar Chart Gradient with Crimson Peak -->
     <linearGradient id="solid-bar-grad" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0%" stop-color="#55070D"/>
-      <stop offset="40%" stop-color="#99111C"/>
+      <stop offset="0%" stop-color="#450A0A"/>
+      <stop offset="40%" stop-color="#991B1B"/>
       <stop offset="85%" stop-color="#ED0C1F"/>
-      <stop offset="100%" stop-color="#FF6B78"/>
+      <stop offset="100%" stop-color="#FFA4AC"/>
     </linearGradient>
 
     <!-- Gaussian Area Fill Gradient -->
     <linearGradient id="gaussian-fill" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.45"/>
-      <stop offset="70%" stop-color="#ED0C1F" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#ED0C1F" stop-opacity="0.10"/>
       <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.0"/>
     </linearGradient>
 
@@ -31,7 +32,7 @@
       </feMerge>
     </filter>
 
-    <filter id="subtle-glow">
+    <filter id="silver-sheen">
       <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
@@ -46,26 +47,26 @@
       50% { transform: scaleY(1.05); }
     }
     @keyframes nodeBlink {
-      0%, 100% { opacity: 0.9; }
+      0%, 100% { opacity: 0.95; }
       50% { opacity: 0.4; }
     }
     .bar-anim { transform-origin: bottom; animation: barPulse 3.5s ease-in-out infinite; }
     .node-pulse { animation: nodeBlink 2.5s ease-in-out infinite; }
     
-    .p-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 0.3px; }
+    .p-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; font-size: 20px; fill: #F8FAFC; letter-spacing: 0.3px; }
     .p-sub { font-family: "SFMono-Regular", Consolas, monospace; font-size: 13px; font-weight: 800; fill: #ED0C1F; letter-spacing: 1.5px; }
-    .p-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14.5px; fill: #E4E4E7; font-weight: 500; }
-    .p-stack { font-family: "SFMono-Regular", Consolas, monospace; font-size: 13px; fill: #D4D4D8; font-weight: 600; }
+    .p-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14.5px; fill: #CBD5E1; font-weight: 500; }
+    .p-stack { font-family: "SFMono-Regular", Consolas, monospace; font-size: 13px; fill: #94A3B8; font-weight: 600; }
     .p-metric { font-family: "SFMono-Regular", Consolas, monospace; font-size: 13.5px; font-weight: 800; fill: #ED0C1F; }
     .p-tag { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; font-weight: 700; fill: #FFFFFF; }
   </style>
 
-  <!-- Container Box -->
-  <rect x="1" y="1" width="1198" height="418" rx="22" fill="#060709" stroke="#1E1E24" stroke-width="1.5"/>
+  <!-- Container Box in Obsidian -->
+  <rect x="1" y="1" width="1198" height="418" rx="22" fill="#060709" stroke="#1E293B" stroke-width="1.5"/>
 
   <!-- ================= CARD 1: DATA ANALYTICS & BI ================= -->
   <g transform="translate(24, 24)">
-    <rect x="0" y="0" width="272" height="372" rx="16" fill="#0B0C12" stroke="url(#p-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="272" height="372" rx="16" fill="#0A0B10" stroke="url(#p-border)" stroke-width="1.2"/>
     <rect x="0" y="0" width="272" height="4" rx="2" fill="#ED0C1F"/>
     
     <!-- Header -->
@@ -76,12 +77,12 @@
     <!-- Visual 1: Solid Multi-Tier Executive KPI & Bar Chart -->
     <g transform="translate(18, 102)">
       <!-- Chart Solid Container -->
-      <rect x="0" y="0" width="236" height="116" rx="10" fill="#111219" stroke="#222330" stroke-width="1"/>
+      <rect x="0" y="0" width="236" height="116" rx="10" fill="#0F111A" stroke="#1E293B" stroke-width="1"/>
       
-      <!-- Grid Lines -->
-      <line x1="14" y1="30" x2="222" y2="30" stroke="#1E1F2B" stroke-width="1" stroke-dasharray="2 3"/>
-      <line x1="14" y1="60" x2="222" y2="60" stroke="#1E1F2B" stroke-width="1" stroke-dasharray="2 3"/>
-      <line x1="14" y1="90" x2="222" y2="90" stroke="#1E1F2B" stroke-width="1"/>
+      <!-- Grid Lines in Muted Silver -->
+      <line x1="14" y1="30" x2="222" y2="30" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 3"/>
+      <line x1="14" y1="60" x2="222" y2="60" stroke="#334155" stroke-width="0.8" stroke-dasharray="2 3"/>
+      <line x1="14" y1="90" x2="222" y2="90" stroke="#334155" stroke-width="0.8"/>
       
       <!-- Solid Bars with Glowing Caps -->
       <g transform="translate(0, 90)">
@@ -93,27 +94,27 @@
         <rect class="bar-anim" x="194" y="-84" width="20" height="84" rx="4" fill="url(#solid-bar-grad)"/>
       </g>
       
-      <!-- Solid White Trend Polyline with Red Glow -->
-      <polyline points="34,50 68,26 102,40 136,14 170,32 204,6" fill="none" stroke="#FFFFFF" stroke-width="2.5" filter="url(#subtle-glow)"/>
+      <!-- Solid Platinum Trend Polyline with Red Glow -->
+      <polyline points="34,50 68,26 102,40 136,14 170,32 204,6" fill="none" stroke="#F8FAFC" stroke-width="2.5" filter="url(#silver-sheen)"/>
       <circle cx="136" cy="14" r="4.5" fill="#ED0C1F" stroke="#FFFFFF" stroke-width="1.5"/>
       <circle cx="204" cy="6" r="4.5" fill="#ED0C1F" stroke="#FFFFFF" stroke-width="1.5"/>
 
-      <!-- KPI Tooltip Badge -->
-      <rect x="14" y="8" width="70" height="18" rx="5" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
-      <text class="p-tag" x="49" y="21" text-anchor="middle" fill="#ED0C1F">+34% ARR</text>
+      <!-- KPI Tooltip Badge: Platinum Border & Red Accent -->
+      <rect x="14" y="8" width="76" height="18" rx="5" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
+      <text class="p-tag" x="52" y="21" text-anchor="middle" fill="#ED0C1F">+34% ARR</text>
     </g>
 
     <!-- Details -->
     <text class="p-stack" x="20" y="248">MySQL · Power BI · Tableau</text>
     <text class="p-stack" x="20" y="270">Advanced Excel DAX · ETL</text>
-    <line x1="20" y1="290" x2="252" y2="290" stroke="#1E1E2E" stroke-width="1"/>
+    <line x1="20" y1="290" x2="252" y2="290" stroke="#1E293B" stroke-width="1"/>
     <text class="p-metric" x="20" y="318">FLAGSHIP: Adventure-Works</text>
     <text class="p-body" x="20" y="342" font-size="13">3M Capstone · Star-Schema ETL</text>
   </g>
 
   <!-- ================= CARD 2: DATA SCIENCE & CLINICAL ML ================= -->
   <g transform="translate(312, 24)">
-    <rect x="0" y="0" width="272" height="372" rx="16" fill="#0B0C12" stroke="url(#p-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="272" height="372" rx="16" fill="#0A0B10" stroke="url(#p-border)" stroke-width="1.2"/>
     <rect x="0" y="0" width="272" height="4" rx="2" fill="#ED0C1F"/>
     
     <!-- Header -->
@@ -123,42 +124,42 @@
 
     <!-- Visual 2: Solid Gaussian Distribution & SHAP Waterfall -->
     <g transform="translate(18, 102)">
-      <rect x="0" y="0" width="236" height="116" rx="10" fill="#111219" stroke="#222330" stroke-width="1"/>
+      <rect x="0" y="0" width="236" height="116" rx="10" fill="#0F111A" stroke="#1E293B" stroke-width="1"/>
       
       <!-- Shaded Gaussian Curve Area -->
       <path d="M16,96 Q70,96 95,60 Q118,18 140,60 Q165,96 220,96 Z" fill="url(#gaussian-fill)"/>
       <path d="M16,96 Q70,96 95,60 Q118,18 140,60 Q165,96 220,96" fill="none" stroke="#ED0C1F" stroke-width="2.8"/>
       
-      <!-- Threshold Vertical Decision Boundary -->
-      <line x1="118" y1="12" x2="118" y2="96" stroke="#FFFFFF" stroke-width="1.8" stroke-dasharray="3 3"/>
+      <!-- Threshold Vertical Decision Boundary in Platinum -->
+      <line x1="118" y1="12" x2="118" y2="96" stroke="#E2E8F0" stroke-width="1.8" stroke-dasharray="3 3"/>
       
       <!-- Solid Decision Badge -->
-      <rect x="124" y="16" width="98" height="20" rx="5" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
+      <rect x="124" y="16" width="98" height="20" rx="5" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
       <text class="p-tag" x="173" y="30" text-anchor="middle" fill="#FFFFFF">PP &gt; 50 mmHg</text>
 
       <!-- SHAP Waterfall Attribute Bars -->
       <g transform="translate(24, 76)">
         <rect x="0" y="0" width="56" height="7" rx="3.5" fill="#ED0C1F"/>
-        <rect x="62" y="0" width="34" height="7" rx="3.5" fill="#FFFFFF"/>
-        <text font-family="monospace" font-size="9" font-weight="700" fill="#A1A1AA" x="104" y="7">+0.42 SHAP</text>
+        <rect x="62" y="0" width="34" height="7" rx="3.5" fill="#E2E8F0"/>
+        <text font-family="monospace" font-size="9" font-weight="700" fill="#94A3B8" x="104" y="7">+0.42 SHAP</text>
       </g>
 
       <!-- Performance Pill -->
-      <rect x="14" y="12" width="76" height="18" rx="5" fill="#14141E" stroke="#2B2C3C" stroke-width="1"/>
-      <text class="p-tag" x="52" y="25" text-anchor="middle" fill="#ED0C1F">93% ACCURACY</text>
+      <rect x="14" y="12" width="82" height="18" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+      <text class="p-tag" x="55" y="25" text-anchor="middle" fill="#E2E8F0">93% ACCURACY</text>
     </g>
 
     <!-- Details -->
     <text class="p-stack" x="20" y="248">Python · XGBoost · TreeSHAP</text>
     <text class="p-stack" x="20" y="270">Clinical NLP · Scikit-Learn</text>
-    <line x1="20" y1="290" x2="252" y2="290" stroke="#1E1E2E" stroke-width="1"/>
+    <line x1="20" y1="290" x2="252" y2="290" stroke="#1E293B" stroke-width="1"/>
     <text class="p-metric" x="20" y="318">FLAGSHIP: SomnoSense</text>
     <text class="p-body" x="20" y="342" font-size="13">Pulse Pressure Arterial Triage</text>
   </g>
 
   <!-- ================= CARD 3: GEN AI & KNOWLEDGE SYSTEMS ================= -->
   <g transform="translate(600, 24)">
-    <rect x="0" y="0" width="272" height="372" rx="16" fill="#0B0C12" stroke="url(#p-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="272" height="372" rx="16" fill="#0A0B10" stroke="url(#p-border)" stroke-width="1.2"/>
     <rect x="0" y="0" width="272" height="4" rx="2" fill="#ED0C1F"/>
     
     <!-- Header -->
@@ -168,49 +169,49 @@
 
     <!-- Visual 3: Solid Neural Knowledge Lattice & Embedding Cluster -->
     <g transform="translate(18, 102)">
-      <rect x="0" y="0" width="236" height="116" rx="10" fill="#111219" stroke="#222330" stroke-width="1"/>
+      <rect x="0" y="0" width="236" height="116" rx="10" fill="#0F111A" stroke="#1E293B" stroke-width="1"/>
       
       <!-- Solid Laser Conduit Lines -->
       <line x1="36" y1="58" x2="98" y2="34" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
-      <line x1="36" y1="58" x2="90" y2="86" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
+      <line x1="36" y1="58" x2="90" y2="86" stroke="#475569" stroke-width="2" opacity="0.85"/>
       <line x1="98" y1="34" x2="162" y2="48" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
       <line x1="90" y1="86" x2="162" y2="48" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
-      <line x1="162" y1="48" x2="204" y2="76" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
+      <line x1="162" y1="48" x2="204" y2="76" stroke="#475569" stroke-width="2" opacity="0.85"/>
       
       <!-- Solid Glowing Vector Nodes -->
       <circle cx="36" cy="58" r="7" fill="#ED0C1F" filter="url(#p-glow)"/>
       <circle cx="36" cy="58" r="3" fill="#FFFFFF"/>
 
-      <circle cx="98" cy="34" r="8" fill="#ED0C1F" filter="url(#p-glow)"/>
-      <circle cx="98" cy="34" r="3.5" fill="#FFFFFF"/>
+      <circle cx="98" cy="34" r="8" fill="#E2E8F0" stroke="#060709" stroke-width="1.5"/>
+      <circle cx="98" cy="34" r="3.5" fill="#ED0C1F"/>
 
-      <circle cx="90" cy="86" r="6" fill="#FFFFFF"/>
+      <circle cx="90" cy="86" r="6" fill="#94A3B8"/>
 
       <circle class="node-pulse" cx="162" cy="48" r="10" fill="#ED0C1F" filter="url(#p-glow)"/>
       <circle cx="162" cy="48" r="4.5" fill="#FFFFFF"/>
 
-      <circle cx="204" cy="76" r="6" fill="#ED0C1F"/>
+      <circle cx="204" cy="76" r="6" fill="#E2E8F0"/>
 
       <!-- Knowledge Corpus Badge -->
-      <rect x="14" y="10" width="104" height="18" rx="5" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
-      <text class="p-tag" x="66" y="23" text-anchor="middle" fill="#FFFFFF">FAO · IPCC CORPUS</text>
+      <rect x="14" y="10" width="108" height="18" rx="5" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
+      <text class="p-tag" x="68" y="23" text-anchor="middle" fill="#FFFFFF">FAO · IPCC CORPUS</text>
 
-      <!-- Semantic Cosine Score -->
-      <rect x="142" y="90" width="80" height="18" rx="5" fill="#14141E" stroke="#2B2C3C" stroke-width="1"/>
-      <text class="p-tag" x="182" y="103" text-anchor="middle" fill="#ED0C1F">sim: 0.94</text>
+      <!-- Semantic Cosine Score in Platinum/Zinc -->
+      <rect x="140" y="90" width="82" height="18" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+      <text class="p-tag" x="181" y="103" text-anchor="middle" fill="#E2E8F0">sim: 0.94</text>
     </g>
 
     <!-- Details -->
     <text class="p-stack" x="20" y="248">Hybrid RAG · FAO/IPCC Corpus</text>
     <text class="p-stack" x="20" y="270">YOLOv8 · LiteLLM · PyTorch</text>
-    <line x1="20" y1="290" x2="252" y2="290" stroke="#1E1E2E" stroke-width="1"/>
+    <line x1="20" y1="290" x2="252" y2="290" stroke="#1E293B" stroke-width="1"/>
     <text class="p-metric" x="20" y="318">FLAGSHIP: Bio-Nexus</text>
     <text class="p-body" x="20" y="342" font-size="13">Google Cloud Certified GenAI</text>
   </g>
 
   <!-- ================= CARD 4: FULL-STACK & SYSTEMS RESILIENCE ================= -->
   <g transform="translate(888, 24)">
-    <rect x="0" y="0" width="288" height="372" rx="16" fill="#0B0C12" stroke="url(#p-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="288" height="372" rx="16" fill="#0A0B10" stroke="url(#p-border)" stroke-width="1.2"/>
     <rect x="0" y="0" width="288" height="4" rx="2" fill="#ED0C1F"/>
     
     <!-- Header -->
@@ -220,44 +221,44 @@
 
     <!-- Visual 4: Solid 14-Status Pipeline Architecture & Telemetry -->
     <g transform="translate(18, 102)">
-      <rect x="0" y="0" width="252" height="116" rx="10" fill="#111219" stroke="#222330" stroke-width="1"/>
+      <rect x="0" y="0" width="252" height="116" rx="10" fill="#0F111A" stroke="#1E293B" stroke-width="1"/>
       
       <!-- Pipeline Track Rail -->
-      <line x1="20" y1="58" x2="232" y2="58" stroke="#1E1F2B" stroke-width="3"/>
-      <line x1="20" y1="58" x2="168" y2="58" stroke="#ED0C1F" stroke-width="3.5" filter="url(#subtle-glow)"/>
+      <line x1="20" y1="58" x2="232" y2="58" stroke="#334155" stroke-width="3"/>
+      <line x1="20" y1="58" x2="168" y2="58" stroke="#ED0C1F" stroke-width="3.5" filter="url(#silver-sheen)"/>
       
       <!-- Stage 1 Block -->
       <rect x="18" y="44" width="36" height="28" rx="6" fill="#ED0C1F"/>
       <text font-family="monospace" font-size="11" font-weight="900" fill="#FFFFFF" x="36" y="62" text-anchor="middle">01</text>
-      <text font-family="monospace" font-size="9" font-weight="700" fill="#E4E4E7" x="36" y="86" text-anchor="middle">INGEST</text>
+      <text font-family="monospace" font-size="9" font-weight="700" fill="#E2E8F0" x="36" y="86" text-anchor="middle">INGEST</text>
 
       <!-- Stage 2 Block -->
       <rect x="74" y="44" width="36" height="28" rx="6" fill="#ED0C1F"/>
       <text font-family="monospace" font-size="11" font-weight="900" fill="#FFFFFF" x="92" y="62" text-anchor="middle">02</text>
-      <text font-family="monospace" font-size="9" font-weight="700" fill="#E4E4E7" x="92" y="86" text-anchor="middle">MATCH</text>
+      <text font-family="monospace" font-size="9" font-weight="700" fill="#E2E8F0" x="92" y="86" text-anchor="middle">MATCH</text>
 
-      <!-- Stage 3 Block -->
-      <rect x="130" y="44" width="36" height="28" rx="6" fill="#ED0C1F"/>
-      <text font-family="monospace" font-size="11" font-weight="900" fill="#FFFFFF" x="148" y="62" text-anchor="middle">03</text>
-      <text font-family="monospace" font-size="9" font-weight="700" fill="#E4E4E7" x="148" y="86" text-anchor="middle">SCORE</text>
+      <!-- Stage 3 Block (Machined Platinum) -->
+      <rect x="130" y="44" width="36" height="28" rx="6" fill="#E2E8F0"/>
+      <text font-family="monospace" font-size="11" font-weight="900" fill="#060709" x="148" y="62" text-anchor="middle">03</text>
+      <text font-family="monospace" font-size="9" font-weight="700" fill="#E2E8F0" x="148" y="86" text-anchor="middle">SCORE</text>
 
       <!-- Stage 4 Block (Target) -->
-      <rect x="186" y="44" width="36" height="28" rx="6" fill="#181822" stroke="#ED0C1F" stroke-width="1.8"/>
+      <rect x="186" y="44" width="36" height="28" rx="6" fill="#140608" stroke="#ED0C1F" stroke-width="1.8"/>
       <text font-family="monospace" font-size="11" font-weight="900" fill="#ED0C1F" x="204" y="62" text-anchor="middle">04</text>
       <text font-family="monospace" font-size="9" font-weight="700" fill="#ED0C1F" x="204" y="86" text-anchor="middle">WARN</text>
 
       <!-- Latency & State Badges -->
-      <rect x="14" y="10" width="84" height="18" rx="5" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
-      <text class="p-tag" x="56" y="23" text-anchor="middle" fill="#FFFFFF">&lt; 12ms SSE</text>
+      <rect x="14" y="10" width="86" height="18" rx="5" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
+      <text class="p-tag" x="57" y="23" text-anchor="middle" fill="#FFFFFF">&lt; 12ms SSE</text>
 
-      <rect x="148" y="10" width="90" height="18" rx="5" fill="#14141E" stroke="#2B2C3C" stroke-width="1"/>
-      <text class="p-tag" x="193" y="23" text-anchor="middle" fill="#ED0C1F">14-STATE LOCK</text>
+      <rect x="146" y="10" width="94" height="18" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+      <text class="p-tag" x="193" y="23" text-anchor="middle" fill="#E2E8F0">14-STATE LOCK</text>
     </g>
 
     <!-- Details -->
     <text class="p-stack" x="20" y="248">React 19 · TypeScript · FastAPI</text>
     <text class="p-stack" x="20" y="270">WebSockets · Supabase · Docker</text>
-    <line x1="20" y1="290" x2="268" y2="290" stroke="#1E1E2E" stroke-width="1"/>
+    <line x1="20" y1="290" x2="268" y2="290" stroke="#1E293B" stroke-width="1"/>
     <text class="p-metric" x="20" y="318">FLAGSHIP: sentinel-grid</text>
     <text class="p-body" x="20" y="342" font-size="13">6M GenAI Workspace (NDA)</text>
   </g>
