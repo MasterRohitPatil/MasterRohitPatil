@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="Rohit Patil — GitHub &amp; Professional Telemetry Metrics">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="Rohit Patil — GitHub Live Engineering Telemetry">
   <defs>
+    <!-- Brushed Titanium & Red Border -->
     <linearGradient id="stat-border" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#E2E8F0" stop-opacity="0.8"/>
       <stop offset="40%" stop-color="#334155" stop-opacity="0.3"/>
@@ -18,7 +19,7 @@
   <style>
     @keyframes pulseLed {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.9); }
+      50% { opacity: 0.35; transform: scale(0.9); }
     }
     .led-live { animation: pulseLed 2s infinite ease-in-out; }
     
@@ -31,10 +32,28 @@
   <!-- Container Box in Obsidian -->
   <rect x="1" y="1" width="1198" height="238" rx="20" fill="#060709" stroke="#1E293B" stroke-width="1.5"/>
 
-  <!-- ================= 4 METRICS CARDS ================= -->
+  <!-- ================= 4 DYNAMIC TELEMETRY CARDS ================= -->
 
-  <!-- CARD 1: CODEBASE REFACTOR & ARCHITECTURE -->
+  <!-- CARD 1: LIVE COMMITS & CONTRIBUTIONS -->
   <g transform="translate(24, 24)">
+    <rect x="0" y="0" width="270" height="192" rx="14" fill="#0A0B10" stroke="url(#stat-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="stat-header" x="20" y="32">LIVE GITHUB ACTIVITY</text>
+    <text class="stat-val" x="20" y="68">94+ Commits</text>
+    <text class="stat-desc" x="20" y="94">128 Contributions (Active Year)</text>
+    <text class="stat-desc" x="20" y="114">Public &amp; Private Repo History</text>
+
+    <!-- Verified Badge -->
+    <g transform="translate(20, 142)">
+      <rect x="0" y="0" width="168" height="26" rx="6" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
+      <circle class="led-live" cx="14" cy="13" r="4" fill="#ED0C1F" filter="url(#stat-glow)"/>
+      <text class="stat-badge" x="26" y="17" fill="#ED0C1F">GITHUB API VERIFIED</text>
+    </g>
+  </g>
+
+  <!-- CARD 2: PRODUCTION REPOSITORIES -->
+  <g transform="translate(312, 24)">
     <rect x="0" y="0" width="270" height="192" rx="14" fill="#0A0B10" stroke="url(#stat-border)" stroke-width="1.2"/>
     <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#ED0C1F"/>
     
@@ -51,12 +70,12 @@
     </g>
   </g>
 
-  <!-- CARD 2: INDUSTRY EXPERIENCE -->
-  <g transform="translate(312, 24)">
+  <!-- CARD 3: INDUSTRY RECORD -->
+  <g transform="translate(600, 24)">
     <rect x="0" y="0" width="270" height="192" rx="14" fill="#0A0B10" stroke="url(#stat-border)" stroke-width="1.2"/>
     <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#ED0C1F"/>
     
-    <text class="stat-header" x="20" y="32">INDUSTRY RECORD</text>
+    <text class="stat-header" x="20" y="32">INDUSTRY TRACK RECORD</text>
     <text class="stat-val" x="20" y="68">10M Cumulative</text>
     <text class="stat-desc" x="20" y="94">6M GenAI / Multi-LLM (NDA)</text>
     <text class="stat-desc" x="20" y="114">3M BI Capstone · 1M Cloud</text>
@@ -69,39 +88,21 @@
     </g>
   </g>
 
-  <!-- CARD 3: INSTITUTIONAL LEADERSHIP -->
-  <g transform="translate(600, 24)">
-    <rect x="0" y="0" width="270" height="192" rx="14" fill="#0A0B10" stroke="url(#stat-border)" stroke-width="1.2"/>
-    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#ED0C1F"/>
-    
-    <text class="stat-header" x="20" y="32">CAMPUS LEADERSHIP</text>
-    <text class="stat-val" x="20" y="68" font-size="21">TNP Stream Head</text>
-    <text class="stat-desc" x="20" y="94">Training &amp; Placement (AIML)</text>
-    <text class="stat-desc" x="20" y="114">Ex-GDG &amp; Ex-CSI Coordinator</text>
-
-    <!-- Verified Badge -->
-    <g transform="translate(20, 142)">
-      <rect x="0" y="0" width="168" height="26" rx="6" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
-      <circle class="led-live" cx="14" cy="13" r="4" fill="#ED0C1F" filter="url(#stat-glow)"/>
-      <text class="stat-badge" x="26" y="17" fill="#ED0C1F">GOVERNANCE &amp; PLACEMENT</text>
-    </g>
-  </g>
-
-  <!-- CARD 4: ATHLETIC ENDURANCE & GRIT -->
+  <!-- CARD 4: GOVERNANCE & ATHLETIC DISCIPLINE -->
   <g transform="translate(888, 24)">
     <rect x="0" y="0" width="288" height="192" rx="14" fill="#0A0B10" stroke="url(#stat-border)" stroke-width="1.2"/>
     <rect x="0" y="0" width="288" height="3" rx="1.5" fill="#ED0C1F"/>
     
-    <text class="stat-header" x="20" y="32">ENDURANCE &amp; DISCIPLINE</text>
-    <text class="stat-val" x="20" y="68" font-size="20">Triathlete · 5KM Swimmer</text>
-    <text class="stat-desc" x="20" y="94">Open-Ocean (2x 5KM, 1x 3KM)</text>
-    <text class="stat-desc" x="20" y="114">Karate Golden Brown Belt</text>
+    <text class="stat-header" x="20" y="32">LEADERSHIP &amp; ENDURANCE</text>
+    <text class="stat-val" x="20" y="68" font-size="20">TNP Head · Triathlete</text>
+    <text class="stat-desc" x="20" y="94">Training &amp; Placement (AIML)</text>
+    <text class="stat-desc" x="20" y="114">2x 5KM Ocean Swims · Karate</text>
 
     <!-- Verified Badge -->
     <g transform="translate(20, 142)">
       <rect x="0" y="0" width="176" height="26" rx="6" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
       <circle class="led-live" cx="14" cy="13" r="4" fill="#ED0C1F" filter="url(#stat-glow)"/>
-      <text class="stat-badge" x="26" y="17" fill="#ED0C1F">PHYSICAL RESILIENCE</text>
+      <text class="stat-badge" x="26" y="17" fill="#ED0C1F">CAMPUS &amp; PHYSICAL GRIT</text>
     </g>
   </g>
 </svg>
