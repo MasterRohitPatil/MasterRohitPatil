@@ -21,12 +21,6 @@
 
 ---
 
-<p align="center">
-  <img src="./assets/github-stats.svg" alt="Verified Engineering &amp; Operational Telemetry" width="100%"/>
-</p>
-
----
-
 <h3 align="center">CONTRIBUTION MATRIX</h3>
 
 <div align="center">
@@ -136,7 +130,8 @@
 <div align="center">
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MasterRohitPatil&hide_border=true&border_radius=12&background=060709&stroke=1E1E24&ring=ED0C1F&fire=ED0C1F&currStreakLabel=ffffff&sideLabels=a1a1aa&currStreakNum=ffffff&sideNums=ffffff&dates=a1a1aa" width="70%" alt="GitHub Streak" />
+  <img src="./assets/github-stats.svg" width="49%" alt="Rohit Patil's GitHub Stats" />&nbsp;
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MasterRohitPatil&hide_border=true&border_radius=12&background=060709&stroke=1E1E24&ring=ED0C1F&fire=ED0C1F&currStreakLabel=ffffff&sideLabels=a1a1aa&currStreakNum=ffffff&sideNums=ffffff&dates=a1a1aa" width="49%" alt="GitHub Streak" />
 </p>
 
 <img src="https://komarev.com/ghpvc/?username=MasterRohitPatil&style=for-the-badge&color=ED0C1F&label=SYSTEM+TELEMETRY+VISITS" alt="Profile Views" />
