@@ -59,7 +59,6 @@ def fetch_github_stats(username, token):
     except Exception as e:
         print(f"GraphQL request error: {e}")
     
-    # Accurate fallback
     return {
         "total_contributions": 158,
         "total_commits": 153,
@@ -76,102 +75,176 @@ def generate_svg(stats, output_path):
     issues = stats["total_issues"]
     contrib = stats["total_contributions"]
     
-    # Exact 495 x 195 dimensions matching github-readme-stats & streak stats
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195" role="img" aria-label="ROHIT PATIL's GitHub Stats">
-  <defs>
-    <linearGradient id="card-grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0E1017"/>
-      <stop offset="100%" stop-color="#060709"/>
-    </linearGradient>
-
-    <linearGradient id="ring-grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ED0C1F"/>
-      <stop offset="100%" stop-color="#FF4D5E"/>
-    </linearGradient>
-
-    <filter id="red-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
-
+    svg = f"""<svg
+  width="467"
+  height="195"
+  viewBox="0 0 467 195"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="descId"
+>
+  <title id="titleId">ROHIT PATIL's GitHub Stats, Rank: A+</title>
+  <desc id="descId">Total Stars Earned: {stars}, Total Commits (last year): {commits}, Total PRs: {prs}, Total Issues: {issues}, Contributed to (last year): {contrib}</desc>
   <style>
-    .header {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: 800; fill: #FFFFFF; letter-spacing: 0.5px; }}
-    .stat-label {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: #CBD5E1; }}
-    .stat-val {{ font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 14px; font-weight: 800; fill: #FFFFFF; }}
-    .grade-text {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 32px; font-weight: 900; fill: #FFFFFF; text-anchor: middle; dominant-baseline: central; }}
-    @keyframes pulseRing {{
-      0%, 100% {{ filter: drop-shadow(0 0 6px rgba(237,12,31,0.6)); }}
-      50% {{ filter: drop-shadow(0 0 16px rgba(237,12,31,0.95)); }}
+    .header {{
+      font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+      fill: #ffffff;
+      animation: fadeInAnimation 0.8s ease-in-out forwards;
     }}
-    .grade-ring {{ animation: pulseRing 3s ease-in-out infinite; }}
+    @supports(-moz-appearance: auto) {{
+      .header {{ font-size: 15.5px; }}
+    }}
+    
+    .stat {{
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif;
+      fill: #b4b4bd;
+    }}
+    @supports(-moz-appearance: auto) {{
+      .stat {{ font-size: 12px; }}
+    }}
+    .stagger {{
+      opacity: 0;
+      animation: fadeInAnimation 0.3s ease-in-out forwards;
+    }}
+    .rank-text {{
+      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif;
+      fill: #ffffff;
+      animation: scaleInAnimation 0.3s ease-in-out forwards;
+    }}
+    
+    .not_bold {{ font-weight: 400; }}
+    .bold {{ font-weight: 700; }}
+    .icon {{
+      fill: #ED0C1F;
+      display: block;
+    }}
+
+    .rank-circle-rim {{
+      stroke: #27272a;
+      fill: none;
+      stroke-width: 6;
+      opacity: 0.8;
+    }}
+    .rank-circle {{
+      stroke: #ED0C1F;
+      stroke-dasharray: 250;
+      fill: none;
+      stroke-width: 6;
+      stroke-linecap: round;
+      opacity: 0.95;
+      transform-origin: -10px 8px;
+      transform: rotate(-90deg);
+      animation: rankAnimation 1s forwards ease-in-out;
+    }}
+    
+    @keyframes rankAnimation {{
+      from {{
+        stroke-dashoffset: 251.32741228718345;
+      }}
+      to {{
+        stroke-dashoffset: 65;
+      }}
+    }}
+    
+    @keyframes scaleInAnimation {{
+      from {{
+        transform: translate(-5px, 5px) scale(0);
+      }}
+      to {{
+        transform: translate(-5px, 5px) scale(1);
+      }}
+    }}
+    @keyframes fadeInAnimation {{
+      from {{
+        opacity: 0;
+      }}
+      to {{
+        opacity: 1;
+      }}
+    }}
   </style>
 
-  <!-- Background Box matching Streak Stats -->
-  <rect x="1" y="1" width="493" height="193" rx="12" fill="url(#card-grad)" stroke="#1E1E24" stroke-width="1.5"/>
+  <rect
+    data-testid="card-bg"
+    x="0.5"
+    y="0.5"
+    rx="16"
+    height="99%"
+    stroke="#27272a"
+    width="466"
+    fill="#050505"
+    stroke-opacity="1"
+  />
 
-  <!-- Title -->
-  <text class="header" x="25" y="35">ROHIT PATIL's GitHub Stats</text>
-
-  <!-- ================= STATS LIST ================= -->
-  
-  <!-- 1. Total Stars Earned -->
-  <g transform="translate(25, 48)">
-    <!-- Star Icon -->
-    <path d="M10,1 L12.5,6.5 L18.5,7.3 L14,11.5 L15.2,17.5 L10,14.5 L4.8,17.5 L6,11.5 L1.5,7.3 L7.5,6.5 Z" fill="none" stroke="#ED0C1F" stroke-width="1.8" filter="url(#red-glow)"/>
-    <text class="stat-label" x="28" y="14">Total Stars Earned:</text>
-    <text class="stat-val" x="230" y="14">{stars}</text>
+  <g data-testid="card-title" transform="translate(25, 35)">
+    <g transform="translate(0, 0)">
+      <text x="0" y="0" class="header" data-testid="header">ROHIT PATIL's GitHub Stats</text>
+    </g>
   </g>
 
-  <!-- 2. Total Commits -->
-  <g transform="translate(25, 75)">
-    <!-- History/Clock Icon -->
-    <circle cx="10" cy="10" r="7" fill="none" stroke="#ED0C1F" stroke-width="1.8" filter="url(#red-glow)"/>
-    <polyline points="10,6 10,10 13,12" fill="none" stroke="#ED0C1F" stroke-width="1.8"/>
-    <text class="stat-label" x="28" y="14">Total Commits (2025/26):</text>
-    <text class="stat-val" x="230" y="14">{commits}</text>
-  </g>
+  <g data-testid="main-card-body" transform="translate(0, 55)">
+    <g data-testid="rank-circle" transform="translate(390.5, 47.5)">
+      <circle class="rank-circle-rim" cx="-10" cy="8" r="40" />
+      <circle class="rank-circle" cx="-10" cy="8" r="40" />
+      <g class="rank-text">
+        <text x="-10" y="8" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" data-testid="level-rank-icon">
+          A+
+        </text>
+      </g>
+    </g>
 
-  <!-- 3. Total PRs -->
-  <g transform="translate(25, 102)">
-    <!-- Pull Request Icon -->
-    <circle cx="6" cy="6" r="2.5" fill="none" stroke="#ED0C1F" stroke-width="1.8" filter="url(#red-glow)"/>
-    <circle cx="6" cy="14" r="2.5" fill="none" stroke="#ED0C1F" stroke-width="1.8" filter="url(#red-glow)"/>
-    <circle cx="14" cy="9" r="2.5" fill="none" stroke="#ED0C1F" stroke-width="1.8" filter="url(#red-glow)"/>
-    <path d="M6,8.5 L6,11.5 M14,11.5 L14,13 A2,2 0 0,1 12,15 L8.5,15" fill="none" stroke="#ED0C1F" stroke-width="1.6"/>
-    <text class="stat-label" x="28" y="14">Total PRs:</text>
-    <text class="stat-val" x="230" y="14">{prs}</text>
-  </g>
+    <svg x="0" y="0">
+      <g transform="translate(0, 0)">
+        <g class="stagger" style="animation-delay: 450ms" transform="translate(25, 0)">
+          <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+            <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/>
+          </svg>
+          <text class="stat bold" x="25" y="12.5">Total Stars Earned:</text>
+          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="stars">{stars}</text>
+        </g>
+      </g>
 
-  <!-- 4. Total Issues -->
-  <g transform="translate(25, 129)">
-    <!-- Issue Icon -->
-    <circle cx="10" cy="10" r="7" fill="none" stroke="#ED0C1F" stroke-width="1.8" filter="url(#red-glow)"/>
-    <line x1="10" y1="6" x2="10" y2="10" stroke="#ED0C1F" stroke-width="1.8"/>
-    <circle cx="10" cy="13" r="0.9" fill="#ED0C1F"/>
-    <text class="stat-label" x="28" y="14">Total Issues:</text>
-    <text class="stat-val" x="230" y="14">{issues}</text>
-  </g>
+      <g transform="translate(0, 25)">
+        <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
+          <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+            <path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"/>
+          </svg>
+          <text class="stat bold" x="25" y="12.5">Total Commits (last year):</text>
+          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="commits">{commits}</text>
+        </g>
+      </g>
 
-  <!-- 5. Contributed to (last year) -->
-  <g transform="translate(25, 156)">
-    <!-- Repo Book Icon -->
-    <path d="M4,4 L14,4 A2,2 0 0,1 16,6 L16,16 L10,13 L4,16 Z" fill="none" stroke="#ED0C1F" stroke-width="1.8" filter="url(#red-glow)"/>
-    <text class="stat-label" x="28" y="14">Contributed to (last year):</text>
-    <text class="stat-val" x="230" y="14">{contrib}</text>
-  </g>
+      <g transform="translate(0, 50)">
+        <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
+          <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+            <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
+          </svg>
+          <text class="stat bold" x="25" y="12.5">Total PRs:</text>
+          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="prs">{prs}</text>
+        </g>
+      </g>
 
-  <!-- ================= RIGHT GRADE RING ================= -->
-  <g class="grade-ring" transform="translate(415, 110)">
-    <!-- Background Track Ring -->
-    <circle cx="0" cy="0" r="42" fill="none" stroke="#1E202B" stroke-width="7"/>
-    <!-- Active Progress Arc in Electric Red (85% progress for A+) -->
-    <circle cx="0" cy="0" r="42" fill="none" stroke="url(#ring-grad)" stroke-width="7" stroke-dasharray="210 264" stroke-dashoffset="30" stroke-linecap="round"/>
-    <!-- Grade Letter -->
-    <text class="grade-text" x="0" y="0">A+</text>
+      <g transform="translate(0, 75)">
+        <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
+          <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+            <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"/>
+          </svg>
+          <text class="stat bold" x="25" y="12.5">Total Issues:</text>
+          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="issues">{issues}</text>
+        </g>
+      </g>
+
+      <g transform="translate(0, 100)">
+        <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
+          <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+            <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"/>
+          </svg>
+          <text class="stat bold" x="25" y="12.5">Contributed to (last year):</text>
+          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="contribs">{contrib}</text>
+        </g>
+      </g>
+    </svg>
   </g>
 </svg>"""
     
@@ -186,6 +259,6 @@ if __name__ == "__main__":
     username = os.getenv("GITHUB_USER", "MasterRohitPatil")
     token = os.getenv("GITHUB_TOKEN")
     stats = fetch_github_stats(username, token)
-    output_path = os.path.join(os.path.dirname(__file__), "..", "assets", "github-stats.svg")
+    output_path = os.path.join(os.path.dirname(__file__), "..", "assets", "stats.svg")
     output_path = os.path.abspath(output_path)
     generate_svg(stats, output_path)

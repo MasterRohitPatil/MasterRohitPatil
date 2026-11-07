@@ -39,5 +39,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assets/github-stats.svg
+          git add assets/stats.svg
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update live github telemetry stats [skip ci]" && git push)

@@ -130,8 +130,8 @@
 <div align="center">
 
 <p align="center">
-  <img src="./assets/github-stats.svg" width="49%" alt="Rohit Patil's GitHub Stats" />&nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MasterRohitPatil&hide_border=true&border_radius=12&background=060709&stroke=1E1E24&ring=ED0C1F&fire=ED0C1F&currStreakLabel=ffffff&sideLabels=a1a1aa&currStreakNum=ffffff&sideNums=ffffff&dates=a1a1aa" width="49%" alt="GitHub Streak" />
+  <img src="./assets/stats.svg?v=1" width="49%" alt="Rohit Patil's GitHub Stats" />&nbsp;
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MasterRohitPatil&hide_border=true&border_radius=16&background=050505&stroke=27272a&ring=ED0C1F&fire=ED0C1F&currStreakLabel=ffffff&sideLabels=b4b4bd&currStreakNum=ffffff&sideNums=ffffff&dates=b4b4bd" width="49%" alt="GitHub Streak" />
 </p>
 
 <img src="https://komarev.com/ghpvc/?username=MasterRohitPatil&style=for-the-badge&color=ED0C1F&label=SYSTEM+TELEMETRY+VISITS" alt="Profile Views" />
