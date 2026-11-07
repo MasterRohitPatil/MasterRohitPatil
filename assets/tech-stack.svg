@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-label="Rohit Patil — Technical Arsenal &amp; Core Capabilities">
+  <defs>
+    <linearGradient id="stack-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#27272A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <linearGradient id="header-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ED0C1F"/>
+      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="stack-glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .cat-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 800; fill: #FFFFFF; letter-spacing: 0.5px; }
+    .cat-track { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; font-weight: 800; fill: #ED0C1F; letter-spacing: 1.5px; }
+    .chip-text { font-family: "SFMono-Regular", Consolas, monospace; font-size: 12.5px; font-weight: 600; fill: #E4E4E7; }
+    .header-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 19px; font-weight: 900; fill: #FFFFFF; letter-spacing: 1px; }
+    .header-sub { font-family: "SFMono-Regular", Consolas, monospace; font-size: 12px; font-weight: 700; fill: #ED0C1F; letter-spacing: 2px; }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="1" y="1" width="1198" height="378" rx="20" fill="#060709" stroke="#1E1E24" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <g transform="translate(24, 28)">
+    <rect x="0" y="0" width="4" height="24" rx="2" fill="#ED0C1F"/>
+    <text class="header-sub" x="16" y="12">PRODUCTION ARSENAL</text>
+    <text class="header-title" x="16" y="32">TECHNICAL STACK &amp; CAPABILITIES</text>
+  </g>
+
+  <!-- ================= 5 CATEGORIZED MODULES ================= -->
+
+  <!-- 1. LANGUAGES & QUERY (Col 1: x=24, w=220) -->
+  <g transform="translate(24, 76)">
+    <rect x="0" y="0" width="220" height="280" rx="14" fill="#0B0C12" stroke="url(#stack-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="220" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="cat-track" x="16" y="26">MODULE 01</text>
+    <text class="cat-title" x="16" y="46">Languages &amp; Query</text>
+
+    <!-- Chips -->
+    <g transform="translate(14, 62)">
+      <!-- Item 1 -->
+      <rect x="0" y="0" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="15" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="20">Python 3.12</text>
+
+      <!-- Item 2 -->
+      <rect x="0" y="36" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="51" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="56">TypeScript / JS</text>
+
+      <!-- Item 3 -->
+      <rect x="0" y="72" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="92">SQL (MySQL &amp; Postgres)</text>
+
+      <!-- Item 4 -->
+      <rect x="0" y="108" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="123" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="128">Advanced DAX / M</text>
+
+      <!-- Item 5 -->
+      <rect x="0" y="144" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="164">Bash / Shell CLI</text>
+
+      <!-- Item 6 -->
+      <rect x="0" y="180" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="200">HTML5 &amp; CSS3</text>
+    </g>
+  </g>
+
+  <!-- 2. MACHINE LEARNING & XAI (Col 2: x=260, w=220) -->
+  <g transform="translate(260, 76)">
+    <rect x="0" y="0" width="220" height="280" rx="14" fill="#0B0C12" stroke="url(#stack-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="220" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="cat-track" x="16" y="26">MODULE 02</text>
+    <text class="cat-title" x="16" y="46">Machine Learning</text>
+
+    <!-- Chips -->
+    <g transform="translate(14, 62)">
+      <rect x="0" y="0" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="15" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="20">PyTorch</text>
+
+      <rect x="0" y="36" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="51" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="56">XGBoost &amp; LightGBM</text>
+
+      <rect x="0" y="72" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="92">TreeSHAP Explainability</text>
+
+      <rect x="0" y="108" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="123" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="128">Scikit-Learn</text>
+
+      <rect x="0" y="144" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="164">YOLOv8 &amp; OpenCV</text>
+
+      <rect x="0" y="180" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="200">Clinical NLP Triage</text>
+    </g>
+  </g>
+
+  <!-- 3. GEN AI & RAG (Col 3: x=496, w=220) -->
+  <g transform="translate(496, 76)">
+    <rect x="0" y="0" width="220" height="280" rx="14" fill="#0B0C12" stroke="url(#stack-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="220" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="cat-track" x="16" y="26">MODULE 03</text>
+    <text class="cat-title" x="16" y="46">Generative AI &amp; RAG</text>
+
+    <!-- Chips -->
+    <g transform="translate(14, 62)">
+      <rect x="0" y="0" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="15" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="20">Hybrid RAG Pipelines</text>
+
+      <rect x="0" y="36" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="51" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="56">LiteLLM Broadcast</text>
+
+      <rect x="0" y="72" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="92">Vector Embeddings</text>
+
+      <rect x="0" y="108" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="123" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="128">Anti-Hallucination</text>
+
+      <rect x="0" y="144" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="164">Multi-Agent Systems</text>
+
+      <rect x="0" y="180" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="200">Google Cloud GenAI</text>
+    </g>
+  </g>
+
+  <!-- 4. FULL-STACK & SYSTEMS (Col 4: x=732, w=220) -->
+  <g transform="translate(732, 76)">
+    <rect x="0" y="0" width="220" height="280" rx="14" fill="#0B0C12" stroke="url(#stack-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="220" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="cat-track" x="16" y="26">MODULE 04</text>
+    <text class="cat-title" x="16" y="46">Full-Stack &amp; Systems</text>
+
+    <!-- Chips -->
+    <g transform="translate(14, 62)">
+      <rect x="0" y="0" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="15" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="20">React 19 &amp; Vite</text>
+
+      <rect x="0" y="36" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="51" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="56">FastAPI (Python)</text>
+
+      <rect x="0" y="72" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="92">WebSockets &amp; SSE</text>
+
+      <rect x="0" y="108" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="123" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="128">Supabase &amp; SQLite</text>
+
+      <rect x="0" y="144" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="164">Tailwind CSS v4</text>
+
+      <rect x="0" y="180" width="192" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="200">Docker &amp; CI/CD</text>
+    </g>
+  </g>
+
+  <!-- 5. ANALYTICS & BI (Col 5: x=968, w=208) -->
+  <g transform="translate(968, 76)">
+    <rect x="0" y="0" width="208" height="280" rx="14" fill="#0B0C12" stroke="url(#stack-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="208" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="cat-track" x="16" y="26">MODULE 05</text>
+    <text class="cat-title" x="16" y="46">Analytics &amp; BI</text>
+
+    <!-- Chips -->
+    <g transform="translate(14, 62)">
+      <rect x="0" y="0" width="180" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="15" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="20">Power BI (.pbix)</text>
+
+      <rect x="0" y="36" width="180" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="51" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="56">Tableau (.twbx)</text>
+
+      <rect x="0" y="72" width="180" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="92">Star-Schema ETL</text>
+
+      <rect x="0" y="108" width="180" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="123" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="128">Dimensional Models</text>
+
+      <rect x="0" y="144" width="180" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="164">Executive KPIs</text>
+
+      <rect x="0" y="180" width="180" height="30" rx="7" fill="#12131C" stroke="#222330"/>
+      <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
+      <text class="chip-text" x="28" y="200">Advanced Excel DAX</text>
+    </g>
+  </g>
+</svg>

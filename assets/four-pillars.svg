@@ -1,23 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Rohit Patil — 4 Engineering Career Domains">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Rohit Patil — 4 Career Tracks: Data Analytics, Data Science, AI Systems, Fullstack">
   <defs>
+    <!-- Card Border Gradient -->
     <linearGradient id="p-border" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.5"/>
-      <stop offset="50%" stop-color="#27272A" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#F97316" stop-opacity="0.4"/>
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#27272A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.6"/>
     </linearGradient>
 
-    <linearGradient id="spark-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0"/>
+    <!-- Solid Bar Chart Gradient -->
+    <linearGradient id="solid-bar-grad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#55070D"/>
+      <stop offset="40%" stop-color="#99111C"/>
+      <stop offset="85%" stop-color="#ED0C1F"/>
+      <stop offset="100%" stop-color="#FF6B78"/>
     </linearGradient>
 
-    <linearGradient id="bar-grad" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0%" stop-color="#E11D48"/>
-      <stop offset="100%" stop-color="#FB923C"/>
+    <!-- Gaussian Area Fill Gradient -->
+    <linearGradient id="gaussian-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="#ED0C1F" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.0"/>
     </linearGradient>
 
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
+    <!-- Red Neon Glow Filter -->
+    <filter id="p-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="subtle-glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -26,178 +41,224 @@
   </defs>
 
   <style>
-    @keyframes pulseNode {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.3); opacity: 1; filter: drop-shadow(0 0 6px #F43F5E); }
-    }
-    @keyframes barGrow {
-      0%, 100% { transform: scaleY(0.9); }
+    @keyframes barPulse {
+      0%, 100% { transform: scaleY(0.94); }
       50% { transform: scaleY(1.05); }
     }
-    .node-anim { transform-origin: center; animation: pulseNode 3s ease-in-out infinite; }
-    .bar-anim { transform-origin: bottom; animation: barGrow 4s ease-in-out infinite; }
+    @keyframes nodeBlink {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 0.4; }
+    }
+    .bar-anim { transform-origin: bottom; animation: barPulse 3.5s ease-in-out infinite; }
+    .node-pulse { animation: nodeBlink 2.5s ease-in-out infinite; }
     
-    .p-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; font-size: 15px; fill: #FFFFFF; letter-spacing: 0.5px; }
-    .p-sub { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; font-weight: 700; fill: #F43F5E; letter-spacing: 1.5px; }
-    .p-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12.5px; fill: #A1A1AA; }
-    .p-stack { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; fill: #E4E4E7; font-weight: 500; }
-    .p-metric { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; font-weight: 700; fill: #F97316; }
+    .p-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 0.3px; }
+    .p-sub { font-family: "SFMono-Regular", Consolas, monospace; font-size: 13px; font-weight: 800; fill: #ED0C1F; letter-spacing: 1.5px; }
+    .p-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14.5px; fill: #E4E4E7; font-weight: 500; }
+    .p-stack { font-family: "SFMono-Regular", Consolas, monospace; font-size: 13px; fill: #D4D4D8; font-weight: 600; }
+    .p-metric { font-family: "SFMono-Regular", Consolas, monospace; font-size: 13.5px; font-weight: 800; fill: #ED0C1F; }
+    .p-tag { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; font-weight: 700; fill: #FFFFFF; }
   </style>
 
   <!-- Container Box -->
-  <rect x="1" y="1" width="1198" height="358" rx="20" fill="#08080D" stroke="#1E1E24" stroke-width="1.5"/>
+  <rect x="1" y="1" width="1198" height="418" rx="22" fill="#060709" stroke="#1E1E24" stroke-width="1.5"/>
 
   <!-- ================= CARD 1: DATA ANALYTICS & BI ================= -->
   <g transform="translate(24, 24)">
-    <rect x="0" y="0" width="270" height="312" rx="14" fill="#0C0C14" stroke="#27272A" stroke-width="1.2"/>
-    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#F43F5E"/>
+    <rect x="0" y="0" width="272" height="372" rx="16" fill="#0B0C12" stroke="url(#p-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="272" height="4" rx="2" fill="#ED0C1F"/>
     
     <!-- Header -->
     <text class="p-sub" x="20" y="32">TRACK 01 // ANALYTICS</text>
-    <text class="p-title" x="20" y="56">Data Analytics &amp; BI</text>
-    <text class="p-body" x="20" y="78">Star-Schema ETL &amp; Executive KPIs</text>
+    <text class="p-title" x="20" y="60">Data Analytics &amp; BI</text>
+    <text class="p-body" x="20" y="84">Star-Schema ETL &amp; Executive KPIs</text>
 
-    <!-- Visual 1: Animated Bar & KPI Chart -->
-    <g transform="translate(20, 96)">
-      <rect x="0" y="0" width="230" height="96" rx="8" fill="#13131F" stroke="#1E1E2E"/>
+    <!-- Visual 1: Solid Multi-Tier Executive KPI & Bar Chart -->
+    <g transform="translate(18, 102)">
+      <!-- Chart Solid Container -->
+      <rect x="0" y="0" width="236" height="116" rx="10" fill="#111219" stroke="#222330" stroke-width="1"/>
+      
       <!-- Grid Lines -->
-      <line x1="15" y1="26" x2="215" y2="26" stroke="#272738" stroke-width="0.8" stroke-dasharray="2 4"/>
-      <line x1="15" y1="52" x2="215" y2="52" stroke="#272738" stroke-width="0.8" stroke-dasharray="2 4"/>
-      <line x1="15" y1="78" x2="215" y2="78" stroke="#272738" stroke-width="0.8"/>
+      <line x1="14" y1="30" x2="222" y2="30" stroke="#1E1F2B" stroke-width="1" stroke-dasharray="2 3"/>
+      <line x1="14" y1="60" x2="222" y2="60" stroke="#1E1F2B" stroke-width="1" stroke-dasharray="2 3"/>
+      <line x1="14" y1="90" x2="222" y2="90" stroke="#1E1F2B" stroke-width="1"/>
       
-      <!-- Bars -->
-      <rect class="bar-anim" x="30" y="44" width="18" height="34" rx="3" fill="url(#bar-grad)"/>
-      <rect class="bar-anim" x="60" y="28" width="18" height="50" rx="3" fill="url(#bar-grad)"/>
-      <rect class="bar-anim" x="90" y="38" width="18" height="40" rx="3" fill="url(#bar-grad)"/>
-      <rect class="bar-anim" x="120" y="20" width="18" height="58" rx="3" fill="url(#bar-grad)"/>
-      <rect class="bar-anim" x="150" y="32" width="18" height="46" rx="3" fill="url(#bar-grad)"/>
-      <rect class="bar-anim" x="180" y="14" width="18" height="64" rx="3" fill="url(#bar-grad)"/>
+      <!-- Solid Bars with Glowing Caps -->
+      <g transform="translate(0, 90)">
+        <rect class="bar-anim" x="24" y="-38" width="20" height="38" rx="4" fill="url(#solid-bar-grad)"/>
+        <rect class="bar-anim" x="58" y="-62" width="20" height="62" rx="4" fill="url(#solid-bar-grad)"/>
+        <rect class="bar-anim" x="92" y="-48" width="20" height="48" rx="4" fill="url(#solid-bar-grad)"/>
+        <rect class="bar-anim" x="126" y="-76" width="20" height="76" rx="4" fill="url(#solid-bar-grad)"/>
+        <rect class="bar-anim" x="160" y="-56" width="20" height="56" rx="4" fill="url(#solid-bar-grad)"/>
+        <rect class="bar-anim" x="194" y="-84" width="20" height="84" rx="4" fill="url(#solid-bar-grad)"/>
+      </g>
       
-      <!-- Spark Trend Line overlay -->
-      <polyline points="39,40 69,24 99,34 129,16 159,28 189,10" fill="none" stroke="#FFFFFF" stroke-width="1.8" filter="url(#glow)"/>
+      <!-- Solid White Trend Polyline with Red Glow -->
+      <polyline points="34,50 68,26 102,40 136,14 170,32 204,6" fill="none" stroke="#FFFFFF" stroke-width="2.5" filter="url(#subtle-glow)"/>
+      <circle cx="136" cy="14" r="4.5" fill="#ED0C1F" stroke="#FFFFFF" stroke-width="1.5"/>
+      <circle cx="204" cy="6" r="4.5" fill="#ED0C1F" stroke="#FFFFFF" stroke-width="1.5"/>
+
+      <!-- KPI Tooltip Badge -->
+      <rect x="14" y="8" width="70" height="18" rx="5" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
+      <text class="p-tag" x="49" y="21" text-anchor="middle" fill="#ED0C1F">+34% ARR</text>
     </g>
 
     <!-- Details -->
-    <text class="p-stack" x="20" y="222">MySQL · Power BI · Tableau</text>
-    <text class="p-stack" x="20" y="240">Advanced Excel DAX · ETL</text>
-    <line x1="20" y1="258" x2="250" y2="258" stroke="#1E1E2E" stroke-width="1"/>
-    <text class="p-metric" x="20" y="284">FLAGSHIP: Adventure-Works</text>
-    <text class="p-body" x="20" y="300" font-size="11">3M Industry Capstone</text>
+    <text class="p-stack" x="20" y="248">MySQL · Power BI · Tableau</text>
+    <text class="p-stack" x="20" y="270">Advanced Excel DAX · ETL</text>
+    <line x1="20" y1="290" x2="252" y2="290" stroke="#1E1E2E" stroke-width="1"/>
+    <text class="p-metric" x="20" y="318">FLAGSHIP: Adventure-Works</text>
+    <text class="p-body" x="20" y="342" font-size="13">3M Capstone · Star-Schema ETL</text>
   </g>
 
   <!-- ================= CARD 2: DATA SCIENCE & CLINICAL ML ================= -->
-  <g transform="translate(310, 24)">
-    <rect x="0" y="0" width="270" height="312" rx="14" fill="#0C0C14" stroke="#27272A" stroke-width="1.2"/>
-    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#FB7185"/>
+  <g transform="translate(312, 24)">
+    <rect x="0" y="0" width="272" height="372" rx="16" fill="#0B0C12" stroke="url(#p-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="272" height="4" rx="2" fill="#ED0C1F"/>
     
     <!-- Header -->
     <text class="p-sub" x="20" y="32">TRACK 02 // DATA SCIENCE</text>
-    <text class="p-title" x="20" y="56">Explainable AI &amp; ML</text>
-    <text class="p-body" x="20" y="78">TreeSHAP &amp; Diagnostic Triage</text>
+    <text class="p-title" x="20" y="60">Explainable AI &amp; ML</text>
+    <text class="p-body" x="20" y="84">TreeSHAP &amp; Diagnostic Triage</text>
 
-    <!-- Visual 2: Statistical Gaussian & Shapley Attributions -->
-    <g transform="translate(20, 96)">
-      <rect x="0" y="0" width="230" height="96" rx="8" fill="#13131F" stroke="#1E1E2E"/>
-      <!-- Gaussian Distribution Area -->
-      <path d="M15,80 Q70,80 95,50 Q115,14 135,50 Q160,80 215,80 Z" fill="url(#spark-grad)"/>
-      <path d="M15,80 Q70,80 95,50 Q115,14 135,50 Q160,80 215,80" fill="none" stroke="#FB7185" stroke-width="2"/>
+    <!-- Visual 2: Solid Gaussian Distribution & SHAP Waterfall -->
+    <g transform="translate(18, 102)">
+      <rect x="0" y="0" width="236" height="116" rx="10" fill="#111219" stroke="#222330" stroke-width="1"/>
       
-      <!-- Attribution Feature Bars (TreeSHAP) -->
-      <line x1="50" y1="36" x2="115" y2="36" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
-      <line x1="115" y1="36" x2="175" y2="36" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="115" cy="36" r="4" fill="#FFFFFF"/>
+      <!-- Shaded Gaussian Curve Area -->
+      <path d="M16,96 Q70,96 95,60 Q118,18 140,60 Q165,96 220,96 Z" fill="url(#gaussian-fill)"/>
+      <path d="M16,96 Q70,96 95,60 Q118,18 140,60 Q165,96 220,96" fill="none" stroke="#ED0C1F" stroke-width="2.8"/>
       
-      <!-- Threshold marker -->
-      <line x1="115" y1="16" x2="115" y2="80" stroke="#F97316" stroke-width="1.2" stroke-dasharray="2 3"/>
-      <text font-family="monospace" font-size="9" fill="#F97316" x="122" y="26">PP &gt; 50</text>
+      <!-- Threshold Vertical Decision Boundary -->
+      <line x1="118" y1="12" x2="118" y2="96" stroke="#FFFFFF" stroke-width="1.8" stroke-dasharray="3 3"/>
+      
+      <!-- Solid Decision Badge -->
+      <rect x="124" y="16" width="98" height="20" rx="5" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
+      <text class="p-tag" x="173" y="30" text-anchor="middle" fill="#FFFFFF">PP &gt; 50 mmHg</text>
+
+      <!-- SHAP Waterfall Attribute Bars -->
+      <g transform="translate(24, 76)">
+        <rect x="0" y="0" width="56" height="7" rx="3.5" fill="#ED0C1F"/>
+        <rect x="62" y="0" width="34" height="7" rx="3.5" fill="#FFFFFF"/>
+        <text font-family="monospace" font-size="9" font-weight="700" fill="#A1A1AA" x="104" y="7">+0.42 SHAP</text>
+      </g>
+
+      <!-- Performance Pill -->
+      <rect x="14" y="12" width="76" height="18" rx="5" fill="#14141E" stroke="#2B2C3C" stroke-width="1"/>
+      <text class="p-tag" x="52" y="25" text-anchor="middle" fill="#ED0C1F">93% ACCURACY</text>
     </g>
 
     <!-- Details -->
-    <text class="p-stack" x="20" y="222">Python · XGBoost · TreeSHAP</text>
-    <text class="p-stack" x="20" y="240">Clinical NLP · Scikit-Learn</text>
-    <line x1="20" y1="258" x2="250" y2="258" stroke="#1E1E2E" stroke-width="1"/>
-    <text class="p-metric" x="20" y="284">FLAGSHIP: SomnoSense</text>
-    <text class="p-body" x="20" y="300" font-size="11">93% Clinical Triage Accuracy</text>
+    <text class="p-stack" x="20" y="248">Python · XGBoost · TreeSHAP</text>
+    <text class="p-stack" x="20" y="270">Clinical NLP · Scikit-Learn</text>
+    <line x1="20" y1="290" x2="252" y2="290" stroke="#1E1E2E" stroke-width="1"/>
+    <text class="p-metric" x="20" y="318">FLAGSHIP: SomnoSense</text>
+    <text class="p-body" x="20" y="342" font-size="13">Pulse Pressure Arterial Triage</text>
   </g>
 
   <!-- ================= CARD 3: GEN AI & KNOWLEDGE SYSTEMS ================= -->
-  <g transform="translate(596, 24)">
-    <rect x="0" y="0" width="270" height="312" rx="14" fill="#0C0C14" stroke="#27272A" stroke-width="1.2"/>
-    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#F97316"/>
+  <g transform="translate(600, 24)">
+    <rect x="0" y="0" width="272" height="372" rx="16" fill="#0B0C12" stroke="url(#p-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="272" height="4" rx="2" fill="#ED0C1F"/>
     
     <!-- Header -->
     <text class="p-sub" x="20" y="32">TRACK 03 // GEN AI</text>
-    <text class="p-title" x="20" y="56">AI Systems &amp; RAG</text>
-    <text class="p-body" x="20" y="78">Hybrid RAG &amp; Anti-Hallucination</text>
+    <text class="p-title" x="20" y="60">AI Systems &amp; RAG</text>
+    <text class="p-body" x="20" y="84">Hybrid RAG &amp; Anti-Hallucination</text>
 
-    <!-- Visual 3: Vector Embedding Graph / Semantic Lattice -->
-    <g transform="translate(20, 96)">
-      <rect x="0" y="0" width="230" height="96" rx="8" fill="#13131F" stroke="#1E1E2E"/>
+    <!-- Visual 3: Solid Neural Knowledge Lattice & Embedding Cluster -->
+    <g transform="translate(18, 102)">
+      <rect x="0" y="0" width="236" height="116" rx="10" fill="#111219" stroke="#222330" stroke-width="1"/>
       
-      <!-- Lattice Connections -->
-      <line x1="40" y1="48" x2="100" y2="28" stroke="#F43F5E" stroke-width="1.2" opacity="0.6"/>
-      <line x1="40" y1="48" x2="90" y2="72" stroke="#F97316" stroke-width="1.2" opacity="0.6"/>
-      <line x1="100" y1="28" x2="160" y2="40" stroke="#FB923C" stroke-width="1.2" opacity="0.6"/>
-      <line x1="90" y1="72" x2="160" y2="40" stroke="#F43F5E" stroke-width="1.2" opacity="0.6"/>
-      <line x1="160" y1="40" x2="200" y2="64" stroke="#F97316" stroke-width="1.2" opacity="0.6"/>
+      <!-- Solid Laser Conduit Lines -->
+      <line x1="36" y1="58" x2="98" y2="34" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
+      <line x1="36" y1="58" x2="90" y2="86" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
+      <line x1="98" y1="34" x2="162" y2="48" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
+      <line x1="90" y1="86" x2="162" y2="48" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
+      <line x1="162" y1="48" x2="204" y2="76" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
       
-      <!-- Vector Nodes -->
-      <circle cx="40" cy="48" r="5" fill="#F43F5E" filter="url(#glow)"/>
-      <circle cx="100" cy="28" r="6" fill="#F97316" filter="url(#glow)"/>
-      <circle cx="90" cy="72" r="4.5" fill="#FB923C"/>
-      <circle cx="160" cy="40" r="7" fill="#FFFFFF" filter="url(#glow)"/>
-      <circle cx="200" cy="64" r="5" fill="#F43F5E"/>
+      <!-- Solid Glowing Vector Nodes -->
+      <circle cx="36" cy="58" r="7" fill="#ED0C1F" filter="url(#p-glow)"/>
+      <circle cx="36" cy="58" r="3" fill="#FFFFFF"/>
+
+      <circle cx="98" cy="34" r="8" fill="#ED0C1F" filter="url(#p-glow)"/>
+      <circle cx="98" cy="34" r="3.5" fill="#FFFFFF"/>
+
+      <circle cx="90" cy="86" r="6" fill="#FFFFFF"/>
+
+      <circle class="node-pulse" cx="162" cy="48" r="10" fill="#ED0C1F" filter="url(#p-glow)"/>
+      <circle cx="162" cy="48" r="4.5" fill="#FFFFFF"/>
+
+      <circle cx="204" cy="76" r="6" fill="#ED0C1F"/>
+
+      <!-- Knowledge Corpus Badge -->
+      <rect x="14" y="10" width="104" height="18" rx="5" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
+      <text class="p-tag" x="66" y="23" text-anchor="middle" fill="#FFFFFF">FAO · IPCC CORPUS</text>
+
+      <!-- Semantic Cosine Score -->
+      <rect x="142" y="90" width="80" height="18" rx="5" fill="#14141E" stroke="#2B2C3C" stroke-width="1"/>
+      <text class="p-tag" x="182" y="103" text-anchor="middle" fill="#ED0C1F">sim: 0.94</text>
     </g>
 
     <!-- Details -->
-    <text class="p-stack" x="20" y="222">Hybrid RAG · FAO/IPCC Corpus</text>
-    <text class="p-stack" x="20" y="240">YOLOv8 · LiteLLM · PyTorch</text>
-    <line x1="20" y1="258" x2="250" y2="258" stroke="#1E1E2E" stroke-width="1"/>
-    <text class="p-metric" x="20" y="284">FLAGSHIP: Bio-Nexus</text>
-    <text class="p-body" x="20" y="300" font-size="11">Google Cloud GenAI Certified</text>
+    <text class="p-stack" x="20" y="248">Hybrid RAG · FAO/IPCC Corpus</text>
+    <text class="p-stack" x="20" y="270">YOLOv8 · LiteLLM · PyTorch</text>
+    <line x1="20" y1="290" x2="252" y2="290" stroke="#1E1E2E" stroke-width="1"/>
+    <text class="p-metric" x="20" y="318">FLAGSHIP: Bio-Nexus</text>
+    <text class="p-body" x="20" y="342" font-size="13">Google Cloud Certified GenAI</text>
   </g>
 
   <!-- ================= CARD 4: FULL-STACK & SYSTEMS RESILIENCE ================= -->
-  <g transform="translate(882, 24)">
-    <rect x="0" y="0" width="294" height="312" rx="14" fill="#0C0C14" stroke="#27272A" stroke-width="1.2"/>
-    <rect x="0" y="0" width="294" height="3" rx="1.5" fill="#FB923C"/>
+  <g transform="translate(888, 24)">
+    <rect x="0" y="0" width="288" height="372" rx="16" fill="#0B0C12" stroke="url(#p-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="288" height="4" rx="2" fill="#ED0C1F"/>
     
     <!-- Header -->
     <text class="p-sub" x="20" y="32">TRACK 04 // FULL-STACK</text>
-    <text class="p-title" x="20" y="56">Full-Stack &amp; Systems</text>
-    <text class="p-body" x="20" y="78">State Machines &amp; Real-Time SSE</text>
+    <text class="p-title" x="20" y="60">Full-Stack &amp; Systems</text>
+    <text class="p-body" x="20" y="84">State Machines &amp; Real-Time SSE</text>
 
-    <!-- Visual 4: 14-Status State Machine & Pipeline Stepper -->
-    <g transform="translate(20, 96)">
-      <rect x="0" y="0" width="254" height="96" rx="8" fill="#13131F" stroke="#1E1E2E"/>
+    <!-- Visual 4: Solid 14-Status Pipeline Architecture & Telemetry -->
+    <g transform="translate(18, 102)">
+      <rect x="0" y="0" width="252" height="116" rx="10" fill="#111219" stroke="#222330" stroke-width="1"/>
       
-      <!-- Pipeline Stepper Track -->
-      <line x1="25" y1="48" x2="225" y2="48" stroke="#272738" stroke-width="2"/>
-      <line x1="25" y1="48" x2="160" y2="48" stroke="#F43F5E" stroke-width="2.5"/>
+      <!-- Pipeline Track Rail -->
+      <line x1="20" y1="58" x2="232" y2="58" stroke="#1E1F2B" stroke-width="3"/>
+      <line x1="20" y1="58" x2="168" y2="58" stroke="#ED0C1F" stroke-width="3.5" filter="url(#subtle-glow)"/>
       
-      <!-- Pipeline Nodes -->
-      <circle cx="35" cy="48" r="8" fill="#F43F5E"/>
-      <text font-family="monospace" font-size="9" fill="#FFFFFF" x="35" y="51" text-anchor="middle">1</text>
-      <text font-family="monospace" font-size="8" fill="#A1A1AA" x="35" y="70" text-anchor="middle">INGEST</text>
+      <!-- Stage 1 Block -->
+      <rect x="18" y="44" width="36" height="28" rx="6" fill="#ED0C1F"/>
+      <text font-family="monospace" font-size="11" font-weight="900" fill="#FFFFFF" x="36" y="62" text-anchor="middle">01</text>
+      <text font-family="monospace" font-size="9" font-weight="700" fill="#E4E4E7" x="36" y="86" text-anchor="middle">INGEST</text>
 
-      <circle cx="85" cy="48" r="8" fill="#F43F5E"/>
-      <text font-family="monospace" font-size="9" fill="#FFFFFF" x="85" y="51" text-anchor="middle">2</text>
-      <text font-family="monospace" font-size="8" fill="#A1A1AA" x="85" y="70" text-anchor="middle">MATCH</text>
+      <!-- Stage 2 Block -->
+      <rect x="74" y="44" width="36" height="28" rx="6" fill="#ED0C1F"/>
+      <text font-family="monospace" font-size="11" font-weight="900" fill="#FFFFFF" x="92" y="62" text-anchor="middle">02</text>
+      <text font-family="monospace" font-size="9" font-weight="700" fill="#E4E4E7" x="92" y="86" text-anchor="middle">MATCH</text>
 
-      <circle cx="135" cy="48" r="8" fill="#F97316"/>
-      <text font-family="monospace" font-size="9" fill="#FFFFFF" x="135" y="51" text-anchor="middle">3</text>
-      <text font-family="monospace" font-size="8" fill="#A1A1AA" x="135" y="70" text-anchor="middle">SCORE</text>
+      <!-- Stage 3 Block -->
+      <rect x="130" y="44" width="36" height="28" rx="6" fill="#ED0C1F"/>
+      <text font-family="monospace" font-size="11" font-weight="900" fill="#FFFFFF" x="148" y="62" text-anchor="middle">03</text>
+      <text font-family="monospace" font-size="9" font-weight="700" fill="#E4E4E7" x="148" y="86" text-anchor="middle">SCORE</text>
 
-      <circle cx="185" cy="48" r="8" fill="#272738" stroke="#F43F5E" stroke-width="1.5"/>
-      <text font-family="monospace" font-size="9" fill="#F43F5E" x="185" y="51" text-anchor="middle">4</text>
-      <text font-family="monospace" font-size="8" fill="#A1A1AA" x="185" y="70" text-anchor="middle">WARN</text>
+      <!-- Stage 4 Block (Target) -->
+      <rect x="186" y="44" width="36" height="28" rx="6" fill="#181822" stroke="#ED0C1F" stroke-width="1.8"/>
+      <text font-family="monospace" font-size="11" font-weight="900" fill="#ED0C1F" x="204" y="62" text-anchor="middle">04</text>
+      <text font-family="monospace" font-size="9" font-weight="700" fill="#ED0C1F" x="204" y="86" text-anchor="middle">WARN</text>
+
+      <!-- Latency & State Badges -->
+      <rect x="14" y="10" width="84" height="18" rx="5" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
+      <text class="p-tag" x="56" y="23" text-anchor="middle" fill="#FFFFFF">&lt; 12ms SSE</text>
+
+      <rect x="148" y="10" width="90" height="18" rx="5" fill="#14141E" stroke="#2B2C3C" stroke-width="1"/>
+      <text class="p-tag" x="193" y="23" text-anchor="middle" fill="#ED0C1F">14-STATE LOCK</text>
     </g>
 
     <!-- Details -->
-    <text class="p-stack" x="20" y="222">React 19 · TypeScript · FastAPI</text>
-    <text class="p-stack" x="20" y="240">WebSockets · Supabase · Docker</text>
-    <line x1="20" y1="258" x2="274" y2="258" stroke="#1E1E2E" stroke-width="1"/>
-    <text class="p-metric" x="20" y="284">FLAGSHIP: sentinel-grid</text>
-    <text class="p-body" x="20" y="300" font-size="11">6M GenAI Internship (NDA)</text>
+    <text class="p-stack" x="20" y="248">React 19 · TypeScript · FastAPI</text>
+    <text class="p-stack" x="20" y="270">WebSockets · Supabase · Docker</text>
+    <line x1="20" y1="290" x2="268" y2="290" stroke="#1E1E2E" stroke-width="1"/>
+    <text class="p-metric" x="20" y="318">FLAGSHIP: sentinel-grid</text>
+    <text class="p-body" x="20" y="342" font-size="13">6M GenAI Workspace (NDA)</text>
   </g>
 </svg>

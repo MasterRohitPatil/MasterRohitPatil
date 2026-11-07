@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="Rohit Patil — GitHub &amp; Professional Telemetry Metrics">
+  <defs>
+    <linearGradient id="stat-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#27272A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <filter id="stat-glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseLed {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.9); }
+    }
+    .led-live { animation: pulseLed 2s infinite ease-in-out; }
+    
+    .stat-header { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11.5px; font-weight: 800; fill: #ED0C1F; letter-spacing: 1.5px; }
+    .stat-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 24px; font-weight: 900; fill: #FFFFFF; letter-spacing: 0.2px; }
+    .stat-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: 500; fill: #A1A1AA; }
+    .stat-badge { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; font-weight: 700; fill: #FFFFFF; }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="1" y="1" width="1198" height="238" rx="20" fill="#060709" stroke="#1E1E24" stroke-width="1.5"/>
+
+  <!-- ================= 4 METRICS CARDS ================= -->
+
+  <!-- CARD 1: CODEBASE REFACTOR & ARCHITECTURE -->
+  <g transform="translate(24, 24)">
+    <rect x="0" y="0" width="270" height="192" rx="14" fill="#0B0C12" stroke="url(#stat-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="stat-header" x="20" y="32">CODEBASE VERIFICATION</text>
+    <text class="stat-val" x="20" y="68">5 Flagships</text>
+    <text class="stat-desc" x="20" y="94">Clean architectural layouts</text>
+    <text class="stat-desc" x="20" y="114">Pytest &amp; Vitest CI/CD passing</text>
+
+    <!-- Verified Badge -->
+    <g transform="translate(20, 142)">
+      <rect x="0" y="0" width="168" height="26" rx="6" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
+      <circle class="led-live" cx="14" cy="13" r="4" fill="#ED0C1F" filter="url(#stat-glow)"/>
+      <text class="stat-badge" x="26" y="17" fill="#ED0C1F">100% PRODUCTION-READY</text>
+    </g>
+  </g>
+
+  <!-- CARD 2: INDUSTRY EXPERIENCE -->
+  <g transform="translate(312, 24)">
+    <rect x="0" y="0" width="270" height="192" rx="14" fill="#0B0C12" stroke="url(#stat-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="stat-header" x="20" y="32">INDUSTRY RECORD</text>
+    <text class="stat-val" x="20" y="68">10M Cumulative</text>
+    <text class="stat-desc" x="20" y="94">6M GenAI / Multi-LLM (NDA)</text>
+    <text class="stat-desc" x="20" y="114">3M BI Capstone · 1M Cloud</text>
+
+    <!-- Verified Badge -->
+    <g transform="translate(20, 142)">
+      <rect x="0" y="0" width="168" height="26" rx="6" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
+      <circle class="led-live" cx="14" cy="13" r="4" fill="#ED0C1F" filter="url(#stat-glow)"/>
+      <text class="stat-badge" x="26" y="17" fill="#ED0C1F">ENTERPRISE INTERNSHIPS</text>
+    </g>
+  </g>
+
+  <!-- CARD 3: INSTITUTIONAL LEADERSHIP -->
+  <g transform="translate(600, 24)">
+    <rect x="0" y="0" width="270" height="192" rx="14" fill="#0B0C12" stroke="url(#stat-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="stat-header" x="20" y="32">CAMPUS LEADERSHIP</text>
+    <text class="stat-val" x="20" y="68" font-size="21">TNP Stream Head</text>
+    <text class="stat-desc" x="20" y="94">Training &amp; Placement (AIML)</text>
+    <text class="stat-desc" x="20" y="114">Ex-GDG &amp; Ex-CSI Coordinator</text>
+
+    <!-- Verified Badge -->
+    <g transform="translate(20, 142)">
+      <rect x="0" y="0" width="168" height="26" rx="6" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
+      <circle class="led-live" cx="14" cy="13" r="4" fill="#ED0C1F" filter="url(#stat-glow)"/>
+      <text class="stat-badge" x="26" y="17" fill="#ED0C1F">GOVERNANCE &amp; PLACEMENT</text>
+    </g>
+  </g>
+
+  <!-- CARD 4: ATHLETIC ENDURANCE & GRIT -->
+  <g transform="translate(888, 24)">
+    <rect x="0" y="0" width="288" height="192" rx="14" fill="#0B0C12" stroke="url(#stat-border)" stroke-width="1.2"/>
+    <rect x="0" y="0" width="288" height="3" rx="1.5" fill="#ED0C1F"/>
+    
+    <text class="stat-header" x="20" y="32">ENDURANCE &amp; DISCIPLINE</text>
+    <text class="stat-val" x="20" y="68" font-size="20">Triathlete · 5KM Swimmer</text>
+    <text class="stat-desc" x="20" y="94">Open-Ocean (2x 5KM, 1x 3KM)</text>
+    <text class="stat-desc" x="20" y="114">Karate Golden Brown Belt</text>
+
+    <!-- Verified Badge -->
+    <g transform="translate(20, 142)">
+      <rect x="0" y="0" width="176" height="26" rx="6" fill="#1C0609" stroke="#ED0C1F" stroke-width="1"/>
+      <circle class="led-live" cx="14" cy="13" r="4" fill="#ED0C1F" filter="url(#stat-glow)"/>
+      <text class="stat-badge" x="26" y="17" fill="#ED0C1F">PHYSICAL RESILIENCE</text>
+    </g>
+  </g>
+</svg>

@@ -3,35 +3,27 @@
 </p>
 
 <p align="center">
-  <a href="https://masterrohitpatil.github.io"><img src="https://img.shields.io/badge/Portfolio-08080D?style=for-the-badge&logo=googlechrome&logoColor=F43F5E&labelColor=18181B"/></a>&nbsp;
-  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-08080D?style=for-the-badge&logo=linkedin&logoColor=F43F5E&labelColor=18181B"/></a>&nbsp;
-  <a href="mailto:rohit.newchallenger@gmail.com"><img src="https://img.shields.io/badge/Email-08080D?style=for-the-badge&logo=gmail&logoColor=F97316&labelColor=18181B"/></a>&nbsp;
-  <a href="https://github.com/MasterRohitPatil"><img src="https://img.shields.io/badge/GitHub-08080D?style=for-the-badge&logo=github&logoColor=FB923C&labelColor=18181B"/></a>
+  <a href="https://masterrohitpatil.github.io"><img src="https://img.shields.io/badge/PORTFOLIO-060709?style=for-the-badge&logo=googlechrome&logoColor=ED0C1F&labelColor=18181B"/></a>&nbsp;
+  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LINKEDIN-060709?style=for-the-badge&logo=linkedin&logoColor=ED0C1F&labelColor=18181B"/></a>&nbsp;
+  <a href="mailto:rohit.newchallenger@gmail.com"><img src="https://img.shields.io/badge/EMAIL-060709?style=for-the-badge&logo=gmail&logoColor=ED0C1F&labelColor=18181B"/></a>&nbsp;
+  <a href="https://github.com/MasterRohitPatil"><img src="https://img.shields.io/badge/GITHUB-060709?style=for-the-badge&logo=github&logoColor=ED0C1F&labelColor=18181B"/></a>
 </p>
 
 <p align="center">
-  <img src="./assets/four-pillars.svg" alt="4 Operational Domains: Data Analytics, Data Science, AI Systems, Fullstack" width="100%"/>
+  <img src="./assets/four-pillars.svg" alt="4 Career Tracks: Data Analytics, Data Science, AI Systems, Fullstack" width="100%"/>
 </p>
 
 ---
 
-### Technical Arsenal &amp; Stack
-
-| Domain | Core Tools &amp; Frameworks |
-| :--- | :--- |
-| **Languages** | Python 3.12, TypeScript, JavaScript (ES6+), SQL (MySQL &amp; PostgreSQL) |
-| **AI &amp; Machine Learning** | PyTorch, XGBoost, TreeSHAP Explainable AI, Ultralytics YOLOv8, LiteLLM, Scikit-Learn |
-| **Full-Stack &amp; Systems** | React 19, TypeScript, Vite, FastAPI, WebSockets, Supabase, Tailwind CSS v4, Docker Compose |
-| **Data Analytics &amp; BI** | Power BI (`.pbix`), Tableau (`.twbx`), MySQL Star-Schema Modeling, Advanced Excel DAX |
-| **Testing &amp; Quality Gates** | Pytest, Vitest, Playwright E2E, GitHub Actions CI/CD |
+<p align="center">
+  <img src="./assets/tech-stack.svg" alt="Technical Arsenal &amp; Capabilities" width="100%"/>
+</p>
 
 ---
 
-### Engineering Philosophy
-
-* **Deterministic Core Before Generative Models:** Hard mathematical rules, state machines, and scoring engines evaluate risk first; LLMs explain and draft behind strict interfaces.
-* **Evidence-Grounded AI:** Every diagnostic score or intervention points directly to institutional citations (FAO/IPCC) or local game-theoretic attributions (TreeSHAP).
-* **Physical Resilience Translating to Code:** Mental stamina developed through open-water ocean swimming translates into zero-downtime, fault-tolerant system architectures.
+<p align="center">
+  <img src="./assets/github-stats.svg" alt="Verified Engineering &amp; Operational Telemetry" width="100%"/>
+</p>
 
 ---
 
@@ -144,9 +136,9 @@
 <div align="center">
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MasterRohitPatil&hide_border=true&border_radius=12&background=08080D&stroke=27272A&ring=F43F5E&fire=F43F5E&currStreakLabel=ffffff&sideLabels=a1a1aa&currStreakNum=ffffff&sideNums=ffffff&dates=a1a1aa" width="70%" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MasterRohitPatil&hide_border=true&border_radius=12&background=060709&stroke=1E1E24&ring=ED0C1F&fire=ED0C1F&currStreakLabel=ffffff&sideLabels=a1a1aa&currStreakNum=ffffff&sideNums=ffffff&dates=a1a1aa" width="70%" alt="GitHub Streak" />
 </p>
 
-<img src="https://komarev.com/ghpvc/?username=MasterRohitPatil&style=for-the-badge&color=F43F5E&label=SYSTEM+TELEMETRY+VISITS" alt="Profile Views" />
+<img src="https://komarev.com/ghpvc/?username=MasterRohitPatil&style=for-the-badge&color=ED0C1F&label=SYSTEM+TELEMETRY+VISITS" alt="Profile Views" />
 
 </div>

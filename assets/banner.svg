@@ -2,50 +2,72 @@
   <defs>
     <!-- Background Dot Grid -->
     <pattern id="grid-dots" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.2" fill="#F43F5E" opacity="0.08"/>
+      <circle cx="2" cy="2" r="1.2" fill="#ED0C1F" opacity="0.08"/>
     </pattern>
 
-    <!-- Gradients -->
+    <!-- Gradients in Pure Dual-Tone (Obsidian & Electric Red #ED0C1F) -->
     <linearGradient id="card-border" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.5"/>
-      <stop offset="50%" stop-color="#27272A" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#F97316" stop-opacity="0.4"/>
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#18181B" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.5"/>
     </linearGradient>
 
     <linearGradient id="name-grad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="50%" stop-color="#FFF1F2"/>
-      <stop offset="100%" stop-color="#FDA4AF"/>
+      <stop offset="70%" stop-color="#F4F4F5"/>
+      <stop offset="100%" stop-color="#E4E4E7"/>
     </linearGradient>
 
-    <radialGradient id="glow-crimson" cx="0.12" cy="0.25" r="0.6">
-      <stop offset="0%" stop-color="#E11D48" stop-opacity="0.14"/>
+    <radialGradient id="glow-red-left" cx="0.1" cy="0.2" r="0.6">
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.12"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="glow-ember" cx="0.82" cy="0.5" r="0.55">
-      <stop offset="0%" stop-color="#F97316" stop-opacity="0.18"/>
-      <stop offset="50%" stop-color="#E11D48" stop-opacity="0.08"/>
+    <radialGradient id="glow-red-core" cx="0.82" cy="0.5" r="0.55">
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#ED0C1F" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <linearGradient id="ember-line" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#F43F5E" stop-opacity="0.9"/>
-      <stop offset="70%" stop-color="#F97316" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+    <linearGradient id="red-accent-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ED0C1F" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#ED0C1F" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0"/>
     </linearGradient>
 
-    <filter id="crimson-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+    <!-- 3D Solid Shading Gradients -->
+    <linearGradient id="plate-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D2D35"/>
+      <stop offset="100%" stop-color="#18181F"/>
+    </linearGradient>
+
+    <linearGradient id="plate-left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1C1C22"/>
+      <stop offset="100%" stop-color="#0A0A0E"/>
+    </linearGradient>
+
+    <linearGradient id="plate-right" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22222A"/>
+      <stop offset="100%" stop-color="#101015"/>
+    </linearGradient>
+
+    <linearGradient id="core-bevel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF2E3F"/>
+      <stop offset="50%" stop-color="#ED0C1F"/>
+      <stop offset="100%" stop-color="#6B050D"/>
+    </linearGradient>
+
+    <filter id="red-neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="subtle-glow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
+    <filter id="subtle-red-glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -54,15 +76,15 @@
   </defs>
 
   <style>
-    @keyframes pulseCore {
-      0%, 100% { transform: scale(1); opacity: 0.85; }
-      50% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 16px rgba(244,63,94,0.6)); }
+    @keyframes pulseSolidCore {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 14px rgba(237,12,31,0.7)); }
+      50% { transform: scale(1.06); filter: drop-shadow(0 0 32px rgba(237,12,31,0.95)); }
     }
-    @keyframes spinClockwise {
+    @keyframes rotateClockwise {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    @keyframes spinCounter {
+    @keyframes rotateCounter {
       0% { transform: rotate(360deg); }
       100% { transform: rotate(0deg); }
     }
@@ -70,128 +92,130 @@
       0%, 49% { opacity: 1; }
       50%, 100% { opacity: 0; }
     }
-    @keyframes radarSweep {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
 
     .cursor { animation: blinkCursor 0.9s infinite; }
-    .rot-cw-slow { transform-origin: 940px 220px; animation: spinClockwise 48s linear infinite; }
-    .rot-ccw-mid { transform-origin: 940px 220px; animation: spinCounter 28s linear infinite; }
-    .rot-cw-fast { transform-origin: 940px 220px; animation: spinClockwise 16s linear infinite; }
-    .core-pulse { transform-origin: 940px 220px; animation: pulseCore 3.5s ease-in-out infinite; }
+    .rot-cw { transform-origin: 980px 220px; animation: rotateClockwise 36s linear infinite; }
+    .rot-ccw { transform-origin: 980px 220px; animation: rotateCounter 24s linear infinite; }
+    .solid-core { transform-origin: 980px 220px; animation: pulseSolidCore 3.5s ease-in-out infinite; }
     
     .tech-font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
     .mono-font { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
   </style>
 
   <!-- Container Box -->
-  <rect x="1" y="1" width="1198" height="438" rx="24" fill="#08080D" stroke="url(#card-border)" stroke-width="1.5"/>
+  <rect x="1" y="1" width="1198" height="438" rx="24" fill="#060709" stroke="url(#card-border)" stroke-width="1.5"/>
   <rect x="2" y="2" width="1196" height="436" rx="23" fill="url(#grid-dots)"/>
-  <rect x="2" y="2" width="1196" height="436" rx="23" fill="url(#glow-crimson)"/>
-  <rect x="2" y="2" width="1196" height="436" rx="23" fill="url(#glow-ember)"/>
+  <rect x="2" y="2" width="1196" height="436" rx="23" fill="url(#glow-red-left)"/>
+  <rect x="2" y="2" width="1196" height="436" rx="23" fill="url(#glow-red-core)"/>
 
-  <!-- Top Decorative Ember Edge Line -->
-  <rect x="80" y="1" width="600" height="2.5" fill="url(#ember-line)"/>
+  <!-- Top Decorative Red Edge Line -->
+  <rect x="80" y="1" width="600" height="3" fill="url(#red-accent-line)"/>
 
   <!-- ================= LEFT CONTENT AREA ================= -->
   
   <!-- Terminal Prompt -->
-  <g transform="translate(64, 58)">
-    <text class="mono-font" x="0" y="0" font-size="14" fill="#71717A" letter-spacing="1.5">&gt; system.init // </text>
-    <text class="mono-font" x="148" y="0" font-size="14" fill="#F43F5E" font-weight="700" letter-spacing="1.5">rohit_patil.sh</text>
-    <rect class="cursor" x="278" y="-12" width="8" height="15" fill="#F43F5E"/>
+  <g transform="translate(60, 56)">
+    <text class="mono-font" x="0" y="0" font-size="14.5" fill="#71717A" letter-spacing="1.5">&gt; system.init // </text>
+    <text class="mono-font" x="156" y="0" font-size="14.5" fill="#ED0C1F" font-weight="700" letter-spacing="1.5">rohit_patil.sh</text>
+    <rect class="cursor" x="290" y="-12" width="8" height="16" fill="#ED0C1F"/>
   </g>
 
-  <!-- Giant Royal Name Typography -->
-  <text class="tech-font" x="60" y="148" font-size="68" font-weight="900" fill="url(#name-grad)" letter-spacing="1.5" style="text-rendering: optimizeLegibility;">
+  <!-- Giant Royal Name Typography (Bold, Grand, Crisp) -->
+  <text class="tech-font" x="56" y="150" font-size="74" font-weight="900" fill="url(#name-grad)" letter-spacing="2" style="text-rendering: optimizeLegibility;">
     ROHIT PATIL
   </text>
 
-  <!-- Subtitle with Ember Track Badge -->
-  <g transform="translate(64, 184)">
-    <text class="mono-font" x="0" y="0" font-size="14" font-weight="800" fill="#F43F5E" letter-spacing="3">
+  <!-- Subtitle with Pure Electric Red Track Badge -->
+  <g transform="translate(60, 186)">
+    <text class="mono-font" x="0" y="0" font-size="15" font-weight="800" fill="#ED0C1F" letter-spacing="3.5">
       APPLIED AI · SYSTEMS &amp; DATA ENGINEERING
     </text>
   </g>
 
-  <!-- Core Thesis / Tagline -->
-  <text class="tech-font" x="64" y="238" font-size="20" font-weight="600" fill="#F8FAFC" letter-spacing="0.3">
+  <!-- Core Thesis / Tagline (Clear, No Overlap with Core) -->
+  <text class="tech-font" x="60" y="238" font-size="20" font-weight="600" fill="#F4F4F5" letter-spacing="0.3">
     Deterministic execution in production; unyielding endurance under pressure.
   </text>
 
-  <!-- Sub-Focus Specialties -->
-  <text class="mono-font" x="64" y="278" font-size="14" font-weight="400" fill="#A1A1AA" letter-spacing="0.4">
+  <!-- Sub-Focus Specialties (Larger, High Contrast) -->
+  <text class="mono-font" x="60" y="278" font-size="14.5" font-weight="500" fill="#A1A1AA" letter-spacing="0.4">
     Threat Early Warning &amp; Response · Clinical Explainable AI · Hybrid RAG · Star-Schema BI
   </text>
 
   <!-- Divider Line -->
-  <line x1="64" y1="322" x2="680" y2="322" stroke="#27272A" stroke-width="1.2"/>
+  <line x1="60" y1="322" x2="680" y2="322" stroke="#27272A" stroke-width="1.2"/>
 
   <!-- Bottom Telemetry Status Strip -->
-  <g transform="translate(64, 368)">
-    <!-- Glowing Pulsing Crimson Dot -->
-    <circle cx="6" cy="-4" r="5" fill="#F43F5E" filter="url(#subtle-glow)"/>
-    <circle cx="6" cy="-4" r="10" fill="none" stroke="#F43F5E" stroke-width="1.2" opacity="0.4">
+  <g transform="translate(60, 368)">
+    <!-- Glowing Pulsing Red Dot -->
+    <circle cx="6" cy="-4" r="5" fill="#ED0C1F" filter="url(#subtle-red-glow)"/>
+    <circle cx="6" cy="-4" r="10" fill="none" stroke="#ED0C1F" stroke-width="1.2" opacity="0.4">
       <animate attributeName="r" values="6;16;6" dur="2.2s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.8;0;0.8" dur="2.2s" repeatCount="indefinite"/>
     </circle>
     
-    <text class="mono-font" x="28" y="0" font-size="12.5" font-weight="800" fill="#F43F5E" letter-spacing="1.5">OPEN TO ROLES 2027</text>
-    <text class="mono-font" x="216" y="0" font-size="12.5" fill="#52525B">|</text>
-    <text class="mono-font" x="236" y="0" font-size="12.5" font-weight="600" fill="#E4E4E7" letter-spacing="0.5">TNP AIML Stream Head</text>
-    <text class="mono-font" x="432" y="0" font-size="12.5" fill="#52525B">|</text>
-    <text class="mono-font" x="452" y="0" font-size="12.5" font-weight="600" fill="#E4E4E7" letter-spacing="0.5">10M Cumulative Industry Experience</text>
+    <text class="mono-font" x="30" y="0" font-size="13" font-weight="800" fill="#ED0C1F" letter-spacing="1.5">OPEN TO ROLES 2027</text>
+    <text class="mono-font" x="228" y="0" font-size="13" fill="#52525B">|</text>
+    <text class="mono-font" x="248" y="0" font-size="13" font-weight="600" fill="#E4E4E7" letter-spacing="0.5">TNP AIML Stream Head</text>
+    <text class="mono-font" x="450" y="0" font-size="13" fill="#52525B">|</text>
+    <text class="mono-font" x="470" y="0" font-size="13" font-weight="600" fill="#E4E4E7" letter-spacing="0.5">10M Cumulative Industry Experience</text>
   </g>
 
-  <!-- ================= RIGHT: 3D ISOMETRIC KINETIC EMBER REACTOR ================= -->
-  <!-- An original 3D faceted geometric lattice with 4 radiating power conduits -->
-  <g id="kinetic-ember-reactor">
+  <!-- ================= RIGHT: SOLID 3D ISOMETRIC KINETIC REACTOR ================= -->
+  <!-- Centered strictly at x=980, y=220 (leaving 300px clear margin from left text) -->
+  <g id="solid-3d-reactor">
     <!-- Ambient Core Glow -->
-    <circle cx="940" cy="220" r="170" fill="url(#glow-ember)"/>
+    <circle cx="980" cy="220" r="170" fill="url(#glow-red-core)"/>
 
-    <!-- Outer Kinetic Track: 4 Radial Coordinate Conduits (The 4 Career Tracks) -->
-    <!-- North: Data Analytics / East: AI Engineer / South: Data Science / West: Fullstack -->
-    <line x1="940" y1="40" x2="940" y2="400" stroke="#27272A" stroke-width="1.5" stroke-dasharray="4 8"/>
-    <line x1="760" y1="220" x2="1120" y2="220" stroke="#27272A" stroke-width="1.5" stroke-dasharray="4 8"/>
-
-    <!-- Track Labels (4 Pillars) -->
-    <text class="mono-font" x="940" y="32" font-size="10" font-weight="700" fill="#F43F5E" text-anchor="middle" letter-spacing="1.5">DATA ANALYTICS</text>
-    <text class="mono-font" x="1130" y="224" font-size="10" font-weight="700" fill="#F97316" letter-spacing="1.5">AI SYSTEMS</text>
-    <text class="mono-font" x="940" y="416" font-size="10" font-weight="700" fill="#F43F5E" text-anchor="middle" letter-spacing="1.5">DATA SCIENCE</text>
-    <text class="mono-font" x="670" y="224" font-size="10" font-weight="700" fill="#F97316" letter-spacing="1.5">FULLSTACK</text>
-
-    <!-- Outer Rotating Telemetry Ring (Slow Clockwise) -->
-    <g class="rot-cw-slow">
-      <circle cx="940" cy="220" r="148" fill="none" stroke="#27272A" stroke-width="1.5"/>
-      <circle cx="940" cy="220" r="148" fill="none" stroke="#F43F5E" stroke-width="2.5" stroke-dasharray="40 180 60 120" opacity="0.75"/>
-      <circle cx="1088" cy="220" r="5" fill="#F43F5E" filter="url(#subtle-glow)"/>
-      <circle cx="792" cy="220" r="4" fill="#F97316"/>
+    <!-- Outer Armor Ring with Precision Notches (Rotating Clockwise) -->
+    <g class="rot-cw">
+      <circle cx="980" cy="220" r="148" fill="none" stroke="#27272A" stroke-width="2"/>
+      <circle cx="980" cy="220" r="148" fill="none" stroke="#ED0C1F" stroke-width="3" stroke-dasharray="40 180 80 120" opacity="0.9" filter="url(#subtle-red-glow)"/>
+      <circle cx="1128" cy="220" r="6" fill="#ED0C1F" filter="url(#red-neon-glow)"/>
+      <circle cx="832" cy="220" r="4.5" fill="#ED0C1F"/>
     </g>
 
-    <!-- Middle Reverse Rotating Octagonal Ring (Counter-Clockwise) -->
-    <g class="rot-ccw-mid">
-      <polygon points="940,95 1028,131 1065,220 1028,309 940,345 852,309 815,220 852,131" 
-               fill="none" stroke="#F97316" stroke-width="1.8" opacity="0.6" stroke-dasharray="24 16 48 16"/>
-      <circle cx="1028" cy="131" r="4.5" fill="#FB923C" filter="url(#subtle-glow)"/>
-      <circle cx="852" cy="309" r="4" fill="#F43F5E"/>
+    <!-- Reverse Interlocking Gear / Segmented Ring (Rotating Counter-Clockwise) -->
+    <g class="rot-ccw">
+      <circle cx="980" cy="220" r="118" fill="none" stroke="#3F3F46" stroke-width="2.5" stroke-dasharray="14 8 28 8"/>
+      <circle cx="1063" cy="135" r="4.5" fill="#ED0C1F"/>
+      <circle cx="897" cy="305" r="4.5" fill="#ED0C1F"/>
     </g>
 
-    <!-- Inner 3D Isometric Wireframe Hex-Cube (Fast Clockwise) -->
-    <g class="rot-cw-fast">
-      <polygon points="940,140 1009,180 1009,260 940,300 871,260 871,180" 
-               fill="none" stroke="#F43F5E" stroke-width="2" filter="url(#subtle-glow)"/>
-      <!-- Inner isometric cube diagonals -->
-      <line x1="940" y1="220" x2="940" y2="140" stroke="#F43F5E" stroke-width="1.5" opacity="0.8"/>
-      <line x1="940" y1="220" x2="1009" y2="260" stroke="#F97316" stroke-width="1.5" opacity="0.8"/>
-      <line x1="940" y1="220" x2="871" y2="260" stroke="#F97316" stroke-width="1.5" opacity="0.8"/>
+    <!-- SOLID 3D ISOMETRIC CUBE / HEX-CORE HOUSING (Realistic Facets & Depth) -->
+    <g class="solid-core">
+      <!-- Shadow base -->
+      <polygon points="980,140 1050,180 1050,260 980,300 910,260 910,180" fill="#09090B" stroke="#27272A" stroke-width="2"/>
+
+      <!-- Top Facet (Lightest) -->
+      <polygon points="980,140 1050,180 980,220 910,180" fill="url(#plate-top)" stroke="#3F3F46" stroke-width="1.2"/>
+      
+      <!-- Left Facet (Medium Dark) -->
+      <polygon points="910,180 980,220 980,300 910,260" fill="url(#plate-left)" stroke="#27272A" stroke-width="1.2"/>
+      
+      <!-- Right Facet (Deepest) -->
+      <polygon points="980,220 1050,180 1050,260 980,300" fill="url(#plate-right)" stroke="#27272A" stroke-width="1.2"/>
+
+      <!-- Sunken Energy Cell Wells on Facets -->
+      <polygon points="980,160 1025,185 980,210 935,185" fill="#09090B" stroke="#ED0C1F" stroke-width="1.2" opacity="0.8"/>
+      <line x1="980" y1="220" x2="980" y2="290" stroke="#ED0C1F" stroke-width="2.2" opacity="0.85"/>
+
+      <!-- Glowing Solid Nuclear Core Emitter -->
+      <circle cx="980" cy="220" r="34" fill="#1C0407" stroke="#ED0C1F" stroke-width="2.5" filter="url(#red-neon-glow)"/>
+      <circle cx="980" cy="220" r="22" fill="url(#core-bevel)" filter="url(#subtle-red-glow)"/>
+      <circle cx="980" cy="220" r="11" fill="#ED0C1F"/>
+      <circle cx="980" cy="220" r="5" fill="#FFFFFF"/>
     </g>
 
-    <!-- Central Glowing Ember Core -->
-    <g class="core-pulse">
-      <circle cx="940" cy="220" r="42" fill="#1C0A10" stroke="#F43F5E" stroke-width="2.5" filter="url(#crimson-glow)"/>
-      <circle cx="940" cy="220" r="24" fill="#E11D48" opacity="0.9" filter="url(#subtle-glow)"/>
-      <circle cx="940" cy="220" r="11" fill="#FFF1F2"/>
-    </g>
+    <!-- Cardinal Coordinate Ticks (Cleanly Positioned Around Core) -->
+    <line x1="980" y1="52" x2="980" y2="66" stroke="#ED0C1F" stroke-width="2"/>
+    <line x1="980" y1="374" x2="980" y2="388" stroke="#ED0C1F" stroke-width="2"/>
+    <line x1="812" y1="220" x2="826" y2="220" stroke="#ED0C1F" stroke-width="2"/>
+    <line x1="1134" y1="220" x2="1148" y2="220" stroke="#ED0C1F" stroke-width="2"/>
+
+    <text class="mono-font" x="980" y="44" font-size="9.5" font-weight="700" fill="#71717A" text-anchor="middle" letter-spacing="1">000°</text>
+    <text class="mono-font" x="1160" y="224" font-size="9.5" font-weight="700" fill="#71717A" letter-spacing="1">090°</text>
+    <text class="mono-font" x="980" y="404" font-size="9.5" font-weight="700" fill="#71717A" text-anchor="middle" letter-spacing="1">180°</text>
+    <text class="mono-font" x="786" y="224" font-size="9.5" font-weight="700" fill="#71717A" letter-spacing="1">270°</text>
   </g>
 </svg>
