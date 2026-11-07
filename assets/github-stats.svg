@@ -53,7 +53,7 @@
     <circle cx="10" cy="10" r="7" fill="none" stroke="#ED0C1F" stroke-width="1.8" filter="url(#red-glow)"/>
     <polyline points="10,6 10,10 13,12" fill="none" stroke="#ED0C1F" stroke-width="1.8"/>
     <text class="stat-label" x="28" y="14">Total Commits (2025/26):</text>
-    <text class="stat-val" x="230" y="14">153</text>
+    <text class="stat-val" x="230" y="14">160</text>
   </g>
 
   <!-- 3. Total PRs -->
@@ -82,7 +82,7 @@
     <!-- Repo Book Icon -->
     <path d="M4,4 L14,4 A2,2 0 0,1 16,6 L16,16 L10,13 L4,16 Z" fill="none" stroke="#ED0C1F" stroke-width="1.8" filter="url(#red-glow)"/>
     <text class="stat-label" x="28" y="14">Contributed to (last year):</text>
-    <text class="stat-val" x="230" y="14">158</text>
+    <text class="stat-val" x="230" y="14">165</text>
   </g>
 
   <!-- ================= RIGHT GRADE RING ================= -->
