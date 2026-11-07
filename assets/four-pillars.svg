@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Rohit Patil — 4 Engineering Career Domains">
+  <defs>
+    <linearGradient id="p-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#27272A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F97316" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <linearGradient id="spark-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="bar-grad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseNode {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 1; filter: drop-shadow(0 0 6px #F43F5E); }
+    }
+    @keyframes barGrow {
+      0%, 100% { transform: scaleY(0.9); }
+      50% { transform: scaleY(1.05); }
+    }
+    .node-anim { transform-origin: center; animation: pulseNode 3s ease-in-out infinite; }
+    .bar-anim { transform-origin: bottom; animation: barGrow 4s ease-in-out infinite; }
+    
+    .p-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; font-size: 15px; fill: #FFFFFF; letter-spacing: 0.5px; }
+    .p-sub { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; font-weight: 700; fill: #F43F5E; letter-spacing: 1.5px; }
+    .p-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12.5px; fill: #A1A1AA; }
+    .p-stack { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; fill: #E4E4E7; font-weight: 500; }
+    .p-metric { font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; font-weight: 700; fill: #F97316; }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="1" y="1" width="1198" height="358" rx="20" fill="#08080D" stroke="#1E1E24" stroke-width="1.5"/>
+
+  <!-- ================= CARD 1: DATA ANALYTICS & BI ================= -->
+  <g transform="translate(24, 24)">
+    <rect x="0" y="0" width="270" height="312" rx="14" fill="#0C0C14" stroke="#27272A" stroke-width="1.2"/>
+    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#F43F5E"/>
+    
+    <!-- Header -->
+    <text class="p-sub" x="20" y="32">TRACK 01 // ANALYTICS</text>
+    <text class="p-title" x="20" y="56">Data Analytics &amp; BI</text>
+    <text class="p-body" x="20" y="78">Star-Schema ETL &amp; Executive KPIs</text>
+
+    <!-- Visual 1: Animated Bar & KPI Chart -->
+    <g transform="translate(20, 96)">
+      <rect x="0" y="0" width="230" height="96" rx="8" fill="#13131F" stroke="#1E1E2E"/>
+      <!-- Grid Lines -->
+      <line x1="15" y1="26" x2="215" y2="26" stroke="#272738" stroke-width="0.8" stroke-dasharray="2 4"/>
+      <line x1="15" y1="52" x2="215" y2="52" stroke="#272738" stroke-width="0.8" stroke-dasharray="2 4"/>
+      <line x1="15" y1="78" x2="215" y2="78" stroke="#272738" stroke-width="0.8"/>
+      
+      <!-- Bars -->
+      <rect class="bar-anim" x="30" y="44" width="18" height="34" rx="3" fill="url(#bar-grad)"/>
+      <rect class="bar-anim" x="60" y="28" width="18" height="50" rx="3" fill="url(#bar-grad)"/>
+      <rect class="bar-anim" x="90" y="38" width="18" height="40" rx="3" fill="url(#bar-grad)"/>
+      <rect class="bar-anim" x="120" y="20" width="18" height="58" rx="3" fill="url(#bar-grad)"/>
+      <rect class="bar-anim" x="150" y="32" width="18" height="46" rx="3" fill="url(#bar-grad)"/>
+      <rect class="bar-anim" x="180" y="14" width="18" height="64" rx="3" fill="url(#bar-grad)"/>
+      
+      <!-- Spark Trend Line overlay -->
+      <polyline points="39,40 69,24 99,34 129,16 159,28 189,10" fill="none" stroke="#FFFFFF" stroke-width="1.8" filter="url(#glow)"/>
+    </g>
+
+    <!-- Details -->
+    <text class="p-stack" x="20" y="222">MySQL · Power BI · Tableau</text>
+    <text class="p-stack" x="20" y="240">Advanced Excel DAX · ETL</text>
+    <line x1="20" y1="258" x2="250" y2="258" stroke="#1E1E2E" stroke-width="1"/>
+    <text class="p-metric" x="20" y="284">FLAGSHIP: Adventure-Works</text>
+    <text class="p-body" x="20" y="300" font-size="11">3M Industry Capstone</text>
+  </g>
+
+  <!-- ================= CARD 2: DATA SCIENCE & CLINICAL ML ================= -->
+  <g transform="translate(310, 24)">
+    <rect x="0" y="0" width="270" height="312" rx="14" fill="#0C0C14" stroke="#27272A" stroke-width="1.2"/>
+    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#FB7185"/>
+    
+    <!-- Header -->
+    <text class="p-sub" x="20" y="32">TRACK 02 // DATA SCIENCE</text>
+    <text class="p-title" x="20" y="56">Explainable AI &amp; ML</text>
+    <text class="p-body" x="20" y="78">TreeSHAP &amp; Diagnostic Triage</text>
+
+    <!-- Visual 2: Statistical Gaussian & Shapley Attributions -->
+    <g transform="translate(20, 96)">
+      <rect x="0" y="0" width="230" height="96" rx="8" fill="#13131F" stroke="#1E1E2E"/>
+      <!-- Gaussian Distribution Area -->
+      <path d="M15,80 Q70,80 95,50 Q115,14 135,50 Q160,80 215,80 Z" fill="url(#spark-grad)"/>
+      <path d="M15,80 Q70,80 95,50 Q115,14 135,50 Q160,80 215,80" fill="none" stroke="#FB7185" stroke-width="2"/>
+      
+      <!-- Attribution Feature Bars (TreeSHAP) -->
+      <line x1="50" y1="36" x2="115" y2="36" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
+      <line x1="115" y1="36" x2="175" y2="36" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="115" cy="36" r="4" fill="#FFFFFF"/>
+      
+      <!-- Threshold marker -->
+      <line x1="115" y1="16" x2="115" y2="80" stroke="#F97316" stroke-width="1.2" stroke-dasharray="2 3"/>
+      <text font-family="monospace" font-size="9" fill="#F97316" x="122" y="26">PP &gt; 50</text>
+    </g>
+
+    <!-- Details -->
+    <text class="p-stack" x="20" y="222">Python · XGBoost · TreeSHAP</text>
+    <text class="p-stack" x="20" y="240">Clinical NLP · Scikit-Learn</text>
+    <line x1="20" y1="258" x2="250" y2="258" stroke="#1E1E2E" stroke-width="1"/>
+    <text class="p-metric" x="20" y="284">FLAGSHIP: SomnoSense</text>
+    <text class="p-body" x="20" y="300" font-size="11">93% Clinical Triage Accuracy</text>
+  </g>
+
+  <!-- ================= CARD 3: GEN AI & KNOWLEDGE SYSTEMS ================= -->
+  <g transform="translate(596, 24)">
+    <rect x="0" y="0" width="270" height="312" rx="14" fill="#0C0C14" stroke="#27272A" stroke-width="1.2"/>
+    <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#F97316"/>
+    
+    <!-- Header -->
+    <text class="p-sub" x="20" y="32">TRACK 03 // GEN AI</text>
+    <text class="p-title" x="20" y="56">AI Systems &amp; RAG</text>
+    <text class="p-body" x="20" y="78">Hybrid RAG &amp; Anti-Hallucination</text>
+
+    <!-- Visual 3: Vector Embedding Graph / Semantic Lattice -->
+    <g transform="translate(20, 96)">
+      <rect x="0" y="0" width="230" height="96" rx="8" fill="#13131F" stroke="#1E1E2E"/>
+      
+      <!-- Lattice Connections -->
+      <line x1="40" y1="48" x2="100" y2="28" stroke="#F43F5E" stroke-width="1.2" opacity="0.6"/>
+      <line x1="40" y1="48" x2="90" y2="72" stroke="#F97316" stroke-width="1.2" opacity="0.6"/>
+      <line x1="100" y1="28" x2="160" y2="40" stroke="#FB923C" stroke-width="1.2" opacity="0.6"/>
+      <line x1="90" y1="72" x2="160" y2="40" stroke="#F43F5E" stroke-width="1.2" opacity="0.6"/>
+      <line x1="160" y1="40" x2="200" y2="64" stroke="#F97316" stroke-width="1.2" opacity="0.6"/>
+      
+      <!-- Vector Nodes -->
+      <circle cx="40" cy="48" r="5" fill="#F43F5E" filter="url(#glow)"/>
+      <circle cx="100" cy="28" r="6" fill="#F97316" filter="url(#glow)"/>
+      <circle cx="90" cy="72" r="4.5" fill="#FB923C"/>
+      <circle cx="160" cy="40" r="7" fill="#FFFFFF" filter="url(#glow)"/>
+      <circle cx="200" cy="64" r="5" fill="#F43F5E"/>
+    </g>
+
+    <!-- Details -->
+    <text class="p-stack" x="20" y="222">Hybrid RAG · FAO/IPCC Corpus</text>
+    <text class="p-stack" x="20" y="240">YOLOv8 · LiteLLM · PyTorch</text>
+    <line x1="20" y1="258" x2="250" y2="258" stroke="#1E1E2E" stroke-width="1"/>
+    <text class="p-metric" x="20" y="284">FLAGSHIP: Bio-Nexus</text>
+    <text class="p-body" x="20" y="300" font-size="11">Google Cloud GenAI Certified</text>
+  </g>
+
+  <!-- ================= CARD 4: FULL-STACK & SYSTEMS RESILIENCE ================= -->
+  <g transform="translate(882, 24)">
+    <rect x="0" y="0" width="294" height="312" rx="14" fill="#0C0C14" stroke="#27272A" stroke-width="1.2"/>
+    <rect x="0" y="0" width="294" height="3" rx="1.5" fill="#FB923C"/>
+    
+    <!-- Header -->
+    <text class="p-sub" x="20" y="32">TRACK 04 // FULL-STACK</text>
+    <text class="p-title" x="20" y="56">Full-Stack &amp; Systems</text>
+    <text class="p-body" x="20" y="78">State Machines &amp; Real-Time SSE</text>
+
+    <!-- Visual 4: 14-Status State Machine & Pipeline Stepper -->
+    <g transform="translate(20, 96)">
+      <rect x="0" y="0" width="254" height="96" rx="8" fill="#13131F" stroke="#1E1E2E"/>
+      
+      <!-- Pipeline Stepper Track -->
+      <line x1="25" y1="48" x2="225" y2="48" stroke="#272738" stroke-width="2"/>
+      <line x1="25" y1="48" x2="160" y2="48" stroke="#F43F5E" stroke-width="2.5"/>
+      
+      <!-- Pipeline Nodes -->
+      <circle cx="35" cy="48" r="8" fill="#F43F5E"/>
+      <text font-family="monospace" font-size="9" fill="#FFFFFF" x="35" y="51" text-anchor="middle">1</text>
+      <text font-family="monospace" font-size="8" fill="#A1A1AA" x="35" y="70" text-anchor="middle">INGEST</text>
+
+      <circle cx="85" cy="48" r="8" fill="#F43F5E"/>
+      <text font-family="monospace" font-size="9" fill="#FFFFFF" x="85" y="51" text-anchor="middle">2</text>
+      <text font-family="monospace" font-size="8" fill="#A1A1AA" x="85" y="70" text-anchor="middle">MATCH</text>
+
+      <circle cx="135" cy="48" r="8" fill="#F97316"/>
+      <text font-family="monospace" font-size="9" fill="#FFFFFF" x="135" y="51" text-anchor="middle">3</text>
+      <text font-family="monospace" font-size="8" fill="#A1A1AA" x="135" y="70" text-anchor="middle">SCORE</text>
+
+      <circle cx="185" cy="48" r="8" fill="#272738" stroke="#F43F5E" stroke-width="1.5"/>
+      <text font-family="monospace" font-size="9" fill="#F43F5E" x="185" y="51" text-anchor="middle">4</text>
+      <text font-family="monospace" font-size="8" fill="#A1A1AA" x="185" y="70" text-anchor="middle">WARN</text>
+    </g>
+
+    <!-- Details -->
+    <text class="p-stack" x="20" y="222">React 19 · TypeScript · FastAPI</text>
+    <text class="p-stack" x="20" y="240">WebSockets · Supabase · Docker</text>
+    <line x1="20" y1="258" x2="274" y2="258" stroke="#1E1E2E" stroke-width="1"/>
+    <text class="p-metric" x="20" y="284">FLAGSHIP: sentinel-grid</text>
+    <text class="p-body" x="20" y="300" font-size="11">6M GenAI Internship (NDA)</text>
+  </g>
+</svg>
