@@ -1,7 +1,52 @@
 import os
 import requests
 import json
+import math
 import xml.etree.ElementTree as ET
+
+def calculate_rank(total_commits, total_prs, total_issues, total_stars):
+    # Official github-readme-stats mathematical CDF formula
+    COMMITS_WEIGHT = 2
+    PRS_WEIGHT = 3
+    ISSUES_WEIGHT = 1
+    STARS_WEIGHT = 4
+
+    COMMITS_MEDIAN = 250
+    PRS_MEDIAN = 50
+    ISSUES_MEDIAN = 25
+    STARS_MEDIAN = 50
+
+    def exp_cdf(x, median):
+        return 1 - math.exp(-0.693 * x / median)
+
+    score = (
+        COMMITS_WEIGHT * exp_cdf(total_commits, COMMITS_MEDIAN) +
+        PRS_WEIGHT * exp_cdf(total_prs, PRS_MEDIAN) +
+        ISSUES_WEIGHT * exp_cdf(total_issues, ISSUES_MEDIAN) +
+        STARS_WEIGHT * exp_cdf(total_stars, STARS_MEDIAN)
+    )
+    max_score = COMMITS_WEIGHT + PRS_WEIGHT + ISSUES_WEIGHT + STARS_WEIGHT
+    percentile = (score / max_score) * 100
+
+    # Official github-readme-stats threshold mappings
+    if percentile >= 90:
+        return "S", percentile
+    elif percentile >= 75:
+        return "A+", percentile
+    elif percentile >= 50:
+        return "A", percentile
+    elif percentile >= 35:
+        return "A-", percentile
+    elif percentile >= 25:
+        return "B+", percentile
+    elif percentile >= 10:
+        return "B", percentile
+    elif percentile >= 5:
+        return "B-", percentile
+    elif percentile >= 1:
+        return "C+", percentile
+    else:
+        return "C", percentile
 
 def fetch_github_stats(username, token):
     headers = {"Authorization": f"Bearer {token}"} if token else {}
@@ -75,6 +120,15 @@ def generate_svg(stats, output_path):
     issues = stats["total_issues"]
     contrib = stats["total_contributions"]
     
+    rank, percentile = calculate_rank(commits, prs, issues, stars)
+    print(f"Calculated authentic rank: {rank} (Percentile: {percentile:.1f}%)")
+    
+    # Circumference for r=40 is 2 * pi * 40 = 251.327
+    total_circ = 251.3274
+    # Calculate dash offset based on authentic percentile
+    active_dash = total_circ * (percentile / 100.0)
+    dash_offset = total_circ - active_dash
+
     svg = f"""<svg
   width="467"
   height="195"
@@ -84,7 +138,7 @@ def generate_svg(stats, output_path):
   role="img"
   aria-labelledby="descId"
 >
-  <title id="titleId">ROHIT PATIL's GitHub Stats, Rank: A+</title>
+  <title id="titleId">ROHIT PATIL's GitHub Stats, Rank: {rank}</title>
   <desc id="descId">Total Stars Earned: {stars}, Total Commits (last year): {commits}, Total PRs: {prs}, Total Issues: {issues}, Contributed to (last year): {contrib}</desc>
   <style>
     .header {{
@@ -109,7 +163,7 @@ def generate_svg(stats, output_path):
     }}
     .rank-text {{
       font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif;
-      fill: #ffffff;
+      fill: #b4b4bd;
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }}
     
@@ -121,18 +175,18 @@ def generate_svg(stats, output_path):
     }}
 
     .rank-circle-rim {{
-      stroke: #27272a;
+      stroke: #ffffff;
       fill: none;
       stroke-width: 6;
-      opacity: 0.8;
+      opacity: 0.2;
     }}
     .rank-circle {{
       stroke: #ED0C1F;
-      stroke-dasharray: 250;
+      stroke-dasharray: 251.327;
       fill: none;
       stroke-width: 6;
       stroke-linecap: round;
-      opacity: 0.95;
+      opacity: 0.9;
       transform-origin: -10px 8px;
       transform: rotate(-90deg);
       animation: rankAnimation 1s forwards ease-in-out;
@@ -140,10 +194,10 @@ def generate_svg(stats, output_path):
     
     @keyframes rankAnimation {{
       from {{
-        stroke-dashoffset: 251.32741228718345;
+        stroke-dashoffset: 251.327;
       }}
       to {{
-        stroke-dashoffset: 65;
+        stroke-dashoffset: {dash_offset:.2f};
       }}
     }}
     
@@ -171,10 +225,10 @@ def generate_svg(stats, output_path):
     y="0.5"
     rx="16"
     height="99%"
-    stroke="#27272a"
+    stroke="#e4e2e2"
     width="466"
     fill="#050505"
-    stroke-opacity="1"
+    stroke-opacity="0"
   />
 
   <g data-testid="card-title" transform="translate(25, 35)">
@@ -188,8 +242,8 @@ def generate_svg(stats, output_path):
       <circle class="rank-circle-rim" cx="-10" cy="8" r="40" />
       <circle class="rank-circle" cx="-10" cy="8" r="40" />
       <g class="rank-text">
-        <text x="-10" y="8" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" data-testid="level-rank-icon">
-          A+
+        <text x="-5" y="3" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" data-testid="level-rank-icon">
+          {rank}
         </text>
       </g>
     </g>
@@ -201,7 +255,7 @@ def generate_svg(stats, output_path):
             <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/>
           </svg>
           <text class="stat bold" x="25" y="12.5">Total Stars Earned:</text>
-          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="stars">{stars}</text>
+          <text class="stat bold" x="219.01" y="12.5" data-testid="stars">{stars}</text>
         </g>
       </g>
 
@@ -211,7 +265,7 @@ def generate_svg(stats, output_path):
             <path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"/>
           </svg>
           <text class="stat bold" x="25" y="12.5">Total Commits (last year):</text>
-          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="commits">{commits}</text>
+          <text class="stat bold" x="219.01" y="12.5" data-testid="commits">{commits}</text>
         </g>
       </g>
 
@@ -221,7 +275,7 @@ def generate_svg(stats, output_path):
             <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
           </svg>
           <text class="stat bold" x="25" y="12.5">Total PRs:</text>
-          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="prs">{prs}</text>
+          <text class="stat bold" x="219.01" y="12.5" data-testid="prs">{prs}</text>
         </g>
       </g>
 
@@ -231,7 +285,7 @@ def generate_svg(stats, output_path):
             <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"/>
           </svg>
           <text class="stat bold" x="25" y="12.5">Total Issues:</text>
-          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="issues">{issues}</text>
+          <text class="stat bold" x="219.01" y="12.5" data-testid="issues">{issues}</text>
         </g>
       </g>
 
@@ -241,7 +295,7 @@ def generate_svg(stats, output_path):
             <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"/>
           </svg>
           <text class="stat bold" x="25" y="12.5">Contributed to (last year):</text>
-          <text class="stat bold" x="219.01" y="12.5" fill="#ffffff" data-testid="contribs">{contrib}</text>
+          <text class="stat bold" x="219.01" y="12.5" data-testid="contribs">{contrib}</text>
         </g>
       </g>
     </svg>
@@ -253,7 +307,7 @@ def generate_svg(stats, output_path):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"Successfully wrote exact GitHub stats to {output_path}")
+    print(f"Successfully generated realistic stats SVG to {output_path}")
 
 if __name__ == "__main__":
     username = os.getenv("GITHUB_USER", "MasterRohitPatil")

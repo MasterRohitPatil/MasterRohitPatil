@@ -130,7 +130,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="./assets/stats.svg?v=1" width="49%" alt="Rohit Patil's GitHub Stats" />&nbsp;
+  <img src="./assets/stats.svg?v=real-b" width="49%" alt="Rohit Patil's GitHub Stats" />&nbsp;
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=MasterRohitPatil&hide_border=true&border_radius=16&background=050505&stroke=27272a&ring=ED0C1F&fire=ED0C1F&currStreakLabel=ffffff&sideLabels=b4b4bd&currStreakNum=ffffff&sideNums=ffffff&dates=b4b4bd" width="49%" alt="GitHub Streak" />
 </p>
 
