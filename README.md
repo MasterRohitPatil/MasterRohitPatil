@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.svg?v=hart-core-v3" alt="Rohit Patil — Applied AI, Systems &amp; Data Engineering" width="100%"/>
+  <img src="./assets/banner.svg?v=deep-well-v4" alt="Rohit Patil — Applied AI, Systems &amp; Data Engineering" width="100%"/>
 </p>
 
 <p align="center">

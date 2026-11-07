@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="Rohit Patil — Applied AI, Systems &amp; Data Engineering | Red H.A.R.T. Core">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="Rohit Patil — Applied AI, Systems &amp; Data Engineering | Quantum Arc Reactor">
   <defs>
     <!-- Background Dot Grid -->
     <pattern id="grid-dots" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.1" fill="#94A3B8" opacity="0.07"/>
     </pattern>
 
-    <!-- Metallic Platinum & Electric Red Border -->
+    <!-- Outer Card Metallic Platinum & Red Border -->
     <linearGradient id="card-border" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#E2E8F0" stop-opacity="0.8"/>
       <stop offset="30%" stop-color="#475569" stop-opacity="0.3"/>
@@ -21,37 +21,78 @@
       <stop offset="100%" stop-color="#94A3B8"/>
     </linearGradient>
 
-    <!-- Outer Chrome Bezel Rim Gradient -->
-    <linearGradient id="chrome-bezel-grad" x1="0" y1="0" x2="1" y2="1">
+    <!-- ================= 3D DEPTH PERCEPTION GRADIENTS ================= -->
+
+    <!-- Level 1: Surface Chrome Bezel (Highest Plane) -->
+    <linearGradient id="bevel-tier-1" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="18%" stop-color="#E2E8F0"/>
-      <stop offset="45%" stop-color="#475569"/>
-      <stop offset="75%" stop-color="#94A3B8"/>
-      <stop offset="90%" stop-color="#1E293B"/>
-      <stop offset="100%" stop-color="#CBD5E1"/>
+      <stop offset="25%" stop-color="#CBD5E1"/>
+      <stop offset="50%" stop-color="#475569"/>
+      <stop offset="75%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
     </linearGradient>
 
-    <!-- Core Ambient Red Glow -->
-    <radialGradient id="hart-ambient-glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.35"/>
-      <stop offset="45%" stop-color="#ED0C1F" stop-opacity="0.12"/>
-      <stop offset="75%" stop-color="#ED0C1F" stop-opacity="0.02"/>
+    <!-- Level 2: Inward Sloping Bevel (Funnel Step 1) -->
+    <linearGradient id="bevel-tier-2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="40%" stop-color="#1E293B"/>
+      <stop offset="80%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#090D16"/>
+    </linearGradient>
+
+    <!-- Level 3: Deep Sunken Wall (Funnel Step 2) -->
+    <radialGradient id="deep-well-wall" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#020306"/>
+      <stop offset="60%" stop-color="#070A12"/>
+      <stop offset="85%" stop-color="#141B2D"/>
+      <stop offset="100%" stop-color="#283548"/>
+    </radialGradient>
+
+    <!-- Inward Angled Vane Shading (Perspective Shading) -->
+    <linearGradient id="vane-shading" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="50%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Core Sunken Plasma Bottom (Deepest Point) -->
+    <radialGradient id="deep-plasma-bottom" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="20%" stop-color="#FFF1F2"/>
+      <stop offset="45%" stop-color="#FF384C"/>
+      <stop offset="75%" stop-color="#ED0C1F"/>
+      <stop offset="92%" stop-color="#6B050D"/>
+      <stop offset="100%" stop-color="#060709"/>
+    </radialGradient>
+
+    <!-- Glass Convex Lens Specular Highlight -->
+    <linearGradient id="lens-reflection" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Ambient Red Core Glow -->
+    <radialGradient id="deep-ambient-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#ED0C1F" stop-opacity="0.15"/>
+      <stop offset="80%" stop-color="#ED0C1F" stop-opacity="0.02"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Plasma Heart Singularity Gradient -->
-    <radialGradient id="heart-plasma-singularity" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="25%" stop-color="#FFF1F2"/>
-      <stop offset="50%" stop-color="#FF384C"/>
-      <stop offset="80%" stop-color="#ED0C1F"/>
-      <stop offset="100%" stop-color="#450A0A"/>
-    </radialGradient>
+    <!-- Drop Shadow for Stepped Tiers (Simulating Physical Depth) -->
+    <filter id="tier-shadow-deep" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.95"/>
+    </filter>
 
-    <!-- Neon Glow Filters -->
-    <filter id="crimson-core-glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="8" result="blur1"/>
-      <feGaussianBlur stdDeviation="2.5" result="blur2"/>
+    <filter id="tier-shadow-mid" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.9"/>
+    </filter>
+
+    <filter id="crimson-core-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur1"/>
+      <feGaussianBlur stdDeviation="3" result="blur2"/>
       <feMerge>
         <feMergeNode in="blur1"/>
         <feMergeNode in="blur2"/>
@@ -69,7 +110,7 @@
   </defs>
 
   <style>
-    /* Kinetic Rotations for Concentric Rings */
+    /* Kinetic Rotations for Concentric Depth Rings */
     @keyframes rotateClockwise {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -82,18 +123,18 @@
     /* Authentic Cardiac Heartbeat Rhythm Pulse (Lub-Dub) */
     @keyframes cardiacPulse {
       0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(237,12,31,0.6)); }
-      12% { transform: scale(1.18); filter: drop-shadow(0 0 30px rgba(237,12,31,0.95)); }
+      12% { transform: scale(1.18); filter: drop-shadow(0 0 32px rgba(237,12,31,0.95)); }
       22% { transform: scale(1.05); filter: drop-shadow(0 0 16px rgba(237,12,31,0.7)); }
-      34% { transform: scale(1.24); filter: drop-shadow(0 0 42px rgba(237,12,31,1)); }
+      34% { transform: scale(1.24); filter: drop-shadow(0 0 45px rgba(237,12,31,1)); }
       55% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(237,12,31,0.6)); }
       100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(237,12,31,0.6)); }
     }
 
-    /* Shockwave Expanding Ring */
-    @keyframes shockwavePulse {
-      0% { r: 24px; opacity: 0.95; }
-      34% { r: 32px; opacity: 1; }
-      75% { r: 68px; opacity: 0; }
+    /* Tunnel Depth Resonance Ring */
+    @keyframes depthShockwave {
+      0% { r: 24px; opacity: 0.9; }
+      34% { r: 36px; opacity: 1; }
+      75% { r: 76px; opacity: 0; }
       100% { r: 24px; opacity: 0; }
     }
 
@@ -103,10 +144,10 @@
     }
 
     .cursor { animation: blinkCursor 0.9s infinite; }
-    .rot-cw-bezel { animation: rotateClockwise 28s linear infinite; transform-origin: 980px 220px; }
+    .rot-cw-bezel { animation: rotateClockwise 30s linear infinite; transform-origin: 980px 220px; }
     .rot-ccw-bezel { animation: rotateCounterClockwise 18s linear infinite; transform-origin: 980px 220px; }
     .heart-beat-core { animation: cardiacPulse 1.9s ease-in-out infinite; transform-origin: 980px 220px; }
-    .shockwave-anim { animation: shockwavePulse 1.9s ease-out infinite; }
+    .shockwave-anim { animation: depthShockwave 1.9s ease-out infinite; }
 
     .tech-font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
     .mono-font { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
@@ -169,114 +210,130 @@
     <text class="mono-font" x="470" y="0" font-size="13" font-weight="600" fill="#CBD5E1" letter-spacing="0.5">10M Cumulative Industry Experience</text>
   </g>
 
-  <!-- ================= RIGHT: THE RED H.A.R.T. CIRCULAR ARC-REACTOR ================= -->
-  <!-- Centered cleanly at cx=980, cy=220 (zero cones, zero back cylinders, zero stands) -->
-  <g id="hart-arc-reactor">
+  <!-- ================= RIGHT: 3D DEEP-WELL QUANTUM ARC REACTOR ================= -->
+  <!-- Centered at cx=980, cy=220 | Multi-tier conical step-down with true depth perception -->
+  <g id="deep-well-arc-reactor">
 
-    <!-- Ambient Core Red Aura Halo -->
-    <circle cx="980" cy="220" r="175" fill="url(#hart-ambient-glow)"/>
+    <!-- Ambient Volumetric Core Halo -->
+    <circle cx="980" cy="220" r="185" fill="url(#deep-ambient-glow)"/>
 
-    <!-- ================= 1. MACHINED TITANIUM / CHROME OUTER CALIPER BEZEL ================= -->
-    <circle cx="980" cy="220" r="148" fill="url(#chrome-bezel-grad)" stroke="#FFFFFF" stroke-width="2.5"/>
-    <circle cx="980" cy="220" r="136" fill="#04060A" stroke="#1E293B" stroke-width="2"/>
-    <circle cx="980" cy="220" r="130" fill="#080C14" stroke="#ED0C1F" stroke-width="1.5" opacity="0.8"/>
-    <circle cx="980" cy="220" r="120" fill="#020306" stroke="#475569" stroke-width="1.8"/>
+    <!-- ================= TIER 1: SURFACE CHROME BEZEL (HEIGHT: 0mm - TOP SURFACE) ================= -->
+    <circle cx="980" cy="220" r="150" fill="url(#bevel-tier-1)" stroke="#FFFFFF" stroke-width="2.5"/>
+    <!-- Outer Bezel Precision Notches -->
+    <circle cx="980" cy="220" r="142" fill="#04060A" stroke="#1E293B" stroke-width="2"/>
+    <!-- Recessed Trench with Deep Ambient Drop Shadow -->
+    <circle cx="980" cy="220" r="134" fill="#080C14" filter="url(#tier-shadow-deep)"/>
 
-    <!-- Perimeter Bezel Rivets / Bolts at 45-degree intervals -->
+    <!-- Perimeter Flush Mechanical Rivets (Surface Level) -->
     <g>
-      <circle cx="1120" cy="220" r="3.5" fill="#CBD5E1" stroke="#060709" stroke-width="1"/>
-      <circle cx="840" cy="220" r="3.5" fill="#CBD5E1" stroke="#060709" stroke-width="1"/>
-      <circle cx="980" cy="80" r="3.5" fill="#CBD5E1" stroke="#060709" stroke-width="1"/>
-      <circle cx="980" cy="360" r="3.5" fill="#CBD5E1" stroke="#060709" stroke-width="1"/>
-      <circle cx="1079" cy="121" r="3.5" fill="#CBD5E1" stroke="#060709" stroke-width="1"/>
-      <circle cx="881" cy="319" r="3.5" fill="#CBD5E1" stroke="#060709" stroke-width="1"/>
-      <circle cx="1079" cy="319" r="3.5" fill="#CBD5E1" stroke="#060709" stroke-width="1"/>
-      <circle cx="881" cy="121" r="3.5" fill="#CBD5E1" stroke="#060709" stroke-width="1"/>
+      <circle cx="1122" cy="220" r="3.5" fill="#E2E8F0" stroke="#000000" stroke-width="1"/>
+      <circle cx="838" cy="220" r="3.5" fill="#E2E8F0" stroke="#000000" stroke-width="1"/>
+      <circle cx="980" cy="78" r="3.5" fill="#E2E8F0" stroke="#000000" stroke-width="1"/>
+      <circle cx="980" cy="362" r="3.5" fill="#E2E8F0" stroke="#000000" stroke-width="1"/>
+      <circle cx="1080" cy="120" r="3.5" fill="#E2E8F0" stroke="#000000" stroke-width="1"/>
+      <circle cx="880" cy="320" r="3.5" fill="#E2E8F0" stroke="#000000" stroke-width="1"/>
+      <circle cx="1080" cy="320" r="3.5" fill="#E2E8F0" stroke="#000000" stroke-width="1"/>
+      <circle cx="880" cy="120" r="3.5" fill="#E2E8F0" stroke="#000000" stroke-width="1"/>
     </g>
 
-    <!-- ================= 2. KINETIC CONCENTRIC ROTATING RINGS ================= -->
+    <!-- ================= TIER 2: INWARD SLOPING BEVEL WALL (DEPTH: -15mm) ================= -->
+    <!-- Drop shadow cast by Tier 1 onto Tier 2 -->
+    <circle cx="980" cy="220" r="126" fill="url(#bevel-tier-2)" stroke="#334155" stroke-width="2" filter="url(#tier-shadow-deep)"/>
 
-    <!-- RING 1 (OUTER): Precision Segmented Caliper Ring — ROTATING CLOCKWISE (28s) -->
+    <!-- 12 INWARD-CONVERGING PERSPECTIVE VANES (Creates instant 3D Tunnel Depth!) -->
+    <!-- Angled stator blades leading the eye down into the chamber -->
+    <g stroke="#1E293B" stroke-width="1">
+      <!-- 0 deg -->
+      <polygon points="1106,216 1106,224 1056,222 1056,218" fill="url(#vane-shading)"/>
+      <!-- 180 deg -->
+      <polygon points="854,216 854,224 904,222 904,218" fill="url(#vane-shading)"/>
+      <!-- 90 deg -->
+      <polygon points="976,346 984,346 982,296 978,296" fill="url(#vane-shading)"/>
+      <!-- 270 deg -->
+      <polygon points="976,94 984,94 982,144 978,144" fill="url(#vane-shading)"/>
+      <!-- 30 deg -->
+      <polygon points="1089,283 1083,289 1042,260 1046,256" fill="url(#vane-shading)"/>
+      <!-- 210 deg -->
+      <polygon points="871,157 877,151 918,180 914,184" fill="url(#vane-shading)"/>
+      <!-- 60 deg -->
+      <polygon points="1043,329 1037,335 1012,286 1016,282" fill="url(#vane-shading)"/>
+      <!-- 240 deg -->
+      <polygon points="917,111 923,105 948,154 944,158" fill="url(#vane-shading)"/>
+      <!-- 120 deg -->
+      <polygon points="917,329 923,335 948,286 944,282" fill="url(#vane-shading)"/>
+      <!-- 300 deg -->
+      <polygon points="1043,111 1037,105 1012,154 1016,158" fill="url(#vane-shading)"/>
+      <!-- 150 deg -->
+      <polygon points="871,283 877,289 918,260 914,256" fill="url(#vane-shading)"/>
+      <!-- 330 deg -->
+      <polygon points="1089,157 1083,151 1042,180 1046,184" fill="url(#vane-shading)"/>
+    </g>
+
+    <!-- ================= TIER 3: SUNKEN KINETIC APERTURE RING (DEPTH: -35mm) ================= -->
+    <!-- Sits inside the well, casting shadow onto the next tier -->
+    <circle cx="980" cy="220" r="106" fill="url(#deep-well-wall)" stroke="#475569" stroke-width="1.8" filter="url(#tier-shadow-mid)"/>
+
+    <!-- OUTER KINETIC GEAR RING (Rotating Clockwise inside the depth well) -->
     <g class="rot-cw-bezel">
-      <circle cx="980" cy="220" r="110" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="16 12 32 12"/>
-      <circle cx="980" cy="220" r="110" fill="none" stroke="#ED0C1F" stroke-width="3" stroke-dasharray="45 180 35 140" filter="url(#subtle-neon)"/>
+      <circle cx="980" cy="220" r="98" fill="none" stroke="#64748B" stroke-width="2" stroke-dasharray="14 10 28 10"/>
+      <circle cx="980" cy="220" r="98" fill="none" stroke="#ED0C1F" stroke-width="3" stroke-dasharray="40 160 30 130" filter="url(#subtle-neon)"/>
       
-      <!-- Caliper Tracking Nodes -->
-      <circle cx="1090" cy="220" r="5" fill="#FFFFFF" stroke="#060709" stroke-width="1.5"/>
-      <circle cx="870" cy="220" r="5" fill="#ED0C1F" filter="url(#subtle-neon)"/>
-      <circle cx="980" cy="110" r="4.5" fill="#CBD5E1"/>
-      <circle cx="980" cy="330" r="4.5" fill="#ED0C1F"/>
-      
-      <!-- Corner Laser Pointers -->
-      <circle cx="1058" cy="142" r="3.5" fill="#FFFFFF"/>
-      <circle cx="902" cy="298" r="3.5" fill="#FFFFFF"/>
-      <circle cx="1058" cy="298" r="3.5" fill="#ED0C1F"/>
-      <circle cx="902" cy="142" r="3.5" fill="#ED0C1F"/>
+      <!-- Caliper Tracking Beads -->
+      <circle cx="1078" cy="220" r="4.5" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+      <circle cx="882" cy="220" r="4.5" fill="#ED0C1F" filter="url(#subtle-neon)"/>
+      <circle cx="980" cy="122" r="4" fill="#CBD5E1"/>
+      <circle cx="980" cy="318" r="4" fill="#ED0C1F"/>
     </g>
 
-    <!-- RING 2 (MIDDLE): High-Speed Gear & Circuit Ring — ROTATING COUNTER-CLOCKWISE (18s) -->
+    <!-- ================= TIER 4: DEEP INNER STATOR WELL (DEPTH: -60mm) ================= -->
+    <!-- The dark inner abyss where the core sits -->
+    <circle cx="980" cy="220" r="78" fill="#020306" stroke="#1E293B" stroke-width="2" filter="url(#tier-shadow-deep)"/>
+    <circle cx="980" cy="220" r="78" fill="none" stroke="#ED0C1F" stroke-width="1.2" opacity="0.6"/>
+
+    <!-- INNER HIGH-SPEED COUNTER-ROTATING GEAR RING (Rotating Counter-Clockwise at Depth) -->
     <g class="rot-ccw-bezel">
-      <circle cx="980" cy="220" r="80" fill="none" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 8 20 8"/>
-      <circle cx="980" cy="220" r="80" fill="none" stroke="#ED0C1F" stroke-width="2.5" stroke-dasharray="70 90 50 110" filter="url(#subtle-neon)"/>
+      <circle cx="980" cy="220" r="68" fill="none" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6 16 6"/>
+      <circle cx="980" cy="220" r="68" fill="none" stroke="#ED0C1F" stroke-width="2.5" stroke-dasharray="60 70 40 90" filter="url(#subtle-neon)"/>
       
-      <!-- Gear Teeth Studs -->
-      <circle cx="1060" cy="220" r="4.5" fill="#ED0C1F"/>
-      <circle cx="900" cy="220" r="4.5" fill="#ED0C1F"/>
-      <circle cx="980" cy="140" r="4" fill="#FFFFFF"/>
-      <circle cx="980" cy="300" r="4" fill="#FFFFFF"/>
-
       <!-- Reverse Interlocking Aperture Blades -->
-      <line x1="940" y1="180" x2="925" y2="165" stroke="#E2E8F0" stroke-width="2"/>
-      <line x1="1020" y1="260" x2="1035" y2="275" stroke="#E2E8F0" stroke-width="2"/>
-      <line x1="1020" y1="180" x2="1035" y2="165" stroke="#ED0C1F" stroke-width="2"/>
-      <line x1="940" y1="260" x2="925" y2="275" stroke="#ED0C1F" stroke-width="2"/>
+      <line x1="946" y1="186" x2="934" y2="174" stroke="#E2E8F0" stroke-width="2"/>
+      <line x1="1014" y1="254" x2="1026" y2="266" stroke="#E2E8F0" stroke-width="2"/>
+      <line x1="1014" y1="186" x2="1026" y2="174" stroke="#ED0C1F" stroke-width="2"/>
+      <line x1="946" y1="254" x2="934" y2="266" stroke="#ED0C1F" stroke-width="2"/>
     </g>
 
-    <!-- ================= 3. STATIONARY STATOR RING: Micro-Circuit Etchings & Diodes ================= -->
+    <!-- Deep Stator Circuit Collar with Internal Diodes -->
     <g>
-      <circle cx="980" cy="220" r="54" fill="#04060C" stroke="#334155" stroke-width="1.8"/>
-      <circle cx="980" cy="220" r="54" fill="none" stroke="#ED0C1F" stroke-width="1.5" stroke-dasharray="5 10"/>
+      <circle cx="980" cy="220" r="48" fill="#04060B" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="980" cy="220" r="48" fill="none" stroke="#ED0C1F" stroke-width="1.5" stroke-dasharray="4 8"/>
       
-      <!-- Cardinal Alignment Ticks -->
-      <line x1="926" y1="220" x2="938" y2="220" stroke="#ED0C1F" stroke-width="2"/>
-      <line x1="1034" y1="220" x2="1022" y2="220" stroke="#ED0C1F" stroke-width="2"/>
-      <line x1="980" y1="166" x2="980" y2="178" stroke="#ED0C1F" stroke-width="2"/>
-      <line x1="980" y1="274" x2="980" y2="262" stroke="#ED0C1F" stroke-width="2"/>
-      
-      <!-- Micro Diode Studs -->
-      <circle cx="932" cy="220" r="3" fill="#FFFFFF"/>
-      <circle cx="1028" cy="220" r="3" fill="#FFFFFF"/>
-      <circle cx="980" cy="172" r="3" fill="#FFFFFF"/>
-      <circle cx="980" cy="268" r="3" fill="#FFFFFF"/>
+      <circle cx="936" cy="220" r="2.5" fill="#FFFFFF"/>
+      <circle cx="1024" cy="220" r="2.5" fill="#FFFFFF"/>
+      <circle cx="980" cy="176" r="2.5" fill="#FFFFFF"/>
+      <circle cx="980" cy="264" r="2.5" fill="#FFFFFF"/>
     </g>
 
-    <!-- ================= 4. DYNAMIC SHOCKWAVE EXPANSION RING ================= -->
+    <!-- ================= TIER 5: SUNKEN PLASMA CORE (DEPTH: -80mm - DEEPEST SHAFT FLOOR) ================= -->
+    <!-- The glowing plasma singularity sitting far down in the bottom of the well -->
     <circle class="shockwave-anim" cx="980" cy="220" r="24" fill="none" stroke="#ED0C1F" stroke-width="2.5" filter="url(#subtle-neon)"/>
 
-    <!-- ================= 5. CARDIAC HEARTBEAT CORE (LUB-DUB RHYTHMIC PULSE) ================= -->
     <g class="heart-beat-core">
-      <!-- Deep Plasma Well Shadow -->
-      <circle cx="980" cy="220" r="32" fill="#140204" filter="url(#crimson-core-glow)"/>
+      <!-- Deep Well Shadow Base -->
+      <circle cx="980" cy="220" r="30" fill="#140204" filter="url(#crimson-core-glow)"/>
       
-      <!-- Layered Plasma Singularity -->
-      <circle cx="980" cy="220" r="24" fill="url(#heart-plasma-singularity)" filter="url(#subtle-neon)"/>
-      <circle cx="980" cy="220" r="14" fill="#ED0C1F"/>
+      <!-- Multi-Layer High-Yield Core Singularity -->
+      <circle cx="980" cy="220" r="22" fill="url(#deep-plasma-bottom)" filter="url(#subtle-neon)"/>
+      <circle cx="980" cy="220" r="13" fill="#ED0C1F"/>
       
-      <!-- Intense White-Hot Singularity Eye -->
-      <circle cx="980" cy="220" r="7" fill="#FFFFFF" filter="url(#subtle-neon)"/>
-      <circle cx="980" cy="220" r="3" fill="#FFFFFF"/>
+      <!-- Pure White-Hot Focal Eye -->
+      <circle cx="980" cy="220" r="6" fill="#FFFFFF" filter="url(#subtle-neon)"/>
+      <circle cx="980" cy="220" r="2.5" fill="#FFFFFF"/>
     </g>
 
-    <!-- ================= 6. CARDINAL DEGREE TELEMETRY TICKS ================= -->
-    <line x1="980" y1="48" x2="980" y2="64" stroke="#E2E8F0" stroke-width="2"/>
-    <line x1="980" y1="376" x2="980" y2="392" stroke="#ED0C1F" stroke-width="2"/>
-    <line x1="808" y1="220" x2="824" y2="220" stroke="#E2E8F0" stroke-width="2"/>
-    <line x1="1136" y1="220" x2="1152" y2="220" stroke="#ED0C1F" stroke-width="2"/>
-
-    <text class="mono-font" x="980" y="40" font-size="10" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing="1">000° [H.A.R.T.]</text>
-    <text class="mono-font" x="1166" y="224" font-size="10" font-weight="700" fill="#ED0C1F" letter-spacing="1">090°</text>
-    <text class="mono-font" x="980" y="408" font-size="10" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing="1">180° [RESONANCE]</text>
-    <text class="mono-font" x="780" y="224" font-size="10" font-weight="700" fill="#CBD5E1" text-anchor="end" letter-spacing="1">270°</text>
+    <!-- ================= TIER 6: CONVEX QUARTZ LENS REFLECTION (FRONT SURFACE OVERLAY) ================= -->
+    <!-- Curved glass specular crescent across the top-left rim creating tactile glass enclosure depth -->
+    <path d="M870,150 A140,140 0 0,1 1060,110 A126,126 0 0,0 870,150 Z" fill="url(#lens-reflection)"/>
+    <ellipse cx="920" cy="140" rx="36" ry="12" transform="rotate(-35 920 140)" fill="#FFFFFF" opacity="0.12"/>
 
   </g>
 </svg>
