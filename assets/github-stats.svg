@@ -40,8 +40,8 @@
     <rect x="0" y="0" width="270" height="3" rx="1.5" fill="#ED0C1F"/>
     
     <text class="stat-header" x="20" y="32">LIVE GITHUB ACTIVITY</text>
-    <text class="stat-val" x="20" y="68">94+ Commits</text>
-    <text class="stat-desc" x="20" y="94">128 Contributions (Active Year)</text>
+    <text class="stat-val" x="20" y="68">153+ Commits</text>
+    <text class="stat-desc" x="20" y="94">158 Contributions (Active Year)</text>
     <text class="stat-desc" x="20" y="114">Public &amp; Private Repo History</text>
 
     <!-- Verified Badge -->
