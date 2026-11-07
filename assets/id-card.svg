@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-label="Rohit Patil — Verified Identity & Systems Dashboard">
+  <defs>
+    <pattern id="card-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#38BDF8" opacity="0.06"/>
+    </pattern>
+
+    <linearGradient id="card-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="lanyard-metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94A3B8"/>
+      <stop offset="50%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+
+    <linearGradient id="badge-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#060913"/>
+    </linearGradient>
+
+    <filter id="badge-shadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+
+    <clipPath id="badge-clip">
+      <rect x="80" y="140" width="300" height="360" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    @keyframes dropIn {
+      0% { transform: translateY(-500px) rotate(0deg); }
+      35% { transform: translateY(0) rotate(8deg); }
+      55% { transform: rotate(-5deg); }
+      75% { transform: rotate(3deg); }
+      88% { transform: rotate(-1.5deg); }
+      100% { transform: rotate(1.2deg); }
+    }
+    @keyframes gentleSwing {
+      0%, 100% { transform: rotate(1.2deg); }
+      50% { transform: rotate(-1.2deg); }
+    }
+    @keyframes foilSweep {
+      0% { transform: translateX(-350px) rotate(25deg); }
+      40%, 100% { transform: translateX(550px) rotate(25deg); }
+    }
+
+    .lanyard-assembly {
+      transform-origin: 230px 0;
+      animation: dropIn 2.4s cubic-bezier(0.25, 0.8, 0.25, 1) both, gentleSwing 5s 2.4s ease-in-out infinite;
+    }
+    .foil-sweep {
+      animation: foilSweep 5s 1.5s ease-in-out infinite;
+    }
+    .mono-id { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+    .sans-id { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="1" y="1" width="1198" height="518" rx="24" fill="#060913" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="2" y="2" width="1196" height="516" rx="23" fill="url(#card-dots)"/>
+
+  <!-- ================= LEFT: SWINGING PHYSICAL LANYARD & ID BADGE ================= -->
+  <g class="lanyard-assembly" filter="url(#badge-shadow)">
+    <!-- Woven Lanyard Ribbon -->
+    <path d="M205 0 L220 110 M255 0 L240 110" stroke="#1E293B" stroke-width="18" stroke-linecap="round"/>
+    <path d="M205 0 L220 110 M255 0 L240 110" stroke="#00F2FE" stroke-width="2" stroke-dasharray="4 8" opacity="0.6"/>
+
+    <!-- Metallic Lanyard Clasp & Ring -->
+    <rect x="212" y="104" width="36" height="20" rx="4" fill="url(#lanyard-metal)"/>
+    <ellipse cx="230" cy="130" rx="10" ry="12" fill="none" stroke="url(#lanyard-metal)" stroke-width="4"/>
+
+    <!-- The Physical ID Card Body -->
+    <rect x="80" y="140" width="300" height="360" rx="18" fill="url(#badge-bg)" stroke="#38BDF8" stroke-width="1.5"/>
+
+    <!-- Lanyard Slot at top of card -->
+    <rect x="210" y="152" width="40" height="7" rx="3.5" fill="#060913" stroke="#1E293B"/>
+
+    <!-- Inside Card Content (Clipped to Card Bounds) -->
+    <g clip-path="url(#badge-clip)">
+      <!-- Top Cyber Tag -->
+      <text class="mono-id" x="100" y="184" font-size="10" font-weight="700" fill="#00F2FE" letter-spacing="2">VERIFIED IDENTITY // 2027</text>
+      
+      <!-- Gold Microchip Emulation -->
+      <rect x="100" y="202" width="42" height="32" rx="4" fill="#CA8A04" stroke="#FDE047" stroke-width="0.8"/>
+      <path d="M100 218 L142 218 M121 202 L121 234" stroke="#854D0E" stroke-width="0.8"/>
+
+      <!-- Department & Access Level -->
+      <text class="mono-id" x="154" y="218" font-size="9" fill="#94A3B8" letter-spacing="1">DEPT: AIML</text>
+      <text class="mono-id" x="154" y="232" font-size="9" font-weight="700" fill="#38BDF8" letter-spacing="1">CLEARANCE: STREAM HEAD</text>
+
+      <!-- Big Name on Card -->
+      <text class="sans-id" x="100" y="278" font-size="24" font-weight="800" fill="#F8FAFC" letter-spacing="1">ROHIT PATIL</text>
+      <text class="mono-id" x="100" y="298" font-size="11" font-weight="600" fill="#00F2FE" letter-spacing="1.5">TNP AIML STREAM HEAD</text>
+
+      <!-- Key Focus Specs -->
+      <line x1="100" y1="316" x2="360" y2="316" stroke="#1E293B" stroke-width="1"/>
+      
+      <text class="mono-id" x="100" y="340" font-size="10" fill="#94A3B8">ATHLETIC ENDURANCE</text>
+      <text class="sans-id" x="100" y="358" font-size="12" font-weight="600" fill="#E2E8F0">State Triathlete · 5KM Ocean</text>
+
+      <text class="mono-id" x="100" y="390" font-size="10" fill="#94A3B8">INDUSTRY TRACK RECORD</text>
+      <text class="sans-id" x="100" y="408" font-size="12" font-weight="600" fill="#E2E8F0">10M Cumulative Internships</text>
+
+      <!-- Barcode Graphic at Bottom -->
+      <g transform="translate(100, 442)">
+        <rect x="0" y="0" width="3" height="28" fill="#E2E8F0"/>
+        <rect x="5" y="0" width="6" height="28" fill="#E2E8F0"/>
+        <rect x="14" y="0" width="2" height="28" fill="#E2E8F0"/>
+        <rect x="18" y="0" width="8" height="28" fill="#E2E8F0"/>
+        <rect x="29" y="0" width="4" height="28" fill="#E2E8F0"/>
+        <rect x="36" y="0" width="2" height="28" fill="#E2E8F0"/>
+        <rect x="41" y="0" width="6" height="28" fill="#E2E8F0"/>
+        <rect x="50" y="0" width="3" height="28" fill="#E2E8F0"/>
+        <rect x="56" y="0" width="7" height="28" fill="#E2E8F0"/>
+        <rect x="66" y="0" width="2" height="28" fill="#E2E8F0"/>
+        <rect x="71" y="0" width="5" height="28" fill="#E2E8F0"/>
+        <rect x="79" y="0" width="3" height="28" fill="#E2E8F0"/>
+        <rect x="85" y="0" width="7" height="28" fill="#E2E8F0"/>
+        <rect x="95" y="0" width="2" height="28" fill="#E2E8F0"/>
+        <rect x="100" y="0" width="6" height="28" fill="#E2E8F0"/>
+        <text class="mono-id" x="130" y="20" font-size="10" fill="#64748B" letter-spacing="3">RP-2027-OK</text>
+      </g>
+
+      <!-- Animated Hologram Sheen Bar -->
+      <rect class="foil-sweep" x="0" y="140" width="120" height="400" fill="url(#card-sheen)"/>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT: SPECIFICATIONS & CORE CREDENTIALS ================= -->
+  <g transform="translate(430, 70)">
+    <!-- Header -->
+    <text class="mono-id" x="0" y="0" font-size="13" font-weight="700" fill="#00F2FE" letter-spacing="2">// VERIFIED CREDENTIALS &amp; LEADERSHIP</text>
+    
+    <!-- 4 Structured Metric Boxes -->
+    <!-- Box 1: Placement Cell Head -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="340" height="90" rx="12" fill="#0A0F1D" stroke="#1E293B"/>
+      <text class="mono-id" x="20" y="28" font-size="11" fill="#38BDF8" letter-spacing="1">INSTITUTIONAL LEADERSHIP</text>
+      <text class="sans-id" x="20" y="52" font-size="16" font-weight="700" fill="#F8FAFC">TNP Stream Head (AIML)</text>
+      <text class="sans-id" x="20" y="72" font-size="12" fill="#94A3B8">Ex-GDG &amp; Ex-CSI 1-Yr Coordinator</text>
+    </g>
+
+    <!-- Box 2: Industry Track Record -->
+    <g transform="translate(360, 30)">
+      <rect x="0" y="0" width="340" height="90" rx="12" fill="#0A0F1D" stroke="#1E293B"/>
+      <text class="mono-id" x="20" y="28" font-size="11" fill="#38BDF8" letter-spacing="1">INDUSTRY EXPERIENCE</text>
+      <text class="sans-id" x="20" y="52" font-size="16" font-weight="700" fill="#F8FAFC">10 Months Cumulative</text>
+      <text class="sans-id" x="20" y="72" font-size="12" fill="#94A3B8">6M GenAI/SDE · 3M BI · 1M IBM Cloud</text>
+    </g>
+
+    <!-- Box 3: Athletic Grit -->
+    <g transform="translate(0, 140)">
+      <rect x="0" y="0" width="340" height="90" rx="12" fill="#0A0F1D" stroke="#1E293B"/>
+      <text class="mono-id" x="20" y="28" font-size="11" fill="#00F2FE" letter-spacing="1">ATHLETIC ENDURANCE</text>
+      <text class="sans-id" x="20" y="52" font-size="16" font-weight="700" fill="#F8FAFC">State-Level Triathlete</text>
+      <text class="sans-id" x="20" y="72" font-size="12" fill="#94A3B8">2x 5KM &amp; 1x 3KM Open-Sea Swimmer</text>
+    </g>
+
+    <!-- Box 4: Honors & Certs -->
+    <g transform="translate(360, 140)">
+      <rect x="0" y="0" width="340" height="90" rx="12" fill="#0A0F1D" stroke="#1E293B"/>
+      <text class="mono-id" x="20" y="28" font-size="11" fill="#00F2FE" letter-spacing="1">COMPETITIVE HONORS</text>
+      <text class="sans-id" x="20" y="52" font-size="16" font-weight="700" fill="#F8FAFC">Anveshna State Finalist</text>
+      <text class="sans-id" x="20" y="72" font-size="12" fill="#94A3B8">Google Cloud Certified · 3x Runner-Up</text>
+    </g>
+
+    <!-- Quote / Thesis Box -->
+    <g transform="translate(0, 250)">
+      <rect x="0" y="0" width="700" height="70" rx="12" fill="#080C16" stroke="#1E293B"/>
+      <text class="sans-id" x="24" y="32" font-size="14" font-weight="500" fill="#F1F5F9" font-style="italic">
+        "Physical stamina tested in the ocean; architectural rigor proven in production."
+      </text>
+      <text class="mono-id" x="24" y="54" font-size="11" fill="#64748B">
+        Verified profile for campus recruitment &amp; technical evaluations.
+      </text>
+    </g>
+  </g>
+</svg>
