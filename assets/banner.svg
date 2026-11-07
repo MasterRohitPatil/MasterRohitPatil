@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="Rohit Patil — Applied AI, Systems &amp; Data Engineering">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="Rohit Patil — Applied AI, Systems &amp; Data Engineering | Red H.A.R.T. Core">
   <defs>
-    <!-- Background Dot Grid in Subtle Platinum -->
+    <!-- Background Dot Grid -->
     <pattern id="grid-dots" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.1" fill="#94A3B8" opacity="0.07"/>
     </pattern>
 
     <!-- Metallic Platinum & Electric Red Border -->
     <linearGradient id="card-border" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#E2E8F0" stop-opacity="0.7"/>
-      <stop offset="25%" stop-color="#64748B" stop-opacity="0.3"/>
-      <stop offset="60%" stop-color="#1E293B" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.6"/>
+      <stop offset="0%" stop-color="#E2E8F0" stop-opacity="0.75"/>
+      <stop offset="30%" stop-color="#64748B" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#1E293B" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ED0C1F" stop-opacity="0.65"/>
     </linearGradient>
 
     <!-- Brushed Platinum Metallic Name Gradient -->
@@ -21,75 +21,114 @@
       <stop offset="100%" stop-color="#94A3B8"/>
     </linearGradient>
 
-    <!-- Machined Platinum Facet Gradients (3D Reactor) -->
-    <linearGradient id="titanium-top" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F8FAFC"/>
-      <stop offset="40%" stop-color="#CBD5E1"/>
-      <stop offset="100%" stop-color="#64748B"/>
-    </linearGradient>
-
-    <linearGradient id="titanium-left" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#475569"/>
-      <stop offset="50%" stop-color="#334155"/>
-      <stop offset="100%" stop-color="#0F172A"/>
-    </linearGradient>
-
-    <linearGradient id="titanium-right" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="60%" stop-color="#1E293B"/>
-      <stop offset="100%" stop-color="#0B0F19"/>
-    </linearGradient>
-
-    <linearGradient id="silver-bezel-ring" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#E2E8F0"/>
-      <stop offset="50%" stop-color="#475569"/>
-      <stop offset="100%" stop-color="#94A3B8"/>
-    </linearGradient>
-
-    <!-- Deep Red Glowing Core -->
-    <radialGradient id="plasma-core" cx="0.5" cy="0.5" r="0.5">
+    <!-- H.A.R.T. Outer Chrome Caliper Rim Gradient -->
+    <linearGradient id="hart-chrome-rim" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="25%" stop-color="#FF4D5E"/>
-      <stop offset="65%" stop-color="#ED0C1F"/>
-      <stop offset="100%" stop-color="#450A0A"/>
-    </radialGradient>
+      <stop offset="20%" stop-color="#E2E8F0"/>
+      <stop offset="45%" stop-color="#475569"/>
+      <stop offset="70%" stop-color="#94A3B8"/>
+      <stop offset="90%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
 
-    <radialGradient id="ambient-glow" cx="0.82" cy="0.5" r="0.55">
-      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.22"/>
-      <stop offset="50%" stop-color="#ED0C1F" stop-opacity="0.04"/>
+    <!-- H.A.R.T. Conical Cylinder Body Gradient (3D Cylindrical Shading) -->
+    <linearGradient id="cone-body-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0A0E17"/>
+      <stop offset="18%" stop-color="#334155"/>
+      <stop offset="38%" stop-color="#64748B"/>
+      <stop offset="55%" stop-color="#1E293B"/>
+      <stop offset="85%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#06090F"/>
+    </linearGradient>
+
+    <!-- Hydraulic Piston Chrome Sleeve -->
+    <linearGradient id="piston-chrome" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="40%" stop-color="#F8FAFC"/>
+      <stop offset="70%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+
+    <!-- Glowing Induction Coils Gradient -->
+    <linearGradient id="coil-energy-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFA4AC"/>
+      <stop offset="40%" stop-color="#ED0C1F"/>
+      <stop offset="100%" stop-color="#55070D"/>
+    </linearGradient>
+
+    <!-- Base Heat-Sink Stepped Gradient -->
+    <linearGradient id="base-plug-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D111A"/>
+      <stop offset="30%" stop-color="#334155"/>
+      <stop offset="70%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#05080E"/>
+    </linearGradient>
+
+    <!-- Deep Ambient Glow -->
+    <radialGradient id="hart-ambient-glow" cx="0.82" cy="0.45" r="0.55">
+      <stop offset="0%" stop-color="#ED0C1F" stop-opacity="0.32"/>
+      <stop offset="35%" stop-color="#ED0C1F" stop-opacity="0.12"/>
+      <stop offset="65%" stop-color="#ED0C1F" stop-opacity="0.02"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Precision Laser Glow Filter -->
-    <filter id="crimson-laser-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+    <!-- White-Hot Plasma Core Singularity -->
+    <radialGradient id="plasma-singularity" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#FFF1F2"/>
+      <stop offset="45%" stop-color="#FF4D5E"/>
+      <stop offset="75%" stop-color="#ED0C1F"/>
+      <stop offset="100%" stop-color="#55070D"/>
+    </radialGradient>
+
+    <!-- Neon Glow Filters -->
+    <filter id="lightning-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="silver-sheen">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+    <filter id="intense-core-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="heavyBlur"/>
+      <feGaussianBlur stdDeviation="2.5" result="sharpBlur"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode in="heavyBlur"/>
+        <feMergeNode in="sharpBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
 
   <style>
-    @keyframes pulsePlasmaCore {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 16px rgba(237,12,31,0.75)); }
-      50% { transform: scale(1.08); filter: drop-shadow(0 0 36px rgba(237,12,31,1)); }
+    /* Electrical Lightning Crackle Animations */
+    @keyframes lightningPulse1 {
+      0%, 100% { opacity: 0.95; stroke-dashoffset: 0; }
+      15% { opacity: 0.2; stroke-dashoffset: 8; }
+      30% { opacity: 1; stroke-dashoffset: 0; }
+      45% { opacity: 0.3; stroke-dashoffset: 14; }
+      70% { opacity: 0.85; stroke-dashoffset: 4; }
+      85% { opacity: 0.15; stroke-dashoffset: 12; }
     }
-    @keyframes rotateClockwise {
+    @keyframes lightningPulse2 {
+      0%, 100% { opacity: 0.25; stroke-dashoffset: 10; }
+      20% { opacity: 1; stroke-dashoffset: 0; }
+      40% { opacity: 0.15; stroke-dashoffset: 16; }
+      60% { opacity: 0.9; stroke-dashoffset: 2; }
+      80% { opacity: 0.3; stroke-dashoffset: 8; }
+    }
+    @keyframes coreResonance {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 16px rgba(237,12,31,0.85)); }
+      50% { transform: scale(1.12); filter: drop-shadow(0 0 38px rgba(237,12,31,1)); }
+    }
+    @keyframes coilGlow {
+      0%, 100% { opacity: 0.75; }
+      50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(237,12,31,0.9)); }
+    }
+    @keyframes rotateBezelRing {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
-    }
-    @keyframes rotateCounter {
-      0% { transform: rotate(360deg); }
-      100% { transform: rotate(0deg); }
     }
     @keyframes blinkCursor {
       0%, 49% { opacity: 1; }
@@ -97,10 +136,12 @@
     }
 
     .cursor { animation: blinkCursor 0.9s infinite; }
-    .rot-cw { transform-origin: 980px 220px; animation: rotateClockwise 36s linear infinite; }
-    .rot-ccw { transform-origin: 980px 220px; animation: rotateCounter 22s linear infinite; }
-    .plasma-core-anim { transform-origin: 980px 220px; animation: pulsePlasmaCore 3.2s ease-in-out infinite; }
-    
+    .bolt-1 { animation: lightningPulse1 1.8s ease-in-out infinite; }
+    .bolt-2 { animation: lightningPulse2 2.3s ease-in-out infinite; }
+    .singularity-anim { transform-origin: 980px 145px; animation: coreResonance 2.8s ease-in-out infinite; }
+    .coil-anim { animation: coilGlow 2.2s ease-in-out infinite; }
+    .bezel-spin { transform-origin: 980px 145px; animation: rotateBezelRing 40s linear infinite; }
+
     .tech-font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
     .mono-font { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
   </style>
@@ -108,7 +149,7 @@
   <!-- Container Box in Obsidian Black -->
   <rect x="1" y="1" width="1198" height="438" rx="24" fill="#060709" stroke="url(#card-border)" stroke-width="1.5"/>
   <rect x="2" y="2" width="1196" height="436" rx="23" fill="url(#grid-dots)"/>
-  <rect x="2" y="2" width="1196" height="436" rx="23" fill="url(#ambient-glow)"/>
+  <rect x="2" y="2" width="1196" height="436" rx="23" fill="url(#hart-ambient-glow)"/>
 
   <!-- Top Machined Platinum Bevel Line -->
   <rect x="60" y="1" width="400" height="2.5" fill="#E2E8F0" opacity="0.6"/>
@@ -150,7 +191,6 @@
 
   <!-- Bottom Telemetry Status Strip -->
   <g transform="translate(60, 368)">
-    <!-- Pulsing Red Indicator -->
     <circle cx="6" cy="-4" r="5" fill="#ED0C1F"/>
     <circle cx="6" cy="-4" r="11" fill="none" stroke="#ED0C1F" stroke-width="1.2" opacity="0.4">
       <animate attributeName="r" values="6;18;6" dur="2.4s" repeatCount="indefinite"/>
@@ -164,70 +204,177 @@
     <text class="mono-font" x="470" y="0" font-size="13" font-weight="600" fill="#CBD5E1" letter-spacing="0.5">10M Cumulative Industry Experience</text>
   </g>
 
-  <!-- ================= RIGHT: PRECISION TITANIUM & CRIMSON KINETIC REACTOR ================= -->
-  <!-- Centered at x=980, y=220 (leaving a massive 300px clear gap from left text) -->
-  <g id="machined-titanium-reactor">
-    <!-- Ambient Core Plasma Halo -->
-    <circle cx="980" cy="220" r="175" fill="url(#ambient-glow)"/>
+  <!-- ================= RIGHT: 3D ISOMETRIC RED H.A.R.T. CORE ================= -->
+  <!-- Centered at x=980, y=200 with dramatic 3/4 perspective revealing face & cone -->
+  <g id="ra-one-hart-device">
+    
+    <!-- Ambient Red Corona Halo -->
+    <circle cx="980" cy="180" r="190" fill="url(#hart-ambient-glow)"/>
 
-    <!-- Outer Gimbal Caliper Ring in Brushed Platinum (Rotating Clockwise) -->
-    <g class="rot-cw">
-      <!-- Silver Carrier Track -->
-      <circle cx="980" cy="220" r="150" fill="none" stroke="#334155" stroke-width="2"/>
-      <circle cx="980" cy="220" r="150" fill="none" stroke="url(#silver-bezel-ring)" stroke-width="3" stroke-dasharray="30 150 60 120" filter="url(#silver-sheen)"/>
-      <circle cx="980" cy="220" r="150" fill="none" stroke="#ED0C1F" stroke-width="3.5" stroke-dasharray="0 240 45 75" filter="url(#crimson-laser-glow)"/>
-      
-      <!-- Caliper Nodes -->
-      <circle cx="1130" cy="220" r="6" fill="#E2E8F0" stroke="#060709" stroke-width="1.5"/>
-      <circle cx="830" cy="220" r="5" fill="#ED0C1F" filter="url(#crimson-laser-glow)"/>
-      <circle cx="980" cy="70" r="4" fill="#CBD5E1"/>
-      <circle cx="980" cy="370" r="4" fill="#ED0C1F"/>
+    <!-- ================= 1. REAR MOUNTING & DOCKING BRACKET ================= -->
+    <!-- Heavy-Duty Caliper Arm (from Image 4) extending behind & below -->
+    <path d="M1065,190 L1130,260 L1115,310 L1080,310 L1050,260" fill="#0A0E17" stroke="#334155" stroke-width="2"/>
+    <rect x="1075" y="300" width="45" height="18" rx="4" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+    <circle cx="1098" cy="309" r="4" fill="#ED0C1F"/>
+
+    <path d="M895,190 L830,260 L845,310 L880,310 L910,260" fill="#0A0E17" stroke="#334155" stroke-width="2"/>
+    <rect x="840" y="300" width="45" height="18" rx="4" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+    <circle cx="862" cy="309" r="4" fill="#ED0C1F"/>
+
+    <!-- ================= 2. CONICAL BODY (DESCENDING CYLINDER) ================= -->
+    <!-- Lower Base Plug & Heat-Sink Stepped Flange -->
+    <ellipse cx="980" cy="316" rx="52" ry="18" fill="url(#base-plug-grad)" stroke="#334155" stroke-width="1.8"/>
+    <ellipse cx="980" cy="330" rx="42" ry="14" fill="#0A0E17" stroke="#1E293B" stroke-width="1.5"/>
+    <ellipse cx="980" cy="338" rx="32" ry="10" fill="#05080E" stroke="#ED0C1F" stroke-width="1.5"/>
+    <circle cx="980" cy="338" r="6" fill="#ED0C1F" filter="url(#intense-core-glow)"/>
+
+    <!-- 3D Tapered Conical Hull -->
+    <path d="M866,155 L928,316 A52,18 0 0,0 1032,316 L1094,155 Z" fill="url(#cone-body-grad)" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Vertical Structural Stabilizer Ribs along the Cone -->
+    <line x1="954" y1="172" x2="964" y2="314" stroke="#475569" stroke-width="2.5"/>
+    <line x1="980" y1="175" x2="980" y2="316" stroke="#ED0C1F" stroke-width="2.2" opacity="0.8"/>
+    <line x1="1006" y1="172" x2="996" y2="314" stroke="#475569" stroke-width="2.5"/>
+
+    <!-- Left & Right Hydraulic Piston Struts (Shock Absorbers) -->
+    <!-- Left Strut -->
+    <g transform="translate(0, 0)">
+      <line x1="876" y1="168" x2="938" y2="300" stroke="url(#piston-chrome)" stroke-width="6" stroke-linecap="round"/>
+      <line x1="876" y1="168" x2="938" y2="300" stroke="#000000" stroke-width="1.5"/>
+      <!-- Spring Coils around Left Piston -->
+      <path d="M885,185 Q880,188 893,195 Q888,203 901,210 Q896,218 909,225 Q904,233 917,240 Q912,248 925,255" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+    </g>
+    <!-- Right Strut -->
+    <g transform="translate(0, 0)">
+      <line x1="1084" y1="168" x2="1022" y2="300" stroke="url(#piston-chrome)" stroke-width="6" stroke-linecap="round"/>
+      <line x1="1084" y1="168" x2="1022" y2="300" stroke="#000000" stroke-width="1.5"/>
+      <!-- Spring Coils around Right Piston -->
+      <path d="M1075,185 Q1080,188 1067,195 Q1072,203 1059,210 Q1064,218 1051,225 Q1056,233 1043,240 Q1048,248 1035,255" fill="none" stroke="#CBD5E1" stroke-width="2"/>
     </g>
 
-    <!-- Inner Counter-Rotating Gear Rotor (Rotating Counter-Clockwise) -->
-    <g class="rot-ccw">
-      <circle cx="980" cy="220" r="122" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="16 8 32 8"/>
-      <!-- Precision Machined Teeth Marks -->
-      <circle cx="1066" cy="134" r="5" fill="#E2E8F0"/>
-      <circle cx="894" cy="306" r="5" fill="#ED0C1F"/>
+    <!-- ================= 3. INDUCTION COIL PERIMETER RING ================= -->
+    <!-- Coiled wire loops ringing below the upper rim (from Image 4) -->
+    <g class="coil-anim">
+      <!-- 14 Induction Coils wrapping around the upper conical rim -->
+      <ellipse cx="896" cy="178" rx="8" ry="16" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="910" cy="182" rx="8" ry="17" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="924" cy="186" rx="8" ry="18" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="938" cy="189" rx="8" ry="19" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="952" cy="191" rx="8" ry="20" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="966" cy="192" rx="8" ry="20" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="980" cy="193" rx="8" ry="20" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="994" cy="192" rx="8" ry="20" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="1008" cy="191" rx="8" ry="20" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="1022" cy="189" rx="8" ry="19" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="1036" cy="186" rx="8" ry="18" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="1050" cy="182" rx="8" ry="17" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
+      <ellipse cx="1064" cy="178" rx="8" ry="16" fill="none" stroke="url(#coil-energy-grad)" stroke-width="3"/>
     </g>
 
-    <!-- SOLID 3D ISOMETRIC TITANIUM PRISM & APERTURE CORE -->
-    <g class="plasma-core-anim">
-      <!-- Base Chassis Drop Shadow -->
-      <polygon points="980,136 1054,178 1054,262 980,304 906,262 906,178" fill="#090D16" stroke="#1E293B" stroke-width="2"/>
+    <!-- Lower Bezel Collar Band -->
+    <path d="M860,158 Q980,214 1100,158 Q980,186 860,158 Z" fill="#1E293B" stroke="#0F172A" stroke-width="1"/>
 
-      <!-- Top Machined Platinum Facet (Reflective Sheen) -->
-      <polygon points="980,136 1054,178 980,220 906,178" fill="url(#titanium-top)" stroke="#F8FAFC" stroke-width="1.2"/>
-      
-      <!-- Left Titanium Facet (Mid Shading) -->
-      <polygon points="906,178 980,220 980,304 906,262" fill="url(#titanium-left)" stroke="#475569" stroke-width="1.2"/>
-      
-      <!-- Right Titanium Facet (Deep Shading) -->
-      <polygon points="980,220 1054,178 1054,262 980,304" fill="url(#titanium-right)" stroke="#334155" stroke-width="1.2"/>
+    <!-- ================= 4. THE PRIMARY H.A.R.T. APERTURE FACE ================= -->
+    <!-- Tilted 3/4 Ellipse: Center at (980, 145) -->
+    
+    <!-- Outer Heavy Caliper Titanium Armor Rim -->
+    <ellipse cx="980" cy="145" rx="142" ry="66" fill="url(#hart-chrome-rim)" stroke="#F8FAFC" stroke-width="2.5"/>
+    <ellipse cx="980" cy="145" rx="134" ry="62" fill="#0A0E17" stroke="#334155" stroke-width="1.8"/>
 
-      <!-- Precision Milled Energy Conduits (Platinum Chamfers with Crimson Glow) -->
-      <polygon points="980,158 1028,185 980,212 932,185" fill="#0A0F1D" stroke="#E2E8F0" stroke-width="1.5"/>
-      <line x1="980" y1="220" x2="980" y2="294" stroke="#ED0C1F" stroke-width="3" filter="url(#crimson-laser-glow)"/>
-      <line x1="906" y1="262" x2="980" y2="220" stroke="#E2E8F0" stroke-width="1" opacity="0.6"/>
-      <line x1="1054" y1="262" x2="980" y2="220" stroke="#E2E8F0" stroke-width="1" opacity="0.6"/>
-
-      <!-- Glowing High-Yield Nuclear Iris Core -->
-      <circle cx="980" cy="220" r="36" fill="#060709" stroke="#E2E8F0" stroke-width="2"/>
-      <circle cx="980" cy="220" r="28" fill="#1C0407" stroke="#ED0C1F" stroke-width="2.5" filter="url(#crimson-laser-glow)"/>
-      <circle cx="980" cy="220" r="18" fill="url(#plasma-core)"/>
-      <circle cx="980" cy="220" r="7" fill="#FFFFFF"/>
+    <!-- Rotating Segmented Caliper Guide Ring -->
+    <g class="bezel-spin">
+      <ellipse cx="980" cy="145" rx="126" ry="58" fill="none" stroke="#ED0C1F" stroke-width="3.5" stroke-dasharray="30 80 50 110" filter="url(#lightning-glow)"/>
+      <ellipse cx="980" cy="145" rx="126" ry="58" fill="none" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="14 14 28 14"/>
+      <!-- Caliper Contact Studs -->
+      <circle cx="1106" cy="145" r="5" fill="#FFFFFF" stroke="#060709" stroke-width="1.5"/>
+      <circle cx="854" cy="145" r="5" fill="#ED0C1F" filter="url(#lightning-glow)"/>
     </g>
 
-    <!-- Calibrated Cardinal Degree Markings in Silver -->
-    <line x1="980" y1="48" x2="980" y2="64" stroke="#E2E8F0" stroke-width="2"/>
-    <line x1="980" y1="376" x2="980" y2="392" stroke="#ED0C1F" stroke-width="2"/>
-    <line x1="808" y1="220" x2="824" y2="220" stroke="#E2E8F0" stroke-width="2"/>
-    <line x1="1136" y1="220" x2="1152" y2="220" stroke="#ED0C1F" stroke-width="2"/>
+    <!-- Inner Recessed Bezel Well (Machined Chrome Chamfer) -->
+    <ellipse cx="980" cy="145" rx="116" ry="52" fill="#030408" stroke="#E2E8F0" stroke-width="2"/>
+    <ellipse cx="980" cy="145" rx="112" ry="50" fill="#070912" stroke="#ED0C1F" stroke-width="1.5" opacity="0.8"/>
 
-    <text class="mono-font" x="980" y="40" font-size="10" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing="1">000° [SYS.INIT]</text>
-    <text class="mono-font" x="1166" y="224" font-size="10" font-weight="700" fill="#ED0C1F" letter-spacing="1">090°</text>
-    <text class="mono-font" x="980" y="408" font-size="10" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing="1">180° [TELEMETRY]</text>
-    <text class="mono-font" x="780" y="224" font-size="10" font-weight="700" fill="#CBD5E1" text-anchor="end" letter-spacing="1">270°</text>
+    <!-- RECESSED DIGITAL WIREFRAME GRID (From Image 2 & 3) -->
+    <g opacity="0.38">
+      <!-- Radial spokes -->
+      <line x1="980" y1="95" x2="980" y2="195" stroke="#ED0C1F" stroke-width="1"/>
+      <line x1="868" y1="145" x2="1092" y2="145" stroke="#ED0C1F" stroke-width="1"/>
+      <line x1="900" y1="110" x2="1060" y2="180" stroke="#ED0C1F" stroke-width="1"/>
+      <line x1="900" y1="180" x2="1060" y2="110" stroke="#ED0C1F" stroke-width="1"/>
+      <!-- Concentric perspective rings -->
+      <ellipse cx="980" cy="145" rx="84" ry="37" fill="none" stroke="#ED0C1F" stroke-width="1" stroke-dasharray="4 4"/>
+      <ellipse cx="980" cy="145" rx="54" ry="24" fill="none" stroke="#ED0C1F" stroke-width="1"/>
+      <ellipse cx="980" cy="145" rx="28" ry="12" fill="none" stroke="#ED0C1F" stroke-width="1"/>
+    </g>
+
+    <!-- 10 PERIMETER ELECTRODE CONTACT PADS (Where lightning strikes) -->
+    <g>
+      <circle cx="878" cy="145" r="4.5" fill="#FFFFFF" stroke="#ED0C1F" stroke-width="1.5"/>
+      <circle cx="896" cy="120" r="4" fill="#ED0C1F"/>
+      <circle cx="936" cy="101" r="4" fill="#FFFFFF"/>
+      <circle cx="980" cy="95" r="4.5" fill="#ED0C1F"/>
+      <circle cx="1024" cy="101" r="4" fill="#FFFFFF"/>
+      <circle cx="1064" cy="120" r="4" fill="#ED0C1F"/>
+      <circle cx="1082" cy="145" r="4.5" fill="#FFFFFF" stroke="#ED0C1F" stroke-width="1.5"/>
+      <circle cx="1064" cy="170" r="4" fill="#ED0C1F"/>
+      <circle cx="1024" cy="189" r="4" fill="#FFFFFF"/>
+      <circle cx="980" cy="195" r="4.5" fill="#ED0C1F"/>
+      <circle cx="936" cy="189" r="4" fill="#FFFFFF"/>
+      <circle cx="896" cy="170" r="4" fill="#ED0C1F"/>
+    </g>
+
+    <!-- ================= 5. ORGANIC ELECTRICAL LIGHTNING FILAMENTS ================= -->
+    <!-- Jagged, branching plasma arcs crackling from central singularity to electrodes -->
+    <!-- Primary Bolt Set (Class: bolt-1) -->
+    <g class="bolt-1" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" filter="url(#lightning-glow)">
+      <!-- Arc to Left Electrode -->
+      <path d="M980,145 L952,142 L944,147 L920,140 L905,148 L878,145" fill="none" stroke-width="2.5"/>
+      <!-- Arc to Top-Right Electrode -->
+      <path d="M980,145 L995,134 L1008,138 L1020,122 L1042,126 L1064,120" fill="none" stroke-width="2.2"/>
+      <!-- Arc to Bottom-Left Electrode -->
+      <path d="M980,145 L965,155 L958,150 L942,168 L922,164 L896,170" fill="none" stroke-width="2.2"/>
+      <!-- Arc to Top-Left Electrode -->
+      <path d="M980,145 L968,130 L952,135 L948,118 L936,101" fill="none" stroke-width="2"/>
+      <!-- Arc to Bottom-Right Electrode -->
+      <path d="M980,145 L998,158 L1012,154 L1030,172 L1046,168 L1064,170" fill="none" stroke-width="2.2"/>
+    </g>
+
+    <!-- Secondary Red Laser Bolts & Forks (Class: bolt-2) -->
+    <g class="bolt-2" stroke="#ED0C1F" stroke-linecap="round" stroke-linejoin="round" filter="url(#lightning-glow)">
+      <!-- Arc to Right Main Electrode -->
+      <path d="M980,145 L1010,148 L1022,141 L1048,149 L1066,142 L1082,145" fill="none" stroke-width="2.8"/>
+      <!-- Arc to Top Center -->
+      <path d="M980,145 L974,128 L986,118 L976,108 L980,95" fill="none" stroke-width="2.5"/>
+      <!-- Arc to Bottom Center -->
+      <path d="M980,145 L986,162 L974,174 L984,186 L980,195" fill="none" stroke-width="2.5"/>
+      <!-- Secondary Branching Forks -->
+      <path d="M944,147 L938,158 L922,164" fill="none" stroke-width="1.8"/>
+      <path d="M1020,122 L1034,112 L1048,116" fill="none" stroke-width="1.8"/>
+      <path d="M998,158 L1008,172 L1024,189" fill="none" stroke-width="1.8"/>
+    </g>
+
+    <!-- ================= 6. CENTRAL WHITE-HOT PLASMA SINGULARITY ================= -->
+    <g class="singularity-anim">
+      <circle cx="980" cy="145" r="28" fill="#1C0407" filter="url(#intense-core-glow)"/>
+      <circle cx="980" cy="145" r="20" fill="url(#plasma-singularity)" filter="url(#lightning-glow)"/>
+      <circle cx="980" cy="145" r="11" fill="#FFFFFF" filter="url(#lightning-glow)"/>
+      <circle cx="980" cy="145" r="5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- ================= 7. PRECISION TELEMETRY CALLOUTS ================= -->
+    <!-- Tactical HUD Callout Bracket -->
+    <g transform="translate(0, 0)">
+      <line x1="1122" y1="145" x2="1144" y2="145" stroke="#ED0C1F" stroke-width="1.5"/>
+      <line x1="1144" y1="145" x2="1156" y2="130" stroke="#ED0C1F" stroke-width="1.5"/>
+      <line x1="1156" y1="130" x2="1182" y2="130" stroke="#ED0C1F" stroke-width="1.5"/>
+      <text class="mono-font" x="1156" y="122" font-size="9" font-weight="800" fill="#ED0C1F" letter-spacing="1">H.A.R.T. CORE</text>
+      <text class="mono-font" x="1156" y="142" font-size="7.5" font-weight="600" fill="#94A3B8">HERTZ AMPLIFIER</text>
+
+      <!-- Bottom Piston Telemetry -->
+      <line x1="980" y1="346" x2="980" y2="368" stroke="#334155" stroke-width="1.2"/>
+      <line x1="980" y1="368" x2="1010" y2="368" stroke="#ED0C1F" stroke-width="1.5"/>
+      <text class="mono-font" x="1016" y="372" font-size="8.5" font-weight="700" fill="#CBD5E1">TRANSMITTER // READY</text>
+    </g>
+
   </g>
 </svg>
