@@ -100,8 +100,8 @@
       <circle cx="204" cy="6" r="4.5" fill="#ED0C1F" stroke="#FFFFFF" stroke-width="1.5"/>
 
       <!-- KPI Tooltip Badge: Platinum Border & Red Accent -->
-      <rect x="14" y="8" width="76" height="18" rx="5" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
-      <text class="p-tag" x="52" y="21" text-anchor="middle" fill="#ED0C1F">+34% ARR</text>
+      <rect x="14" y="8" width="106" height="18" rx="5" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
+      <text class="p-tag" x="67" y="21" text-anchor="middle" fill="#ED0C1F">APR–MAR FISCAL</text>
     </g>
 
     <!-- Details -->
@@ -196,14 +196,14 @@
       <rect x="14" y="10" width="108" height="18" rx="5" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
       <text class="p-tag" x="68" y="23" text-anchor="middle" fill="#FFFFFF">FAO · IPCC CORPUS</text>
 
-      <!-- Semantic Cosine Score in Platinum/Zinc -->
-      <rect x="140" y="90" width="82" height="18" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-      <text class="p-tag" x="181" y="103" text-anchor="middle" fill="#E2E8F0">sim: 0.94</text>
+      <!-- Traceability Pill in Platinum/Zinc -->
+      <rect x="126" y="90" width="96" height="18" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+      <text class="p-tag" x="174" y="103" text-anchor="middle" fill="#E2E8F0">DOI TRACEABLE</text>
     </g>
 
     <!-- Details -->
     <text class="p-stack" x="20" y="248">Hybrid RAG · FAO/IPCC Corpus</text>
-    <text class="p-stack" x="20" y="270">YOLOv8 · LiteLLM · PyTorch</text>
+    <text class="p-stack" x="20" y="270">Gemini API · LiteLLM · Pydantic</text>
     <line x1="20" y1="290" x2="252" y2="290" stroke="#1E293B" stroke-width="1"/>
     <text class="p-metric" x="20" y="318">FLAGSHIP: Bio-Nexus</text>
     <text class="p-body" x="20" y="342" font-size="13">Google Cloud Certified GenAI</text>
@@ -247,9 +247,9 @@
       <text font-family="monospace" font-size="11" font-weight="900" fill="#ED0C1F" x="204" y="62" text-anchor="middle">04</text>
       <text font-family="monospace" font-size="9" font-weight="700" fill="#ED0C1F" x="204" y="86" text-anchor="middle">WARN</text>
 
-      <!-- Latency & State Badges -->
-      <rect x="14" y="10" width="86" height="18" rx="5" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
-      <text class="p-tag" x="57" y="23" text-anchor="middle" fill="#FFFFFF">&lt; 12ms SSE</text>
+      <!-- Exposure & State Badges -->
+      <rect x="14" y="10" width="102" height="18" rx="5" fill="#140608" stroke="#ED0C1F" stroke-width="1"/>
+      <text class="p-tag" x="65" y="23" text-anchor="middle" fill="#FFFFFF">CISA KEV · SSE</text>
 
       <rect x="146" y="10" width="94" height="18" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1"/>
       <text class="p-tag" x="193" y="23" text-anchor="middle" fill="#E2E8F0">14-STATE LOCK</text>

@@ -3,29 +3,14 @@
 </p>
 
 <p align="center">
-  <a href="https://masterrohitpatil.github.io"><img src="https://img.shields.io/badge/PORTFOLIO-060709?style=for-the-badge&logo=googlechrome&logoColor=ED0C1F&labelColor=18181B"/></a>&nbsp;
-  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LINKEDIN-060709?style=for-the-badge&logo=linkedin&logoColor=ED0C1F&labelColor=18181B"/></a>&nbsp;
-  <a href="mailto:rohit.newchallenger@gmail.com"><img src="https://img.shields.io/badge/EMAIL-060709?style=for-the-badge&logo=gmail&logoColor=ED0C1F&labelColor=18181B"/></a>&nbsp;
-  <a href="https://github.com/MasterRohitPatil"><img src="https://img.shields.io/badge/GITHUB-060709?style=for-the-badge&logo=github&logoColor=ED0C1F&labelColor=18181B"/></a>
+  <a href="mailto:rohit.newchallenger@gmail.com"><img src="https://img.shields.io/badge/EMAIL-060709?style=for-the-badge&logo=gmail&logoColor=ED0C1F&labelColor=18181B" alt="Email Rohit Patil"/></a>&nbsp;
+  <img src="https://img.shields.io/badge/MUMBAI,_INDIA-060709?style=for-the-badge&logo=googlemaps&logoColor=ED0C1F&labelColor=18181B" alt="Mumbai, India"/>
+  <!-- Add LinkedIn & Portfolio badges here once exact LinkedIn URL and masterrohitpatil.github.io are live -->
 </p>
 
 <p align="center">
-  <img src="./assets/four-pillars.svg" alt="4 Career Tracks: Data Analytics, Data Science, AI Systems, Fullstack" width="100%"/>
+  <img src="./assets/four-pillars.svg?v=2" alt="4 Career Tracks: Data Analytics, Data Science, AI Systems, Full-Stack" width="100%"/>
 </p>
-
----
-
-<p align="center">
-  <img src="./assets/tech-stack.svg" alt="Technical Arsenal &amp; Capabilities" width="100%"/>
-</p>
-
----
-
-<h3 align="center">CONTRIBUTION MATRIX</h3>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/MasterRohitPatil/MasterRohitPatil/output/github-snake-dark.svg" alt="GitHub Contribution Snake" width="100%" />
-</div>
 
 ---
 
@@ -36,35 +21,35 @@
     <td width="50%" valign="top">
       <h4><a href="https://github.com/MasterRohitPatil/sentinel-grid">sentinel-grid</a></h4>
       <b>AI Cyber Threat Early Warning &amp; Exposure Engine</b><br>
-      Deterministic CVE-to-asset exposure matcher eliminating alert fatigue. Features a 14-status closed-loop governance state machine, live attack simulation, and real-time SSE with WhatsApp alerting.<br>
-      <sub>React · TypeScript · FastAPI · Supabase PostgreSQL · WebSockets</sub>
+      Deterministic CVE-to-asset exposure matcher eliminating alert fatigue. Features CISA KEV &amp; EPSS scoring, a 14-status closed-loop governance state machine, and real-time SSE with WhatsApp alerting.<br>
+      <sub>React 19 · TypeScript · FastAPI · Supabase PostgreSQL · SSE</sub>
     </td>
     <td width="50%" valign="top">
       <h4><a href="https://github.com/MasterRohitPatil/Bio-Nexus">Bio-Nexus</a></h4>
       <b>Environmental Decision Intelligence &amp; Hybrid RAG</b><br>
-      Multi-variable ecological reasoning engine (soil × climate × land use) backed by a Hybrid RAG scientific layer (FAO, IPCC, IPBES) with strict anti-hallucination guardrails.<br>
-      <sub>Python 3.12 · FastAPI · React 19 · SQLite · Pytest CI/CD</sub>
+      Multi-variable ecological reasoning engine (soil × climate × land use) backed by a DOI-traceable Hybrid RAG scientific corpus (FAO, IPCC, IPBES) and strict anti-hallucination guardrails.<br>
+      <sub>Python 3.12 · FastAPI · React 19 · SQLAlchemy · Pytest CI/CD</sub>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h4><a href="https://github.com/MasterRohitPatil/somnosense">somnosense</a></h4>
       <b>Clinical Sleep Triage &amp; Cardiovascular Risk Platform</b><br>
-      3-class diagnostic triage (Healthy / Insomnia / Apnea) with 93% accuracy via XGBoost, per-patient local TreeSHAP attributions, and Pulse Pressure ($PP &gt; 50\text{ mmHg}$) arterial compliance monitoring.<br>
-      <sub>Python · XGBoost · TreeSHAP · FastAPI · Clinical NLP</sub>
+      3-class diagnostic triage (Healthy / Insomnia / Apnea) achieving 93% accuracy via XGBoost, per-patient local TreeSHAP attributions, and Pulse Pressure (<code>PP &gt; 50 mmHg</code>) arterial compliance monitoring.<br>
+      <sub>Python · XGBoost · TreeSHAP · FastAPI · Scikit-Learn</sub>
     </td>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/MasterRohitPatil/Adventure-Works-Data-Analyst">Adventure-Works-Analytics</a></h4>
+      <h4><a href="https://github.com/MasterRohitPatil/Adventure-Works-Data-Analyst">Adventure-Works-Data-Analyst</a></h4>
       <b>Enterprise Sales Analytics &amp; Star-Schema ETL</b><br>
-      Full dimensional modeling across MySQL, Power BI, Tableau, and Excel. Custom fiscal calendar periods, financial KPI derivations, and executive dashboard storytelling.<br>
-      <sub>MySQL · Power BI · Tableau · Advanced Excel</sub>
+      End-to-end dimensional modeling across MySQL, Power BI, Tableau, and Excel. Custom Apr–Mar fiscal calendar logic, unioned sales pipelines, and executive financial KPI dashboards.<br>
+      <sub>MySQL · Power BI · Tableau · Advanced Excel DAX</sub>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h4><a href="https://github.com/MasterRohitPatil/BlindAssistAi">BlindAssistAi</a></h4>
       <b>Real-Time Assistive Vision &amp; Audio Narration</b><br>
-      Edge-optimized computer vision for visually impaired users using YOLOv8n and zero-cloud pyttsx3 audio narration with desktop Tkinter GUI.<br>
+      Edge-optimized computer vision for visually impaired users using YOLOv8n and zero-cloud <code>pyttsx3</code> audio narration with a desktop Tkinter GUI.<br>
       <sub>Python · YOLOv8 · OpenCV · pyttsx3 · Tkinter</sub>
     </td>
     <td width="50%" valign="top">
@@ -83,8 +68,16 @@
 | Role | Domain / Organization | Duration | Focus &amp; Technical Impact |
 | :--- | :--- | :---: | :--- |
 | **Gen AI &amp; Full-Stack Intern** | Multi-LLM Workspace *(Under NDA)* | 6 Months | Parallel streaming interface, WebSocket state sync, and real-time token/cost telemetry using FastAPI &amp; React 18. |
-| **Data Analytics &amp; BI Intern** | Adventure Works Capstone | 3 Months | Star-Schema dimensional data models, custom fiscal calendar logic, and executive Power BI / Tableau dashboards. |
+| **Data Analytics &amp; BI Intern** | Adventure Works Capstone | 3 Months | Star-Schema dimensional data models, Apr–Mar fiscal calendar logic, and executive Power BI / Tableau dashboards. |
 | **Cloud &amp; Agentic AI Intern** | IBM Cloud Lite Services | 1 Month | Autonomous travel agent workflow architectures with cloud service integration. |
+
+---
+
+### Technical Stack &amp; Capabilities
+
+<p align="center">
+  <img src="./assets/tech-stack.svg?v=2" alt="Technical Arsenal &amp; Capabilities" width="100%"/>
+</p>
 
 ---
 
@@ -125,15 +118,23 @@
 
 ---
 
-### Activity &amp; Telemetry
+### Activity &amp; Contribution Telemetry
 
 <div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MasterRohitPatil/MasterRohitPatil/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MasterRohitPatil/MasterRohitPatil/output/github-snake.svg" />
+  <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/MasterRohitPatil/MasterRohitPatil/output/github-snake-dark.svg" width="100%" />
+</picture>
+
+<br/><br/>
+
 <p align="center">
-  <img src="./assets/stats.svg?v=real-b" width="49%" alt="Rohit Patil's GitHub Stats" />&nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MasterRohitPatil&hide_border=true&border_radius=16&background=050505&stroke=27272a&ring=ED0C1F&fire=ED0C1F&currStreakLabel=ffffff&sideLabels=b4b4bd&currStreakNum=ffffff&sideNums=ffffff&dates=b4b4bd" width="49%" alt="GitHub Streak" />
+  <img src="./assets/stats.svg?v=authentic-1" width="49%" alt="Rohit Patil's GitHub Stats" />&nbsp;
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MasterRohitPatil&border_radius=16&background=050505&border=27272a&stroke=27272a&ring=ED0C1F&fire=ED0C1F&currStreakLabel=ffffff&sideLabels=b4b4bd&currStreakNum=ffffff&sideNums=ffffff&dates=b4b4bd" width="49%" alt="GitHub Streak" />
 </p>
 
-<img src="https://komarev.com/ghpvc/?username=MasterRohitPatil&style=for-the-badge&color=ED0C1F&label=SYSTEM+TELEMETRY+VISITS" alt="Profile Views" />
+<img src="https://komarev.com/ghpvc/?username=MasterRohitPatil&style=for-the-badge&color=ED0C1F&label=PROFILE+VIEWS" alt="Profile Views" />
 
 </div>

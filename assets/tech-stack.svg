@@ -42,7 +42,7 @@
     <rect x="0" y="0" width="220" height="3" rx="1.5" fill="#ED0C1F"/>
     
     <text class="cat-track" x="16" y="26">MODULE 01</text>
-    <text class="cat-title" x="16" y="46">Languages &amp; Query</text>
+    <text class="cat-title" x="16" y="46">Languages &amp; Core</text>
 
     <!-- Chips -->
     <g transform="translate(14, 62)">
@@ -52,23 +52,23 @@
 
       <rect x="0" y="36" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="51" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="56">TypeScript / JS</text>
+      <text class="chip-text" x="28" y="56">TypeScript / ES6+</text>
 
       <rect x="0" y="72" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="92">SQL (MySQL &amp; Postgres)</text>
+      <text class="chip-text" x="28" y="92">SQL (Postgres/MySQL)</text>
 
       <rect x="0" y="108" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="123" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="128">Advanced DAX / M</text>
+      <text class="chip-text" x="28" y="128">Pydantic v2</text>
 
       <rect x="0" y="144" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="164">Bash / Shell CLI</text>
+      <text class="chip-text" x="28" y="164">DAX &amp; Power Query</text>
 
       <rect x="0" y="180" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="200">HTML5 &amp; CSS3</text>
+      <text class="chip-text" x="28" y="200">Bash / Shell CLI</text>
     </g>
   </g>
 
@@ -78,7 +78,7 @@
     <rect x="0" y="0" width="220" height="3" rx="1.5" fill="#ED0C1F"/>
     
     <text class="cat-track" x="16" y="26">MODULE 02</text>
-    <text class="cat-title" x="16" y="46">Machine Learning</text>
+    <text class="cat-title" x="16" y="46">ML &amp; Vision</text>
 
     <!-- Chips -->
     <g transform="translate(14, 62)">
@@ -92,7 +92,7 @@
 
       <rect x="0" y="72" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="92">TreeSHAP Explainability</text>
+      <text class="chip-text" x="28" y="92">SHAP / TreeSHAP</text>
 
       <rect x="0" y="108" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="123" r="3.5" fill="#ED0C1F"/>
@@ -100,11 +100,11 @@
 
       <rect x="0" y="144" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="164">YOLOv8 &amp; OpenCV</text>
+      <text class="chip-text" x="28" y="164">Pandas &amp; NumPy</text>
 
       <rect x="0" y="180" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="200">Clinical NLP Triage</text>
+      <text class="chip-text" x="28" y="200">YOLOv8 &amp; OpenCV</text>
     </g>
   </g>
 
@@ -120,23 +120,23 @@
     <g transform="translate(14, 62)">
       <rect x="0" y="0" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="15" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="20">Hybrid RAG Pipelines</text>
+      <text class="chip-text" x="28" y="20">Google Gemini API</text>
 
       <rect x="0" y="36" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="51" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="56">LiteLLM Broadcast</text>
+      <text class="chip-text" x="28" y="56">LiteLLM Gateway</text>
 
       <rect x="0" y="72" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="92">Vector Embeddings</text>
+      <text class="chip-text" x="28" y="92">TF-IDF &amp; Embeddings</text>
 
       <rect x="0" y="108" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="123" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="128">Anti-Hallucination</text>
+      <text class="chip-text" x="28" y="128">Structured Outputs</text>
 
       <rect x="0" y="144" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="164">Multi-Agent Systems</text>
+      <text class="chip-text" x="28" y="164">Token/Cost Telemetry</text>
 
       <rect x="0" y="180" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
@@ -150,17 +150,17 @@
     <rect x="0" y="0" width="220" height="3" rx="1.5" fill="#ED0C1F"/>
     
     <text class="cat-track" x="16" y="26">MODULE 04</text>
-    <text class="cat-title" x="16" y="46">Full-Stack &amp; Systems</text>
+    <text class="cat-title" x="16" y="46">Full-Stack &amp; Infra</text>
 
     <!-- Chips -->
     <g transform="translate(14, 62)">
       <rect x="0" y="0" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="15" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="20">React 19 &amp; Vite</text>
+      <text class="chip-text" x="28" y="20">React 19 &amp; Tailwind</text>
 
       <rect x="0" y="36" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="51" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="56">FastAPI (Python)</text>
+      <text class="chip-text" x="28" y="56">FastAPI &amp; SQLAlchemy</text>
 
       <rect x="0" y="72" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
@@ -172,11 +172,11 @@
 
       <rect x="0" y="144" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="164">Tailwind CSS v4</text>
+      <text class="chip-text" x="28" y="164">Pytest &amp; Vitest</text>
 
       <rect x="0" y="180" width="192" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="200">Docker &amp; CI/CD</text>
+      <text class="chip-text" x="28" y="200">Docker &amp; GH Actions</text>
     </g>
   </g>
 
@@ -200,19 +200,19 @@
 
       <rect x="0" y="72" width="180" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="87" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="92">Star-Schema ETL</text>
+      <text class="chip-text" x="28" y="92">MySQL ETL Unions</text>
 
       <rect x="0" y="108" width="180" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="123" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="128">Dimensional Models</text>
+      <text class="chip-text" x="28" y="128">Star-Schema Models</text>
 
       <rect x="0" y="144" width="180" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="159" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="164">Executive KPIs</text>
+      <text class="chip-text" x="28" y="164">Fiscal Period DAX</text>
 
       <rect x="0" y="180" width="180" height="30" rx="7" fill="#10131E" stroke="#1E293B"/>
       <circle cx="14" cy="195" r="3.5" fill="#ED0C1F"/>
-      <text class="chip-text" x="28" y="200">Advanced Excel DAX</text>
+      <text class="chip-text" x="28" y="200">Excel &amp; XLOOKUP</text>
     </g>
   </g>
 </svg>
