@@ -59,6 +59,14 @@
       <sub>React 18 · TypeScript · FastAPI · WebSockets · LiteLLM · Docker</sub>
     </td>
   </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <h4><a href="https://github.com/MasterRohitPatil/Chitran">Chitran</a></h4>
+      <b>Local-First Windows AI Desktop Daemon &amp; Taskbar Companion (Ditto)</b><br>
+      ₹0-cost FastAPI daemon triggered via Flow Launcher (<code>cn</code>) and an animated taskbar slime. Features Groq/Gemini routing with 95% daily quota caps, 15s local habit &amp; focus analytics, Chrome CDP form/Gmail/Colab automation, and a human-in-the-loop Office (<code>.pptx</code>/<code>.docx</code>/<code>.xlsx</code>) generator with local Mermaid rendering.<br>
+      <sub>Python 3.12 · FastAPI · SQLite · Playwright CDP · Tkinter · Groq/Gemini</sub>
+    </td>
+  </tr>
 </table>
 
 ---
